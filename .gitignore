@@ -1,0 +1,13 @@
+# Pasta local com documentos do professor
+.ignore/
+
+# Arquivos temporários do Sistema Operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs e arquivos temporários de editores
+*.log
+.vscode/
+.idea/
