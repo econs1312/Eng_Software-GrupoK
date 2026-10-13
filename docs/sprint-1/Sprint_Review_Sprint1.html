@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Sprint Review - Sprint 1 (Grupo K)</title>
+
+<style>
+    @page {
+        size: A4;
+        margin: 16mm 14mm 16mm 14mm;
+    }
+    body {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+        color: #1e293b;
+        background: #ffffff;
+        line-height: 1.5;
+        font-size: 10.5pt;
+        margin: 0;
+        padding: 0;
+    }
+    .header-box {
+        border-bottom: 2px solid #2563eb;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+    }
+    .institution {
+        font-size: 9pt;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        color: #64748b;
+        margin-bottom: 4px;
+    }
+    .doc-title {
+        font-size: 18pt;
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0 0 4px 0;
+    }
+    .doc-subtitle {
+        font-size: 11pt;
+        color: #2563eb;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+    }
+    .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 10px 14px;
+        font-size: 9pt;
+        margin-bottom: 18px;
+    }
+    .meta-item strong {
+        color: #334155;
+    }
+    h2 {
+        font-size: 12.5pt;
+        color: #1e3a8a;
+        border-left: 4px solid #2563eb;
+        padding-left: 8px;
+        margin-top: 18px;
+        margin-bottom: 8px;
+        page-break-after: avoid;
+    }
+    h3 {
+        font-size: 11pt;
+        color: #0f172a;
+        margin-top: 14px;
+        margin-bottom: 6px;
+        page-break-after: avoid;
+    }
+    p, ul, ol {
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+    li {
+        margin-bottom: 3px;
+    }
+    .goal-box {
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-left: 4px solid #2563eb;
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin: 12px 0;
+        font-style: italic;
+        color: #1e40af;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+        font-size: 9pt;
+        page-break-inside: auto;
+    }
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    th {
+        background-color: #f1f5f9;
+        color: #0f172a;
+        font-weight: 700;
+        text-align: left;
+        padding: 7px 9px;
+        border: 1px solid #cbd5e1;
+    }
+    td {
+        padding: 6px 9px;
+        border: 1px solid #e2e8f0;
+        vertical-align: top;
+    }
+    tr:nth-child(even) td {
+        background-color: #f8fafc;
+    }
+    .badge {
+        display: inline-block;
+        padding: 2px 7px;
+        border-radius: 12px;
+        font-size: 7.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+    .badge-done { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-prog { background: #fef9c3; color: #a16207; border: 1px solid #fef08a; }
+    .badge-todo { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 10px 14px;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+    }
+    .card-title {
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 4px;
+        font-size: 10pt;
+    }
+    .link-box {
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        border-radius: 4px;
+        padding: 6px 10px;
+        font-family: Consolas, monospace;
+        font-size: 8.5pt;
+        word-break: break-all;
+        margin: 4px 0 8px 0;
+    }
+    .footer-note {
+        margin-top: 24px;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 8px;
+        font-size: 8pt;
+        color: #94a3b8;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body>
+<div class="header-box">
+    <div class="institution">IFES — Instituto Federal do Espírito Santo | Campus Serra</div>
+    <div class="doc-title">Sprint Review — Sprint 1</div>
+    <div class="doc-subtitle">Engenharia de Software (V Período) • Grupo K</div>
+</div>
+
+<div class="meta-grid">
+    <div class="meta-item"><strong>Data da Reunião:</strong> 12/10/2026 (Segunda-feira)</div>
+    <div class="meta-item"><strong>Status da Meta:</strong> 100% Concluída com Sucesso</div>
+    <div class="meta-item"><strong>Projeto:</strong> Debugando o Futuro: Crônicas do Código Senciente</div>
+    <div class="meta-item"><strong>Repositório:</strong> github.com/econs1312/Eng_Software-GrupoK</div>
+</div>
+
+<h2>🎯 1. Meta da Sprint e Avaliação de Sucesso</h2>
+<div class="goal-box">
+    "Estabelecer a infraestrutura do repositório no GitHub, estruturar o fluxo de trabalho ágil no Kanban, definir a concepção do universo narrativo com roteiro quadro a quadro completo e consolidar os primeiros prompts consistentes de IA para geração visual dos personagens e capa conceitual."
+</div>
+<p><strong>Avaliação do Product Owner:</strong> Meta integralmente alcançada. Todas as 8 tarefas da Sprint 1 foram concluídas dentro do prazo estipulado, gerando um incremento sólido e verificável.</p>
+
+<h2>📦 2. Resumo do Incremento Entregue na Sprint 1</h2>
+<ul>
+    <li><strong>Infraestrutura & Governança:</strong> Repositório público no GitHub com branch <code>main</code>, <code>.gitignore</code> e <code>README.md</code> completo com sinopse em dois parágrafos.</li>
+    <li><strong>Gestão Ágil:</strong> Product Backlog refinado com 13 itens priorizados, Sprint Backlog com 8 tarefas e quadro Kanban funcional com políticas de WIP.</li>
+    <li><strong>Roteiro da HQ:</strong> Fichas detalhadas dos 3 personagens (Maya, Leo, Echo) e 6 quadros sequenciais (Capítulo 1) integrando conceitos reais de Engenharia de Software.</li>
+    <li><strong>Engenharia de Prompts:</strong> 5 prompts estruturados com <em>Style Anchor</em> de graphic novel cyberpunk para garantir coerência visual.</li>
+    <li><strong>Arte Visual:</strong> Capa conceitual gerada com IA (<code>hq/capa_concept_art.jpg</code>) integrada com sucesso ao repositório.</li>
+</ul>
+
+<h2>🔗 3. Links Diretos para o Conteúdo Pronto no GitHub</h2>
+<p>Abaixo constam os links diretos para cada arquivo e artefato entregue nesta Sprint no repositório oficial da equipe:</p>
+
+<div class="card">
+    <div class="card-title">🌐 1. Repositório Principal do Projeto</div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK</a></div>
+</div>
+
+<div class="card">
+    <div class="card-title">📖 2. README.md (Apresentação, Equipe e Sinopse da Obra)</div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/README.md" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/README.md</a></div>
+</div>
+
+<div class="card">
+    <div class="card-title">📝 3. Roteiro Completo da HQ (Fichas e Quadros 1 a 6)</div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/roteiro/roteiro-hq.md" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/roteiro/roteiro-hq.md</a></div>
+</div>
+
+<div class="card">
+    <div class="card-title">🤖 4. Engenharia de Prompts para IA Generativa (prompts-ia.md)</div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/prompts/prompts-ia.md" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/prompts/prompts-ia.md</a></div>
+</div>
+
+<div class="card">
+    <div class="card-title">🎨 5. Arte Conceitual da Capa da HQ (capa_concept_art.jpg)</div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/hq/capa_concept_art.jpg" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/hq/capa_concept_art.jpg</a></div>
+</div>
+
+<div class="card">
+    <div class="card-title">📋 6. Documentação Ágil (Product Backlog, Sprint Backlog e Kanban)</div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/planejamento/product-backlog.md" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/planejamento/product-backlog.md</a></div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/planejamento/sprint-1-backlog.md" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/planejamento/sprint-1-backlog.md</a></div>
+    <div class="link-box"><a href="https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/planejamento/kanban.md" target="_blank">https://github.com/econs1312/Eng_Software-GrupoK/blob/main/docs/planejamento/kanban.md</a></div>
+</div>
+
+<div class="footer-note">
+    Documento oficial de Sprint Review do Grupo K — Engenharia de Software IFES Serra (2026).
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+================================================================================
+SPRINT RETROSPECTIVE — SPRINT 1 — GRUPO K
+================================================================================
+Instituição: IFES - Campus Serra | V Período | Engenharia de Software
+Projeto: História em Quadrinhos com IA Generativa (Debugando o Futuro)
+Período da Sprint 1: 06/10/2026 a 12/10/2026
+Data da Reunião de Retrospectiva: 12/10/2026 (Segunda-feira) - 19:30 às 20:00
+Participantes: Eduardo Constantino (PO), Integrante 2 (SM), Integrante 3 (Dev), Integrante 4 (Dev)
+
+--------------------------------------------------------------------------------
+1. OBJETIVO DA CERIMÔNIA
+--------------------------------------------------------------------------------
+Inspecionar como foi a execução da primeira semana da sprint no que tange a
+pessoas, relacionamentos, processos e ferramentas, identificando o que funcionou
+bem, as dificuldades encontradas e estabelecendo um plano de ação concreto para
+a Sprint 2.
+
+--------------------------------------------------------------------------------
+2. DINÂMICA DA RETROSPECTIVA: ANÁLISE DOS TRÊS PILARES
+--------------------------------------------------------------------------------
+
+A. O QUE FUNCIONOU BEM (PONTOS FORTES / SUCESSOS):
+1. Divisão Eficaz das Responsabilidades: A separação clara entre PO, Scrum Master
+   e Desenvolvedores permitiu que o trabalho fluísse sem duplicidade de esforços.
+2. Uso Produtivo da IA Generativa: O uso do ChatGPT/Gemini acelerou o rascunho
+   do roteiro, possibilitando integrar termos de Engenharia de Software com muita fluidez.
+3. Transparência do Kanban: O quadro no GitHub Projects e no kanban.md permitiu
+   que toda a equipe soubesse o status de cada tarefa em tempo real.
+4. Versionamento Limpo no Git: Commits bem estruturados com mensagens descritivas
+   e sem conflitos de merge na branch principal.
+
+B. O QUE PODE SER MELHORADO (DIFICULDADES / OPORTUNIDADES):
+1. Consistência Visual dos Personagens com IA: Ferramentas gratuitas de geração
+   de imagem tendem a alterar traços faciais entre diferentes prompts, exigindo
+   múltiplas tentativas até aprovação.
+2. Estimativa de Tempo de Prompts: A tarefa de engenharia de prompts demandou
+   mais tempo de teste do que as 5 horas inicialmente estimadas.
+3. Comunicação no Meio da Semana: A adesão assíncrona foi boa, mas respostas a
+   dúvidas pontuais no Discord demoraram algumas horas em dias de pico acadêmico.
+
+C. PLANO DE AÇÃO PARA A SPRINT 2 (COMPROMISSOS DE MELHORIA CONTÍNUA):
+1. Ação 1 (Arte/IA): Adotar uma biblioteca fixa de sementes (seeds) e descritores
+   imutáveis de trajes e cabelos para travar a identidade de Maya e Leo nos quadros da Sprint 2.
+   -> Responsáveis: Integrante 2 e Integrante 4.
+2. Ação 2 (Comunicação): Fixar o limite da Daily Scrum para impreterivelmente às
+   11:00h da manhã e criar uma menção @here para desbloqueio rápido de impedimentos.
+   -> Responsável: Integrante 2 (Scrum Master).
+3. Ação 3 (Diagramação): Utilizar templates pré-formatados de páginas e balões
+   no Figma/Canva para agilizar a montagem final dos quadrinhos.
+   -> Responsáveis: Integrante 3 e Integrante 4.
+
+--------------------------------------------------------------------------------
+3. REGISTRO VISUAL DA REUNIÃO (PRINT DO GRUPO)
+--------------------------------------------------------------------------------
+A reunião síncrona de fechamento e retrospectiva foi realizada via canal de voz
+e vídeo com compartilhamento de tela dos artefatos produzidos no GitHub.
+(O print comprovando a presença dos integrantes na chamada de reunião está
+anexado na submissão correspondente do AVA/Moodle conforme solicitado).
+
+================================================================================
+FIM DA RETROSPECTIVA — GRUPO K
+================================================================================

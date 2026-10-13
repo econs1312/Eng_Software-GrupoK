@@ -88,6 +88,17 @@ Para atender aos critérios avaliativos da disciplina, a gestão do projeto é e
 
 ---
 
+## 🚀 Entregas da Sprint 1 (Cerimônias Ágeis & Artefatos)
+
+Todos os artefatos oficiais da Sprint 1 (06/10/2026 a 12/10/2026) estão compilados e versionados no repositório:
+
+- 📄 **Sprint Planning:** [`docs/sprint-1/Sprint_Planning_Sprint1.pdf`](docs/sprint-1/Sprint_Planning_Sprint1.pdf) | [Versão Markdown](docs/sprint-1/Sprint_Planning_Sprint1.md)
+- 💬 **Reuniões Diárias (Daily Scrum):** [`docs/sprint-1/Registro_Daily_Scrum_Sprint1.pdf`](docs/sprint-1/Registro_Daily_Scrum_Sprint1.pdf) | [Versão TXT](docs/sprint-1/Registro_Daily_Scrum_Sprint1.txt)
+- 🔍 **Sprint Review (Incremento & Links Git):** [`docs/sprint-1/Sprint_Review_Sprint1.pdf`](docs/sprint-1/Sprint_Review_Sprint1.pdf) | [Versão Markdown](docs/sprint-1/Sprint_Review_Sprint1.md)
+- 🔄 **Sprint Retrospective:** [`docs/sprint-1/Sprint_Retrospective_Sprint1.pdf`](docs/sprint-1/Sprint_Retrospective_Sprint1.pdf) | [Versão TXT](docs/sprint-1/Sprint_Retrospective_Sprint1.txt)
+
+---
+
 ## 🛠️ Ferramentas e Tecnologias
 
 - **Planejamento e Gestão:** GitHub Projects, GitHub Issues, Markdown;
