@@ -6,7 +6,8 @@
 **Título da HQ:** *Debugando o Futuro: Crônicas do Código Senciente*  
 **Período da Sprint 1:** Terça-feira, 06/10/2026 a Segunda-feira, 12/10/2026  
 **Data da Reunião de Review:** Segunda-feira, 12/10/2026  
-**Participantes:** Eduardo Constantino (PO), Integrante 2 (SM), Integrante 3 (Dev), Integrante 4 (Dev)
+
+> **Nota Metodológica:** Cerimônia conduzida sob o modelo de **simulação de papéis ágeis (Role-Playing no Scrum)**, reunindo as perspectivas do Product Owner, Scrum Master e Desenvolvedores para homologação do incremento.
 
 ---
 
@@ -25,19 +26,15 @@ Apresentar o incremento do produto desenvolvido ao longo da Sprint 1, demonstrar
 
 ### A. Repositório e Infraestrutura Colaborativa (TSK-101 e TSK-102)
 - Repositório público criado com boas práticas de governança e arquivo `.gitignore` adequado;
-- `README.md` completo, incluindo:
-  - Dados de identificação do Grupo K;
-  - Sinopse completa da obra em dois parágrafos, situando os protagonistas e o conflito central;
-  - Mapeamento detalhado da arquitetura de pastas do projeto;
-  - Links de navegação para todos os documentos ágeis.
+- `README.md` completo, incluindo papéis no Scrum, sinopse em dois parágrafos, mapa de pastas e links ágeis.
 
 ### B. Gestão Ágil no Scrum e Kanban (TSK-103)
 - Product Backlog com 13 itens mapeados e priorizados segundo a técnica MoSCoW;
-- Sprint 1 Backlog detalhando 8 tarefas técnicas com estimativas e responsáveis;
-- Quadro Kanban estruturado em 5 colunas (*Product Backlog*, *To Do*, *In Progress*, *Review/QA*, *Done*) com limites de WIP.
+- Sprint 1 Backlog detalhando 8 tarefas técnicas com estimativas e papéis responsáveis;
+- Quadro Kanban estruturado em 5 colunas com políticas de limites de WIP e todos os cards da Sprint 1 movidos para **Done**.
 
 ### C. Universo Narrativo e Fichas de Personagens (TSK-104)
-- Ambientação detalhada da megalópole futurista de Neo-Vitória em 2088 e do supercomputador *Nexus Core*;
+- Ambientação detalhada da metrópole futurista Neo-Vitória (2088) e do supercomputador *Nexus Core*;
 - Fichas completas dos 3 personagens centrais:
   - **Maya Chen:** Engenheira de Software Sênior defensora de código limpo e arquitetura sustentável;
   - **Leo Santos:** Engenheiro de DevOps e Infraestrutura voltado para resiliência operacional;
@@ -45,7 +42,7 @@ Apresentar o incremento do produto desenvolvido ao longo da Sprint 1, demonstrar
 
 ### D. Roteiro Quadro a Quadro — Capítulo 1 (TSK-105)
 - Roteiro estruturado contendo 6 quadros sequenciais completos (enquadramentos de câmera, descrição visual rica, recordatórios e diálogos expressivos);
-- Integração didática com conceitos reais de Engenharia de Software: debito técnico, exceções não tratadas, deadlock, bypass de testes e refatoração arquitetural.
+- Integração pedagógica com conceitos de Engenharia de Software: débito técnico, exceções não tratadas, bypass de testes e refatoração arquitetural.
 
 ### E. Engenharia de Prompts para IA Generativa (TSK-106)
 - Formulação de um *Prompt Base* de atuação (role-playing) para geração e refinamento do roteiro;
@@ -64,7 +61,7 @@ Todos os conteúdos desenvolvidos e demonstrados nesta Sprint estão disponívei
 - 🔗 **Repositório Principal no GitHub:**  
   https://github.com/econs1312/Eng_Software-GrupoK
 
-- 🔗 **README Principal com Apresentação e Sinopse:**  
+- 🔗 **README Principal com Apresentação, Papéis e Sinopse:**  
   https://github.com/econs1312/Eng_Software-GrupoK/blob/main/README.md
 
 - 🔗 **Roteiro Completo da HQ (Fichas e Quadros 1 a 6):**  
@@ -91,4 +88,4 @@ Todos os conteúdos desenvolvidos e demonstrados nesta Sprint estão disponívei
 ---
 
 ## 5. Parecer do Product Owner e Próximos Passos
-O Product Owner (Eduardo Constantino) aprovou integralmente o incremento da Sprint 1 sem ressalvas técnicas. O escopo para a Sprint 2 focará na geração dos quadros individuais das páginas, montagem do grid visual e inserção dos balões de diálogo.
+O Product Owner aprovou integralmente o incremento da Sprint 1 sem ressalvas técnicas. O escopo planejado para a Sprint 2 focará na geração dos quadros individuais das páginas, montagem do grid visual e inserção dos balões de diálogo.

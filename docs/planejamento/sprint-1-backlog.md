@@ -27,18 +27,18 @@ Os seguintes itens prioritários foram puxados do [Product Backlog](product-back
 
 ## 📋 Decomposição em Tarefas Técnicas (Sprint Tasks)
 
-| Task ID | Item Origem | Descrição Detalhada da Tarefa | Responsável | Estimativa | Status |
+| Task ID | Item Origem | Descrição Detalhada da Tarefa | Responsável (Papel) | Estimativa | Status |
 | :---: | :---: | :--- | :---: | :---: | :---: |
-| **TSK-101** | PB-01 | Criar repositório público `Eng_Software-GrupoK`, configurar `.gitignore` e organizar estrutura de pastas (`docs/`, `prompts/`, `hq/`). | Eduardo Constantino | 2h | **Concluído** |
-| **TSK-102** | PB-02 | Redigir o `README.md` completo contendo dados dos integrantes, escopo do projeto, sinopse em 2 parágrafos e links de gestão. | Integrante 2 | 3h | **Concluído** |
-| **TSK-103** | PB-05 | Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo de vida ágil e cadastrar as tarefas da Sprint 1. | Integrante 3 | 2h | **Concluído** |
-| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | Integrante 4 | 4h | **Em Andamento** |
-| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para as páginas iniciais da HQ. | Eduardo Constantino | 6h | **Em Andamento** |
-| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | Integrante 2 | 5h | **Em Andamento** |
-| **TSK-107** | PB-06 | Gerar as primeiras imagens de teste dos personagens (estilo concept art) e armazenar os resultados validados no repositório. | Integrante 4 | 4h | **A Fazer** |
-| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando os pontos fortes e melhorias para a Sprint 2. | Toda a Equipe | 2h | **A Fazer** |
+| **TSK-101** | PB-01 | Criar repositório público `Eng_Software-GrupoK`, configurar `.gitignore` e organizar estrutura de pastas (`docs/`, `prompts/`, `hq/`). | Eduardo Constantino *(PO)* | 2h | **Concluído** |
+| **TSK-102** | PB-02 | Redigir o `README.md` completo contendo papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão. | *Scrum Master (Simulado)* | 3h | **Concluído** |
+| **TSK-103** | PB-05 | Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo de vida ágil e cadastrar as tarefas da Sprint 1. | *Dev Diagramação & QA (Simulado)* | 2h | **Concluído** |
+| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | *Dev Arte & Prompts (Simulado)* | 4h | **Concluído** |
+| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para as páginas da HQ. | Eduardo Constantino *(PO)* | 6h | **Concluído** |
+| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | *Scrum Master (Simulado)* | 5h | **Concluído** |
+| **TSK-107** | PB-06 | Gerar as primeiras imagens de teste dos personagens (estilo concept art) e armazenar a capa no repositório (`capa_concept_art.jpg`). | *Dev Arte & Prompts (Simulado)* | 4h | **Concluído** |
+| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando os pontos fortes e melhorias para a Sprint 2. | *Toda a Equipe (Todos os Papéis)* | 2h | **Concluído** |
 
-**Carga Horária Total Estimada:** 28 horas úteis (divididas entre os integrantes durante a semana).
+**Carga Horária Total Estimada:** 28 horas úteis (distribuídas entre as responsabilidades de cada papel ao longo da semana).
 
 ---
 

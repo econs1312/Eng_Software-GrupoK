@@ -20,14 +20,16 @@
 
 ---
 
-## 👥 Integrantes do Grupo K
+## 👥 Estrutura da Equipe e Papéis (Scrum)
 
-| Nome | Função Principal | GitHub / Contato |
+> **Nota Metodológica:** Para atender à proposta acadêmica da disciplina, o projeto adota o modelo de **simulação de papéis ágeis (Role-Playing no Scrum)**, onde o integrante executa o fluxo iterativo assumindo formalmente as responsabilidades e perspectivas de cada papel do framework:
+
+| Papel no Scrum | Responsabilidade Principal | Atribuição / Responsável |
 | :--- | :--- | :--- |
-| **Eduardo Constantino de Oliveira** | Product Owner / Roteiro & Prompts | [@econs1312](https://github.com/econs1312) |
-| *[Nome do Integrante 2]* | Scrum Master / Montagem & Arte | [@github-usuario](#) |
-| *[Nome do Integrante 3]* | Desenvolvedor / Revisão & Documentação | [@github-usuario](#) |
-| *[Nome do Integrante 4]* | Desenvolvedor / Diagramação & Letreiramento | [@github-usuario](#) |
+| **Product Owner (PO)** | Concepção da HQ, Roteiro e Engenharia de Prompts | **Eduardo Constantino de Oliveira** ([@econs1312](https://github.com/econs1312)) |
+| **Scrum Master (SM)** | Facilitação ágil, gestão do Kanban e cerimônias | *Papel Scrum Master (Simulado)* |
+| **Desenvolvedor / Ilustrador IA** | Geração e curadoria visual de imagens com IA | *Papel Desenvolvedor de Arte (Simulado)* |
+| **Desenvolvedor / Diagramador** | Diagramação, balões de fala e documentação técnica | *Papel Desenvolvedor de Diagramação & QA (Simulado)* |
 
 ---
 

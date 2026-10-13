@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Google Meet - Reunião de Sprint Retrospective (Grupo K)</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Google Sans', Roboto, 'Segoe UI', Arial, sans-serif;
+        background-color: #202124;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+    /* Main call container */
+    .meet-main {
+        flex: 1;
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+    }
+    /* Screen share area (large) */
+    .screen-share-area {
+        flex: 3;
+        background-color: #000000;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #3c4043;
+    }
+    .share-header {
+        background-color: #1a1a1a;
+        padding: 10px 16px;
+        font-size: 13px;
+        color: #9aa0a6;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #333;
+    }
+    .share-header strong {
+        color: #8ab4f8;
+    }
+    .share-content {
+        flex: 1;
+        background-color: #0d1117;
+        color: #c9d1d9;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        padding: 18px;
+        overflow: auto;
+    }
+    .kanban-mock {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        height: 100%;
+    }
+    .col-mock {
+        background-color: #161b22;
+        border-radius: 6px;
+        border: 1px solid #30363d;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .col-title {
+        font-size: 12px;
+        font-weight: 700;
+        color: #8b949e;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+    .item-mock {
+        background-color: #21262d;
+        border-radius: 6px;
+        padding: 8px 10px;
+        border: 1px solid #30363d;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    .item-done {
+        border-left: 3px solid #2ea043;
+    }
+    .tag-done {
+        display: inline-block;
+        background-color: #238636;
+        color: white;
+        font-size: 9px;
+        padding: 1px 5px;
+        border-radius: 10px;
+        font-weight: 700;
+        margin-top: 4px;
+    }
+
+    /* Participants column */
+    .participants-column {
+        flex: 1;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 12px;
+    }
+    .participant-card {
+        background-color: #3c4043;
+        border-radius: 12px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border: 1px solid #5f6368;
+    }
+    .participant-card.active-speaker {
+        border: 2px solid #8ab4f8;
+    }
+    .avatar-circle {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .user-tag-bar {
+        position: absolute;
+        bottom: 8px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 500;
+        color: #e8eaed;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .mic-icon {
+        width: 14px;
+        height: 14px;
+        fill: #8ab4f8;
+    }
+
+    /* Bottom Control Bar */
+    .meet-bottom-bar {
+        height: 72px;
+        background-color: #202124;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        border-top: 1px solid #3c4043;
+    }
+    .meeting-info {
+        font-size: 14px;
+        font-weight: 500;
+        color: #e8eaed;
+    }
+    .meeting-info span {
+        color: #9aa0a6;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .controls-center {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    .btn-circle {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #3c4043;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+    }
+    .btn-circle.active {
+        background-color: #8ab4f8;
+        color: #202124;
+    }
+    .btn-circle.end-call {
+        background-color: #ea4335;
+        width: 56px;
+        border-radius: 28px;
+    }
+    .controls-right {
+        display: flex;
+        gap: 14px;
+        color: #9aa0a6;
+        font-size: 13px;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="meet-main">
+    <!-- Screen share showing Git / Kanban -->
+    <div class="screen-share-area">
+        <div class="share-header">
+            <span>📺 <strong>Eduardo Constantino (PO)</strong> está compartilhando a tela: <em>Quadro Kanban & Repositório Eng_Software-GrupoK</em></span>
+        </div>
+        <div class="share-content">
+            <div style="font-weight:700; font-size:15px; margin-bottom:12px; color:#58a6ff; display:flex; justify-content:space-between; align-items:center;">
+                <span>📋 GitHub Projects — Grupo K (Sprint 1: 06/10 a 12/10)</span>
+                <span style="font-size:11px; background:#238636; color:white; padding:3px 8px; border-radius:4px;">Status da Meta: 100% Concluída</span>
+            </div>
+            <div class="kanban-mock">
+                <div class="col-mock">
+                    <div class="col-title"><span>⏳ TO DO</span> <span>0</span></div>
+                    <div style="font-size:11px; color:#8b949e; text-align:center; padding-top:20px;">Nenhuma tarefa pendente</div>
+                </div>
+                <div class="col-mock">
+                    <div class="col-title"><span>⚙️ IN PROGRESS</span> <span>0</span></div>
+                    <div style="font-size:11px; color:#8b949e; text-align:center; padding-top:20px;">Todas finalizadas</div>
+                </div>
+                <div class="col-mock">
+                    <div class="col-title"><span>🔍 REVIEW / QA</span> <span>0</span></div>
+                    <div style="font-size:11px; color:#8b949e; text-align:center; padding-top:20px;">Incremento aprovado</div>
+                </div>
+                <div class="col-mock" style="background:#16241a; border-color:#238636;">
+                    <div class="col-title" style="color:#3fb950;"><span>✅ DONE (SPRINT 1)</span> <span>8</span></div>
+                    <div class="item-mock item-done"><strong>TSK-101:</strong> Repositório & pastas <span class="tag-done">PO</span></div>
+                    <div class="item-mock item-done"><strong>TSK-102:</strong> README.md & sinopse <span class="tag-done">SM</span></div>
+                    <div class="item-mock item-done"><strong>TSK-103:</strong> Board Kanban & fluxos <span class="tag-done">QA</span></div>
+                    <div class="item-mock item-done"><strong>TSK-104:</strong> Fichas de Maya, Leo e Echo <span class="tag-done">ARTE</span></div>
+                    <div class="item-mock item-done"><strong>TSK-105:</strong> Roteiro completo Cap. 1 <span class="tag-done">PO</span></div>
+                    <div class="item-mock item-done"><strong>TSK-106:</strong> Engenharia de Prompts <span class="tag-done">SM</span></div>
+                    <div class="item-mock item-done"><strong>TSK-107:</strong> Capa da HQ gerada por IA <span class="tag-done">ARTE</span></div>
+                    <div class="item-mock item-done"><strong>TSK-108:</strong> Review & Retrospective <span class="tag-done">TODOS</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Participants Column -->
+    <div class="participants-column">
+        <div class="participant-card active-speaker">
+            <div class="avatar-circle" style="background-color: #1a73e8;">EC</div>
+            <div class="user-tag-bar">
+                <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
+                Eduardo Constantino (PO)
+            </div>
+        </div>
+
+        <div class="participant-card">
+            <div class="avatar-circle" style="background-color: #e91e63;">SM</div>
+            <div class="user-tag-bar">
+                <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
+                Scrum Master (Simulado)
+            </div>
+        </div>
+
+        <div class="participant-card">
+            <div class="avatar-circle" style="background-color: #f9ab00; color:#202124;">IA</div>
+            <div class="user-tag-bar">
+                <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
+                Dev Arte & Prompts (Simulado)
+            </div>
+        </div>
+
+        <div class="participant-card">
+            <div class="avatar-circle" style="background-color: #34a853;">QA</div>
+            <div class="user-tag-bar">
+                <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
+                Dev Diagramação & QA (Simulado)
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Controls Bar -->
+<div class="meet-bottom-bar">
+    <div class="meeting-info">
+        Sprint Retrospective — Sprint 1 (Grupo K)
+        <span>19:42 | IFES Serra</span>
+    </div>
+
+    <div class="controls-center">
+        <div class="btn-circle active">🎤</div>
+        <div class="btn-circle active">📹</div>
+        <div class="btn-circle">✋</div>
+        <div class="btn-circle active" style="background:#8ab4f8; color:#111;">🖥️</div>
+        <div class="btn-circle end-call">📞</div>
+    </div>
+
+    <div class="controls-right">
+        <span>👥 4 pessoas</span>
+        <span>💬 Chat</span>
+        <span>ℹ️ Detalhes</span>
+    </div>
+</div>
+
+</body>
+</html>

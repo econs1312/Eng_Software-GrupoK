@@ -29,12 +29,14 @@ Abaixo está a representação tabular do estado do quadro com as atividades da 
 
 | 📋 Product Backlog (Futuras Sprints) | ⏳ To Do (Sprint 1) | ⚙️ In Progress | 🔍 Review / QA | ✅ Done |
 | :--- | :--- | :--- | :--- | :--- |
-| **PB-08:** Design do Layout e Grades de Quadrinhos *(5 pts)* | **TSK-107:** Gerar primeiras imagens de teste dos personagens com IA *(4h - Integrante 4)* | **TSK-104:** Elaborar fichas dos personagens Maya, Leo e Echo *(4h - Integrante 4)* | **TSK-102:** Revisão ortográfica e aprovação do `README.md` *(3h - Integrante 2)* | **TSK-101:** Criação do repositório GitHub e estrutura de pastas *(2h - Eduardo)* |
-| **PB-09:** Inserção de Balões e Onomatopeias *(8 pts)* | **TSK-108:** Realizar cerimônia de Sprint Review e Retrospectiva *(2h - Equipe)* | **TSK-105:** Escrita do roteiro quadro a quadro da HQ *(6h - Eduardo)* | | **TSK-103:** Configuração do board Kanban e documentação das colunas *(2h - Integrante 3)* |
-| **PB-10:** Criação da Capa e Contracapa *(5 pts)* | | **TSK-106:** Formular biblioteca de prompts de IA *(5h - Integrante 2)* | | |
-| **PB-11:** Revisão Técnica Final *(3 pts)* | | | | |
-| **PB-12:** Exportação do PDF da HQ *(3 pts)* | | | | |
-| **PB-13:** Relatório Metodológico *(5 pts)* | | | | |
+| **PB-08:** Design do Layout e Grades de Quadrinhos *(5 pts)* | | | | **TSK-101:** Criação do repositório GitHub e estrutura de pastas *(Eduardo - PO)* |
+| **PB-09:** Inserção de Balões e Onomatopeias *(8 pts)* | | | | **TSK-102:** Redação do README e sinopse da obra *(Scrum Master)* |
+| **PB-10:** Criação da Capa e Contracapa *(5 pts)* | | | | **TSK-103:** Configuração do board Kanban e fluxo *(Dev Diagramação/QA)* |
+| **PB-11:** Revisão Técnica Final *(3 pts)* | | | | **TSK-104:** Fichas dos personagens Maya, Leo e Echo *(Dev Arte/Prompts)* |
+| **PB-12:** Exportação do PDF da HQ *(3 pts)* | | | | **TSK-105:** Escrita do roteiro quadro a quadro *(Eduardo - PO)* |
+| **PB-13:** Relatório Metodológico *(5 pts)* | | | | **TSK-106:** Biblioteca de prompts com Style Anchor *(Scrum Master)* |
+| | | | | **TSK-107:** Geração da arte da capa `capa_concept_art.jpg` *(Dev Arte)* |
+| | | | | **TSK-108:** Reunião de Sprint Review e Retrospectiva *(Todos os Papéis)* |
 
 ---
 

@@ -4,7 +4,11 @@ REUNIÕES DIÁRIAS (DAILY SCRUMS) — SPRINT 1 — GRUPO K
 Instituição: IFES - Campus Serra | V Período | Engenharia de Software
 Projeto: História em Quadrinhos com IA Generativa (Debugando o Futuro)
 Período da Sprint 1: 06/10/2026 a 12/10/2026
-Equipe: Eduardo Constantino (PO), Integrante 2 (SM), Integrante 3 (Dev), Integrante 4 (Dev)
+Estrutura da Equipe: Simulação de Papéis Ágeis no Framework Scrum:
+- Product Owner (PO): Eduardo Constantino de Oliveira
+- Scrum Master (SM): Papel Scrum Master (Simulado)
+- Desenvolvedor / Ilustrador IA: Papel Dev Arte & Prompts (Simulado)
+- Desenvolvedor / Diagramador & QA: Papel Dev Diagramação & Documentação (Simulado)
 
 --------------------------------------------------------------------------------
 1. FORMATO ESCOLHIDO PARA AS REUNIÕES DIÁRIAS
@@ -13,129 +17,128 @@ Formato: Daily Scrum Assíncrona via Canal de Texto no Discord (#daily-scrum-gru
 Timebox/Horário Limite: Diariamente até as 11:00h da manhã.
 
 Justificativa Técnica:
-A adoção do formato assíncrono é uma prática consolidada na Engenharia de Software
-para times com rotinas acadêmicas e profissionais distribuídas. Cada integrante
-responde impreterivelmente às 3 perguntas clássicas do Scrum no canal designado,
-garantindo transparência, registro histórico contínuo para auditoria e rapidez na
-remoção de impedimentos pelo Scrum Master sem sobrecarga de reuniões síncronas.
+A simulação adota o formato assíncrono por ser o padrão de excelência na indústria
+global de Engenharia de Software para times distribuídos. Cada papel responde
+diariamente às 3 perguntas canônicas do Scrum, assegurando visibilidade transparente,
+histórico para auditoria e rapidez na mitigação de impedimentos.
 
 --------------------------------------------------------------------------------
-2. REGISTRO DIÁRIO DE ATIVIDADES POR INTEGRANTE
+2. REGISTRO DIÁRIO DE ATIVIDADES POR PAPEL
 --------------------------------------------------------------------------------
 
 ==================================================
 DIA 1: Terça-feira, 06/10/2026 (Abertura da Sprint)
 ==================================================
-• Eduardo Constantino:
-  - O que fiz ontem: Alinhei a proposta do projeto e participei do Sprint Planning.
+• Papel: Product Owner (Eduardo Constantino):
+  - O que fiz ontem: Conduzi a sessão de Sprint Planning e priorizei os itens do Backlog.
   - O que farei hoje: Criar o repositório no GitHub, configurar .gitignore e a árvore de pastas (TSK-101).
   - Impedimentos: Nenhum.
 
-• Integrante 2:
-  - O que fiz ontem: Participei da divisão das tarefas da Sprint 1.
-  - O que farei hoje: Iniciar a elaboração do README.md do repositório (TSK-102).
+• Papel: Scrum Master (Simulado):
+  - O que fiz ontem: Facilitei o dimensionamento das horas e distribuição das tarefas.
+  - O que farei hoje: Redigir o README.md detalhando o propósito pedagógico e visão da obra (TSK-102).
   - Impedimentos: Nenhum.
 
-• Integrante 3:
-  - O que fiz ontem: Revisei o roteiro de atividades do professor.
-  - O que farei hoje: Estruturar o quadro Kanban e definir as colunas de fluxo ágil (TSK-103).
+• Papel: Dev Diagramação & QA (Simulado):
+  - O que fiz ontem: Analisei o roteiro de diretrizes da disciplina de Engenharia de Software.
+  - O que farei hoje: Configurar o quadro Kanban com as colunas do ciclo ágil e limites de WIP (TSK-103).
   - Impedimentos: Nenhum.
 
-• Integrante 4:
-  - O que fiz ontem: Pesquisei referências sobre cyberpunk e engenharia de software.
-  - O que farei hoje: Iniciar o levantamento das características dos personagens Maya e Leo (TSK-104).
+• Papel: Dev Arte & Prompts (Simulado):
+  - O que fiz ontem: Pesquisei referências de quadrinhos de ficção científica e estética cyberpunk.
+  - O que farei hoje: Elaborar os perfis dos personagens principais Maya Chen e Leo Santos (TSK-104).
   - Impedimentos: Nenhum.
 
 ==================================================
 DIA 2: Quarta-feira, 07/10/2026
 ==================================================
-• Eduardo Constantino:
-  - O que fiz ontem: Concluí o repositório público no GitHub com a estrutura de pastas organizada.
-  - O que farei hoje: Iniciar a escrita do roteiro quadro a quadro com foco nos quadros 1 a 3 (TSK-105).
+• Papel: Product Owner (Eduardo Constantino):
+  - O que fiz ontem: Repositório público criado com pastas docs/, prompts/ e hq/ devidamente organizadas.
+  - O que farei hoje: Iniciar a redação do roteiro quadro a quadro com foco nos quadros 1 a 3 (TSK-105).
   - Impedimentos: Nenhum.
 
-• Integrante 2:
-  - O que fiz ontem: Redigi a primeira versão do README com os dados dos integrantes e visão geral.
-  - O que farei hoje: Pesquisar estilos de prompts no ChatGPT/Gemini para diálogo dos personagens (TSK-106).
+• Papel: Scrum Master (Simulado):
+  - O que fiz ontem: Concluí a primeira versão do README com os papéis e links de gestão.
+  - O que farei hoje: Pesquisar modelos de prompts textuais no ChatGPT/Gemini para os diálogos (TSK-106).
   - Impedimentos: Alinhar paleta de cores para os prompts visuais.
 
-• Integrante 3:
-  - O que fiz ontem: Configurei o Kanban no GitHub Projects e no documento kanban.md.
-  - O que farei hoje: Cadastrar as 8 tarefas detalhadas da Sprint 1 no board (TSK-103).
+• Papel: Dev Diagramação & QA (Simulado):
+  - O que fiz ontem: Configurei as colunas do Kanban no GitHub Projects e no kanban.md.
+  - O que farei hoje: Cadastrar as 8 tarefas da Sprint 1 com responsáveis e critérios de aceite (TSK-103).
   - Impedimentos: Nenhum.
 
-• Integrante 4:
-  - O que fiz ontem: Esbocei a descrição técnica e perfil psicológico de Maya Chen e Leo Santos.
-  - O que farei hoje: Criar o conceito e personalidade da entidade senciente Echo (TSK-104).
+• Papel: Dev Arte & Prompts (Simulado):
+  - O que fiz ontem: Descrevi a caracterização de Maya (Dev Sênior) e Leo (DevOps).
+  - O que farei hoje: Conceber a entidade senciente Echo e seu comportamento visual (TSK-104).
   - Impedimentos: Nenhum.
 
 ==================================================
 DIA 3: Quinta-feira, 08/10/2026
 ==================================================
-• Eduardo Constantino:
-  - O que fiz ontem: Escrevi os quadros 1 a 3 (panorama da cidade, sala de servidores em crise e código legado).
-  - O que farei hoje: Desenvolver os quadros 4 e 5 (aparição de Echo e diálogo sobre débito técnico) (TSK-105).
+• Papel: Product Owner (Eduardo Constantino):
+  - O que fiz ontem: Roteirizei os quadros 1 a 3 (panorama da cidade, sala de servidores em crise e código legado).
+  - O que farei hoje: Escrever os quadros 4 e 5 (encontro de Echo e debates sobre refatoração) (TSK-105).
   - Impedimentos: Nenhum.
 
-• Integrante 2:
-  - O que fiz ontem: Estruturei o template base de role-playing para geração textual de roteiro.
-  - O que farei hoje: Formular os prompts de imagem com o Style Anchor (cyberpunk graphic novel) (TSK-106).
+• Papel: Scrum Master (Simulado):
+  - O que fiz ontem: Desenvolvi o prompt base de role-playing para geração textual de roteiro.
+  - O que farei hoje: Formular o Style Anchor imutável para prompts de imagens (TSK-106).
   - Impedimentos: Nenhum.
 
-• Integrante 3:
-  - O que fiz ontem: Cadastrei todas as tarefas da Sprint 1 e atualizei os limites de WIP no Kanban.
-  - O que farei hoje: Realizar a primeira revisão ortográfica e formatação do README e backlog (TSK-102).
+• Papel: Dev Diagramação & QA (Simulado):
+  - O que fiz ontem: Cadastrei todos os cards no board e verifiquei o fluxo de To Do e In Progress.
+  - O que farei hoje: Realizar a revisão ortográfica e formatação dos documentos ágeis (TSK-102).
   - Impedimentos: Nenhum.
 
-• Integrante 4:
-  - O que fiz ontem: Finalizei as fichas completas de Maya, Leo e Echo no arquivo docs/roteiro/roteiro-hq.md.
-  - O que farei hoje: Apoiar o Integrante 2 nos primeiros testes de geração visual com os prompts (TSK-107).
-  - Impedimentos: Oscilação na consistência dos rostos nas ferramentas de IA gratuitas.
+• Papel: Dev Arte & Prompts (Simulado):
+  - O que fiz ontem: Finalizei as fichas de Maya, Leo e Echo no roteiro-hq.md.
+  - O que farei hoje: Iniciar testes práticos de geração de imagem com o Style Anchor (TSK-107).
+  - Impedimentos: Variação nos traços faciais entre diferentes geradores gratuitos.
 
 ==================================================
 DIA 4: Sexta-feira, 09/10/2026
 ==================================================
-• Eduardo Constantino:
-  - O que fiz ontem: Completei os 6 quadros do Capítulo 1 da HQ, fechando o clímax da refatoração ágil.
-  - O que farei hoje: Revisar o roteiro completo com os integrantes e verificar links do repositório (TSK-105).
+• Papel: Product Owner (Eduardo Constantino):
+  - O que fiz ontem: Finalizei os 6 quadros do Capítulo 1 da HQ, integrando conceitos de testes e refatoração.
+  - O que farei hoje: Revisar a coerência narrativa e verificar a rastreabilidade com o Product Backlog (TSK-105).
   - Impedimentos: Nenhum.
 
-• Integrante 2:
-  - O que fiz ontem: Finalizei os 5 prompts estruturados para geração de cenas e personagens no prompts-ia.md.
-  - O que farei hoje: Ajustar palavras-chave de iluminação e iluminação neon para os testes finais (TSK-106).
+• Papel: Scrum Master (Simulado):
+  - O que fiz ontem: Concluí a biblioteca de prompts parametrizados em prompts-ia.md.
+  - O que farei hoje: Ajustar tags de iluminação e iluminação neon para testes finais (TSK-106).
   - Impedimentos: Nenhum.
 
-• Integrante 3:
-  - O que fiz ontem: Validei os artefatos de documentação e aprovei o README.md na branch principal.
-  - O que farei hoje: Preparar a pauta das cerimônias de Sprint Review e Sprint Retrospective (TSK-108).
+• Papel: Dev Diagramação & QA (Simulado):
+  - O que fiz ontem: Validei os artefatos de documentação e aprovei a integração com a branch principal.
+  - O que farei hoje: Organizar a pauta para a cerimônia de Sprint Review e Retrospectiva (TSK-108).
   - Impedimentos: Nenhum.
 
-• Integrante 4:
-  - O que fiz ontem: Testei a geração de imagens dos personagens e cenários com as seeds sugeridas.
+• Papel: Dev Arte & Prompts (Simulado):
+  - O que fiz ontem: Realizei múltiplas gerações de imagem para concept art e personagens.
   - O que farei hoje: Selecionar a melhor arte e salvar a capa conceitual em hq/capa_concept_art.jpg (TSK-107).
   - Impedimentos: Nenhum.
 
 ==================================================
 DIA 5: Segunda-feira, 12/10/2026 (Encerramento da Sprint)
 ==================================================
-• Eduardo Constantino:
-  - O que fiz ontem: Validei a integridade de todos os documentos no GitHub e testei a visualização da capa.
-  - O que farei hoje: Conduzir a Sprint Review, apresentar o incremento e compilar os links do Git (TSK-108).
+• Papel: Product Owner (Eduardo Constantino):
+  - O que fiz ontem: Validei os commits e a conformidade dos artefatos da Sprint 1 no Git.
+  - O que farei hoje: Conduzir a Sprint Review, apresentar o incremento e compilar links do Git (TSK-108).
   - Impedimentos: Nenhum.
 
-• Integrante 2:
-  - O que fiz ontem: Realizei a checagem final dos prompts e da sinopse da HQ.
-  - O que farei hoje: Participar da Sprint Retrospective e consolidar os pontos de melhoria da equipe (TSK-108).
+• Papel: Scrum Master (Simulado):
+  - O que fiz ontem: Chequei o cumprimento da Meta da Sprint e o DoD de cada tarefa.
+  - O que farei hoje: Facilitar a Sprint Retrospective, documentando pontos fortes e melhorias (TSK-108).
   - Impedimentos: Nenhum.
 
-• Integrante 3:
-  - O que fiz ontem: Atualizei o status de todos os cards no quadro Kanban para Done.
-  - O que farei hoje: Redigir a ata final da Sprint Retrospective com as ações da Sprint 2 (TSK-108).
+• Papel: Dev Diagramação & QA (Simulado):
+  - O que fiz ontem: Atualizei o status de todos os cards da Sprint 1 para a coluna Done no Kanban.
+  - O que farei hoje: Consolidar a ata da Retrospectiva com as ações planejadas para a Sprint 2 (TSK-108).
   - Impedimentos: Nenhum.
 
-• Integrante 4:
-  - O que fiz ontem: Confirmei a submissão da arte conceitual da capa na pasta hq/.
-  - O que farei hoje: Participar da Sprint Review e avaliar as lições aprendidas com geração de IA (TSK-108).
+• Papel: Dev Arte & Prompts (Simulado):
+  - O que fiz ontem: Integrei a imagem da capa conceitual ao README principal da HQ.
+  - O que farei hoje: Participar da Sprint Review e avaliar lições aprendidas na consistência de IA (TSK-108).
   - Impedimentos: Nenhum.
 
 ================================================================================

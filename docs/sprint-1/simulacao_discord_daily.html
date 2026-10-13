@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Discord - #daily-scrum-grupo-k</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'gg sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+        background-color: #313338;
+        color: #dbdee1;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+    }
+    /* Server bar */
+    .guilds-nav {
+        width: 72px;
+        background-color: #1e1f22;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 12px;
+        gap: 8px;
+    }
+    .guild-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #5865f2;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .guild-icon.active {
+        border-radius: 16px;
+        background-color: #23a55a;
+    }
+    /* Channel sidebar */
+    .sidebar {
+        width: 240px;
+        background-color: #2b2d31;
+        display: flex;
+        flex-direction: column;
+    }
+    .server-header {
+        height: 48px;
+        border-bottom: 1px solid #1f2023;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        font-weight: 700;
+        font-size: 15px;
+        color: #f2f3f5;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .channel-category {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #949ba4;
+        padding: 16px 16px 6px 16px;
+        letter-spacing: 0.5px;
+    }
+    .channel-item {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        margin: 2px 8px;
+        border-radius: 4px;
+        color: #949ba4;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .channel-item.active {
+        background-color: #404249;
+        color: #f2f3f5;
+    }
+    .channel-hash {
+        font-size: 18px;
+        margin-right: 6px;
+        color: #80848e;
+    }
+    /* Chat area */
+    .chat-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #313338;
+    }
+    .chat-header {
+        height: 48px;
+        border-bottom: 1px solid #1f2023;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        font-weight: 700;
+        font-size: 16px;
+        color: #f2f3f5;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .chat-header span {
+        font-size: 12px;
+        font-weight: normal;
+        color: #949ba4;
+        margin-left: 12px;
+        border-left: 1px solid #4e5058;
+        padding-left: 12px;
+    }
+    .messages-container {
+        flex: 1;
+        overflow-y: auto;
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .date-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 12px 0;
+        color: #949ba4;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .date-divider::before, .date-divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #3f4147;
+    }
+    .date-divider span {
+        padding: 0 10px;
+    }
+    .message-group {
+        display: flex;
+        gap: 14px;
+    }
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+        flex-shrink: 0;
+    }
+    .avatar-po { background-color: #5865f2; }
+    .avatar-sm { background-color: #eb459e; }
+    .avatar-art { background-color: #fee75c; color: #1e1f22; }
+    .avatar-qa { background-color: #57f287; color: #1e1f22; }
+
+    .msg-content {
+        flex: 1;
+    }
+    .msg-header {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 4px;
+    }
+    .user-name {
+        font-weight: 600;
+        font-size: 14px;
+        color: #f2f3f5;
+    }
+    .bot-tag {
+        background-color: #5865f2;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 1px 4px;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+    .timestamp {
+        font-size: 11px;
+        color: #949ba4;
+    }
+    .msg-body {
+        font-size: 13.5px;
+        line-height: 1.45;
+        color: #dbdee1;
+    }
+    .msg-body strong {
+        color: #ffffff;
+    }
+    .msg-body ul {
+        margin: 4px 0 4px 18px;
+    }
+    .chat-input-bar {
+        padding: 0 16px 20px 16px;
+    }
+    .fake-input {
+        background-color: #383a40;
+        border-radius: 8px;
+        padding: 11px 16px;
+        color: #80848e;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Guilds nav -->
+<div class="guilds-nav">
+    <div class="guild-icon active" title="IFES - Engenharia de Software">IFES</div>
+    <div class="guild-icon" title="Grupo K">GK</div>
+</div>
+
+<!-- Channels sidebar -->
+<div class="sidebar">
+    <div class="server-header">
+        Eng_Software Grupo-K
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#b5bac1"><path d="M12 16L6 10H18L12 16Z"/></svg>
+    </div>
+    <div class="channel-category">CANAIS DE TEXTO</div>
+    <div class="channel-item">
+        <span class="channel-hash">#</span>geral
+    </div>
+    <div class="channel-item active">
+        <span class="channel-hash">#</span>daily-scrum
+    </div>
+    <div class="channel-item">
+        <span class="channel-hash">#</span>prompts-ia
+    </div>
+    <div class="channel-item">
+        <span class="channel-hash">#</span>roteiro-hq
+    </div>
+    <div class="channel-category">VOZ / REUNIÕES</div>
+    <div class="channel-item">
+        <span class="channel-hash">🔊</span>Daily & Retrospectiva
+    </div>
+</div>
+
+<!-- Main chat area -->
+<div class="chat-area">
+    <div class="chat-header">
+        <span style="font-size:20px; color:#80848e; margin-right:4px;">#</span> daily-scrum
+        <span>Canal oficial para reuniões diárias assíncronas (Sprint 1) — Limite: 11:00h</span>
+    </div>
+
+    <div class="messages-container">
+
+        <div class="date-divider"><span>6 de Outubro de 2026 (Dia 1 - Abertura da Sprint 1)</span></div>
+
+        <div class="message-group">
+            <div class="avatar avatar-po">PO</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Eduardo Constantino</span>
+                    <span class="bot-tag">Product Owner</span>
+                    <span class="timestamp">06/10/2026 10:15</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 1:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Participei da sessão de Sprint Planning e alinhei os épicos no Product Backlog.</li>
+                        <li><strong>2. Hoje:</strong> Criar repositório público no GitHub, configurar <code>.gitignore</code> e estrutura de pastas (TSK-101).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-group">
+            <div class="avatar avatar-sm">SM</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Scrum Master</span>
+                    <span class="bot-tag" style="background:#eb459e;">Facilitador</span>
+                    <span class="timestamp">06/10/2026 10:22</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 1:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Apoiei no dimensionamento das estimativas e metas da Sprint 1.</li>
+                        <li><strong>2. Hoje:</strong> Iniciar a redação do <code>README.md</code> com escopo e sinopse em 2 parágrafos (TSK-102).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-group">
+            <div class="avatar avatar-qa">QA</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Dev Diagramação & QA</span>
+                    <span class="bot-tag" style="background:#57f287; color:#111;">Desenvolvedor</span>
+                    <span class="timestamp">06/10/2026 10:35</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 1:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Revisei o roteiro de diretrizes pedagógicas da disciplina.</li>
+                        <li><strong>2. Hoje:</strong> Configurar o quadro Kanban no GitHub Projects e documentar o fluxo no <code>kanban.md</code> (TSK-103).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-group">
+            <div class="avatar avatar-art">IA</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Dev Arte & Prompts</span>
+                    <span class="bot-tag" style="background:#fee75c; color:#111;">Desenvolvedor</span>
+                    <span class="timestamp">06/10/2026 10:48</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 1:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Pesquisei referências de ficção cyberpunk e histórias em quadrinhos de tecnologia.</li>
+                        <li><strong>2. Hoje:</strong> Estruturar as fichas de personagens de Maya Chen e Leo Santos (TSK-104).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="date-divider"><span>12 de Outubro de 2026 (Dia 5 - Encerramento da Sprint 1)</span></div>
+
+        <div class="message-group">
+            <div class="avatar avatar-po">PO</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Eduardo Constantino</span>
+                    <span class="bot-tag">Product Owner</span>
+                    <span class="timestamp">12/10/2026 10:10</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 5:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Concluí a validação de integridade dos arquivos no GitHub e testei a renderização da capa.</li>
+                        <li><strong>2. Hoje:</strong> Conduzir a Sprint Review, demonstrar os entregáveis e gerar os links do Git (TSK-108).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum. Meta da Sprint cumprida com 100% de sucesso!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-group">
+            <div class="avatar avatar-sm">SM</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Scrum Master</span>
+                    <span class="bot-tag" style="background:#eb459e;">Facilitador</span>
+                    <span class="timestamp">12/10/2026 10:18</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 5:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Realizei o checklist de DoD de todas as 8 tarefas da Sprint 1.</li>
+                        <li><strong>2. Hoje:</strong> Facilitar a Sprint Retrospective às 19:30h e documentar pontos fortes e melhorias (TSK-108).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-group">
+            <div class="avatar avatar-qa">QA</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Dev Diagramação & QA</span>
+                    <span class="bot-tag" style="background:#57f287; color:#111;">Desenvolvedor</span>
+                    <span class="timestamp">12/10/2026 10:25</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 5:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Movi todos os cards da Sprint 1 para a coluna Done no Kanban.</li>
+                        <li><strong>2. Hoje:</strong> Compilar a ata da Retrospectiva com o plano de ação para a Sprint 2 (TSK-108).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-group">
+            <div class="avatar avatar-art">IA</div>
+            <div class="msg-content">
+                <div class="msg-header">
+                    <span class="user-name">Dev Arte & Prompts</span>
+                    <span class="bot-tag" style="background:#fee75c; color:#111;">Desenvolvedor</span>
+                    <span class="timestamp">12/10/2026 10:40</span>
+                </div>
+                <div class="msg-body">
+                    <strong>Daily Scrum - Dia 5:</strong>
+                    <ul>
+                        <li><strong>1. Ontem:</strong> Submeti a arte oficial da capa em <code>hq/capa_concept_art.jpg</code>.</li>
+                        <li><strong>2. Hoje:</strong> Participar da Review e avaliar aprendizados de consistência visual para a próxima sprint (TSK-108).</li>
+                        <li><strong>3. Impedimentos:</strong> Nenhum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="chat-input-bar">
+        <div class="fake-input">Conversar em #daily-scrum (Limite diário: 11:00h)</div>
+    </div>
+</div>
+
+</body>
+</html>
