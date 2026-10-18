@@ -57,14 +57,14 @@
     .meta-item strong {
         color: #334155;
     }
-    .simulated-note {
-        background: #fefce8;
-        border: 1px solid #fef08a;
-        border-left: 4px solid #ca8a04;
+    .team-box {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-left: 4px solid #16a34a;
         border-radius: 4px;
         padding: 8px 12px;
         font-size: 8.5pt;
-        color: #854d0e;
+        color: #166534;
         margin-bottom: 14px;
     }
     h2 {
@@ -138,30 +138,6 @@
         letter-spacing: 0.4px;
     }
     .badge-done { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
-    .card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 6px;
-        padding: 8px 12px;
-        margin-bottom: 8px;
-        page-break-inside: avoid;
-    }
-    .card-title {
-        font-weight: 700;
-        color: #1e3a8a;
-        margin-bottom: 4px;
-        font-size: 9.5pt;
-    }
-    .link-box {
-        background: #f1f5f9;
-        border: 1px solid #cbd5e1;
-        border-radius: 4px;
-        padding: 5px 8px;
-        font-family: Consolas, monospace;
-        font-size: 8pt;
-        word-break: break-all;
-        margin: 3px 0 6px 0;
-    }
     .footer-note {
         margin-top: 20px;
         border-top: 1px solid #e2e8f0;
@@ -180,15 +156,15 @@
     <div class="doc-subtitle">Engenharia de Software (V Período) • Grupo K</div>
 </div>
 
-<div class="simulated-note">
-    <strong>Nota Metodológica:</strong> Projeto executado sob modelo de <strong>simulação de papéis ágeis (Role-Playing no Scrum)</strong>, exercendo com rigor as atribuições de cada papel (Product Owner, Scrum Master, Desenvolvedor de Arte e Desenvolvedor de Diagramação/QA).
+<div class="team-box">
+    <strong>Estrutura da Equipe (Scrum):</strong> Trabalho colaborativo desenvolvido por <strong>Eduardo Constantino de Oliveira</strong> (Product Owner & Dev) e <strong>João Paulo Gusmão Teixeira</strong> (Scrum Master & Dev), atuando de forma integrada na execução técnica e na facilitação do ciclo ágil.
 </div>
 
 <div class="meta-grid">
     <div class="meta-item"><strong>Projeto:</strong> Criação de HQ com IA Generativa & GitHub</div>
     <div class="meta-item"><strong>Obra:</strong> Debugando o Futuro: Crônicas do Código Senciente</div>
     <div class="meta-item"><strong>Período da Sprint 1:</strong> 06/10/2026 a 12/10/2026 (1 Semana)</div>
-    <div class="meta-item"><strong>Product Owner:</strong> Eduardo Constantino de Oliveira</div>
+    <div class="meta-item"><strong>Integrantes:</strong> Eduardo Constantino (PO) & João Paulo Gusmão (SM)</div>
 </div>
 
 <h2>🎯 1. Meta da Sprint (Sprint Goal)</h2>
@@ -211,8 +187,8 @@
     <thead>
         <tr>
             <th style="width: 11%;">Task ID</th>
-            <th style="width: 47%;">Descrição Detalhada da Tarefa</th>
-            <th style="width: 25%;">Responsável (Papel)</th>
+            <th style="width: 45%;">Descrição Detalhada da Tarefa</th>
+            <th style="width: 27%;">Responsável (Papel)</th>
             <th style="width: 7%;">Horas</th>
             <th style="width: 10%;">Status</th>
         </tr>
@@ -221,70 +197,70 @@
         <tr>
             <td><strong>TSK-101</strong></td>
             <td>Criar repositório público <code>Eng_Software-GrupoK</code>, configurar <code>.gitignore</code> e organizar diretórios base (<code>docs/</code>, <code>prompts/</code>, <code>hq/</code>).</td>
-            <td>Eduardo Constantino <em>(PO)</em></td>
+            <td>Eduardo Constantino <em>(PO / Dev)</em></td>
             <td>2h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-102</strong></td>
-            <td>Redigir o <code>README.md</code> completo contendo papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão.</td>
-            <td><em>Scrum Master (Simulado)</em></td>
+            <td>Redigir o <code>README.md</code> completo contendo integrantes, papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão.</td>
+            <td>João Paulo Gusmão <em>(SM / Dev)</em></td>
             <td>3h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-103</strong></td>
-            <td>Criar e configurar o quadro Kanban com as colunas do ciclo ágil e cadastrar as tarefas da Sprint 1.</td>
-            <td><em>Dev Diagramação/QA (Simulado)</em></td>
+            <td>Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo ágil e cadastrar as tarefas da Sprint 1.</td>
+            <td>João Paulo Gusmão <em>(SM / Dev)</em></td>
             <td>2h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-104</strong></td>
-            <td>Desenvolver as fichas dos personagens (Maya, Leo, Echo) com perfis psicológicos e conceituais.</td>
-            <td><em>Dev Arte & Prompts (Simulado)</em></td>
+            <td>Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) com perfis psicológicos, conceituais e referências estéticas.</td>
+            <td>Eduardo Constantino <em>(PO / Dev)</em></td>
             <td>4h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-105</strong></td>
-            <td>Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) do Capítulo 1.</td>
-            <td>Eduardo Constantino <em>(PO)</em></td>
+            <td>Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ.</td>
+            <td>Eduardo Constantino <em>(PO / Dev)</em></td>
             <td>6h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-106</strong></td>
-            <td>Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo coerência visual.</td>
-            <td><em>Scrum Master (Simulado)</em></td>
+            <td>Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens.</td>
+            <td>João Paulo Gusmão <em>(SM / Dev)</em></td>
             <td>5h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-107</strong></td>
-            <td>Gerar arte conceitual da capa com IA e armazenar no repositório (<code>hq/capa_concept_art.jpg</code>).</td>
-            <td><em>Dev Arte & Prompts (Simulado)</em></td>
+            <td>Gerar e selecionar a arte conceitual da capa oficial da HQ com IA generativa e armazenar no repositório (<code>hq/capa_concept_art.jpg</code>).</td>
+            <td>João Paulo Gusmão <em>(SM / Dev)</em></td>
             <td>4h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
         <tr>
             <td><strong>TSK-108</strong></td>
-            <td>Realizar cerimônias de Sprint Review e Retrospectiva da Sprint 1 e documentar aprendizados.</td>
-            <td><em>Toda a Equipe (Todos os Papéis)</em></td>
+            <td>Realizar cerimônias de Sprint Review e Retrospectiva da Sprint 1, compilando links e plano de ação para a Sprint 2.</td>
+            <td>Eduardo & João Paulo <em>(Scrum Team)</em></td>
             <td>2h</td>
             <td><span class="badge badge-done">Concluído</span></td>
         </tr>
     </tbody>
 </table>
 
-<p><strong>Carga Horária Total Planejada:</strong> 28 horas úteis (distribuídas entre os papéis durante a semana).</p>
+<p><strong>Carga Horária Total Planejada:</strong> 28 horas úteis (divididas equitativamente: Eduardo Constantino com 14h e João Paulo Gusmão com 14h).</p>
 
 <h2>🏁 4. Critérios de Aceitação e Definição de Pronto (DoD)</h2>
 <p>Para que as tarefas da Sprint 1 sejam consideradas concluídas:</p>
 <ol>
     <li>Atender integralmente aos critérios técnicos e pedagógicos solicitados no roteiro da disciplina;</li>
     <li>Todos os arquivos estarem versionados e sincronizados na branch <code>main</code> do repositório GitHub público;</li>
-    <li>Roteiro e prompts validados em conjunto pela equipe;</li>
+    <li>Roteiro e prompts validados em conjunto por ambos os membros da equipe;</li>
     <li>Cards do Kanban atualizados na coluna <strong>Done</strong>.</li>
 </ol>
 

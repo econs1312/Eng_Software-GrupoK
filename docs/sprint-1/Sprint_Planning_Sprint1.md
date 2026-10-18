@@ -6,13 +6,11 @@
 **Título da HQ:** *Debugando o Futuro: Crônicas do Código Senciente*  
 **Período da Sprint 1:** Terça-feira, 06/10/2026 a Segunda-feira, 12/10/2026 (Duração: 1 Semana)  
 
-> **Nota Metodológica:** O projeto é conduzido individualmente através do modelo de **simulação de papéis ágeis (Role-Playing no Scrum)**, onde as responsabilidades de cada papel do framework são exercidas formalmente para planejamento, execução e validação das entregas.
-
-### Estrutura de Papéis da Equipe:
-- **Product Owner (PO):** Eduardo Constantino de Oliveira
-- **Scrum Master (SM):** Papel Scrum Master (Simulado)
-- **Desenvolvedor / Ilustrador IA:** Papel Desenvolvedor de Arte & Prompts (Simulado)
-- **Desenvolvedor / Diagramador & QA:** Papel Desenvolvedor de Diagramação & Documentação (Simulado)
+### 👥 Integrantes e Estrutura de Papéis da Equipe (Scrum):
+- **Eduardo Constantino de Oliveira:** **Product Owner (PO) & Desenvolvedor**
+  - *Atribuições:* Concepção da HQ, roteiro estruturado quadro a quadro, alinhamento dos conceitos de Engenharia de Software e homologação das entregas.
+- **João Paulo Gusmão Teixeira:** **Scrum Master (SM) & Desenvolvedor**
+  - *Atribuições:* Facilitação das cerimônias ágeis, engenharia de prompts de IA para consistência visual, geração da arte da capa conceitual, gestão do quadro Kanban no GitHub Projects e garantia de qualidade (QA).
 
 ---
 
@@ -35,22 +33,22 @@
 
 | Task ID | Item Origem | Descrição Detalhada da Tarefa | Responsável (Papel) | Estimativa | Status |
 | :---: | :---: | :--- | :---: | :---: | :---: |
-| **TSK-101** | PB-01 | Criar repositório público `Eng_Software-GrupoK`, configurar `.gitignore` e organizar estrutura de pastas (`docs/`, `prompts/`, `hq/`). | Eduardo Constantino *(PO)* | 2h | **Concluído** |
-| **TSK-102** | PB-02 | Redigir o `README.md` completo contendo papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão. | *Scrum Master (Simulado)* | 3h | **Concluído** |
-| **TSK-103** | PB-05 | Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo ágil e cadastrar as tarefas da Sprint 1. | *Dev Diagramação & QA (Simulado)* | 2h | **Concluído** |
-| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | *Dev Arte & Prompts (Simulado)* | 4h | **Concluído** |
-| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ. | Eduardo Constantino *(PO)* | 6h | **Concluído** |
-| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | *Scrum Master (Simulado)* | 5h | **Concluído** |
-| **TSK-107** | PB-06 | Gerar as primeiras imagens de teste dos personagens (estilo concept art) e armazenar a capa no repositório (`capa_concept_art.jpg`). | *Dev Arte & Prompts (Simulado)* | 4h | **Concluído** |
-| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando os pontos fortes e melhorias para a Sprint 2. | *Toda a Equipe (Todos os Papéis)* | 2h | **Concluído** |
+| **TSK-101** | PB-01 | Criar repositório público `Eng_Software-GrupoK`, configurar `.gitignore` e organizar estrutura de pastas (`docs/`, `prompts/`, `hq/`). | Eduardo Constantino *(PO / Dev)* | 2h | **Concluído** |
+| **TSK-102** | PB-02 | Redigir o `README.md` completo contendo integrantes, papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão. | João Paulo Gusmão *(SM / Dev)* | 3h | **Concluído** |
+| **TSK-103** | PB-05 | Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo ágil e cadastrar as tarefas da Sprint 1. | João Paulo Gusmão *(SM / Dev)* | 2h | **Concluído** |
+| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | Eduardo Constantino *(PO / Dev)* | 4h | **Concluído** |
+| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ. | Eduardo Constantino *(PO / Dev)* | 6h | **Concluído** |
+| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | João Paulo Gusmão *(SM / Dev)* | 5h | **Concluído** |
+| **TSK-107** | PB-06 | Gerar e selecionar a arte conceitual da capa oficial da HQ com IA generativa e armazenar no repositório (`hq/capa_concept_art.jpg`). | João Paulo Gusmão *(SM / Dev)* | 4h | **Concluído** |
+| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando os pontos fortes e melhorias para a Sprint 2. | Eduardo & João Paulo *(Scrum Team)* | 2h | **Concluído** |
 
-**Carga Horária Total Planejada:** 28 horas úteis (distribuídas entre os papéis ao longo da semana).
+**Carga Horária Total Planejada:** 28 horas úteis (divididas equitativamente: Eduardo Constantino com 14h e João Paulo Gusmão com 14h).
 
 ---
 
 ## 4. Critérios de Aceitação e Definição de Pronto (Definition of Done)
 Para que uma tarefa seja considerada finalizada:
 1. Deve cumprir integralmente o escopo definido no backlog;
-2. Deve ser revisada e validada sob a ótica dos critérios de aceite da disciplina;
-3. Deve ter seus arquivos commitados na branch `main` do GitHub;
-4. Seu respectivo card no Kanban deve estar na coluna **Done**.
+2. Deve ser revisada e validada em conjunto pelos dois membros da equipe;
+3. Deve ter seus arquivos commitados e sincronizados na branch `main` do GitHub;
+4. Seu respectivo card no Kanban deve ser movido para a coluna **Done**.

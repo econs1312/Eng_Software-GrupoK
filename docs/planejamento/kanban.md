@@ -29,14 +29,14 @@ Abaixo está a representação tabular do estado do quadro com as atividades da 
 
 | 📋 Product Backlog (Futuras Sprints) | ⏳ To Do (Sprint 1) | ⚙️ In Progress | 🔍 Review / QA | ✅ Done |
 | :--- | :--- | :--- | :--- | :--- |
-| **PB-08:** Design do Layout e Grades de Quadrinhos *(5 pts)* | | | | **TSK-101:** Criação do repositório GitHub e estrutura de pastas *(Eduardo - PO)* |
-| **PB-09:** Inserção de Balões e Onomatopeias *(8 pts)* | | | | **TSK-102:** Redação do README e sinopse da obra *(Scrum Master)* |
-| **PB-10:** Criação da Capa e Contracapa *(5 pts)* | | | | **TSK-103:** Configuração do board Kanban e fluxo *(Dev Diagramação/QA)* |
-| **PB-11:** Revisão Técnica Final *(3 pts)* | | | | **TSK-104:** Fichas dos personagens Maya, Leo e Echo *(Dev Arte/Prompts)* |
-| **PB-12:** Exportação do PDF da HQ *(3 pts)* | | | | **TSK-105:** Escrita do roteiro quadro a quadro *(Eduardo - PO)* |
-| **PB-13:** Relatório Metodológico *(5 pts)* | | | | **TSK-106:** Biblioteca de prompts com Style Anchor *(Scrum Master)* |
-| | | | | **TSK-107:** Geração da arte da capa `capa_concept_art.jpg` *(Dev Arte)* |
-| | | | | **TSK-108:** Reunião de Sprint Review e Retrospectiva *(Todos os Papéis)* |
+| **PB-08:** Design do Layout e Grades de Quadrinhos *(5 pts)* | | | | **TSK-101:** Criação do repositório GitHub e estrutura de pastas *(Eduardo Constantino - PO/Dev)* |
+| **PB-09:** Inserção de Balões e Onomatopeias *(8 pts)* | | | | **TSK-102:** Redação do README e sinopse da obra *(João Paulo Gusmão - SM/Dev)* |
+| **PB-10:** Criação da Capa e Contracapa *(5 pts)* | | | | **TSK-103:** Configuração do board Kanban e fluxos *(João Paulo Gusmão - SM/Dev)* |
+| **PB-11:** Revisão Técnica Final *(3 pts)* | | | | **TSK-104:** Fichas dos personagens Maya, Leo e Echo *(Eduardo Constantino - PO/Dev)* |
+| **PB-12:** Exportação do PDF da HQ *(3 pts)* | | | | **TSK-105:** Escrita do roteiro quadro a quadro *(Eduardo Constantino - PO/Dev)* |
+| **PB-13:** Relatório Metodológico *(5 pts)* | | | | **TSK-106:** Biblioteca de prompts com Style Anchor *(João Paulo Gusmão - SM/Dev)* |
+| | | | | **TSK-107:** Geração da arte da capa `capa_concept_art.jpg` *(João Paulo Gusmão - SM/Dev)* |
+| | | | | **TSK-108:** Reunião de Sprint Review e Retrospectiva *(Eduardo & João Paulo - Equipe)* |
 
 ---
 

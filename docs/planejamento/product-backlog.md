@@ -3,7 +3,8 @@
 **Projeto:** História em Quadrinhos com IA Generativa (*Debugando o Futuro: Crônicas do Código Senciente*)  
 **Disciplina:** Engenharia de Software — IFES Serra  
 **Responsável (Product Owner):** Eduardo Constantino de Oliveira  
-**Equipe:** Grupo K  
+**Scrum Master:** João Paulo Gusmão Teixeira  
+**Equipe / Scrum Team:** Grupo K (Eduardo Constantino de Oliveira & João Paulo Gusmão Teixeira)  
 
 ---
 

@@ -3,144 +3,168 @@ REUNIÕES DIÁRIAS (DAILY SCRUMS) — SPRINT 1 — GRUPO K
 ================================================================================
 Instituição: IFES - Campus Serra | V Período | Engenharia de Software
 Projeto: História em Quadrinhos com IA Generativa (Debugando o Futuro)
-Período da Sprint 1: 06/10/2026 a 12/10/2026
-Estrutura da Equipe: Simulação de Papéis Ágeis no Framework Scrum:
-- Product Owner (PO): Eduardo Constantino de Oliveira
-- Scrum Master (SM): Papel Scrum Master (Simulado)
-- Desenvolvedor / Ilustrador IA: Papel Dev Arte & Prompts (Simulado)
-- Desenvolvedor / Diagramador & QA: Papel Dev Diagramação & Documentação (Simulado)
+Período da Sprint 1: 06/10/2026 a 12/10/2026 (1 Semana)
+
+Integrantes e Estrutura da Equipe no Scrum:
+- Eduardo Constantino de Oliveira: Product Owner (PO) & Desenvolvedor
+- João Paulo Gusmão Teixeira: Scrum Master (SM) & Desenvolvedor
 
 --------------------------------------------------------------------------------
-1. FORMATO ESCOLHIDO PARA AS REUNIÕES DIÁRIAS
+1. FORMATO ESCOLHIDO PARA AS REUNIÕES DIÁRIAS E JUSTIFICATIVA
 --------------------------------------------------------------------------------
-Formato: Daily Scrum Assíncrona via Canal de Texto no Discord (#daily-scrum-grupo-k)
-Timebox/Horário Limite: Diariamente até as 11:00h da manhã.
+Formato: Daily Scrum Assíncrona via Canal Dedicado de Texto no Discord (#daily-scrum)
+Servidor Oficial: Grupo K — Eng. Software IFES Serra
+Timebox / Horário Limite Diário: Diariamente até as 11:00h da manhã.
 
-Justificativa Técnica:
-A simulação adota o formato assíncrono por ser o padrão de excelência na indústria
-global de Engenharia de Software para times distribuídos. Cada papel responde
-diariamente às 3 perguntas canônicas do Scrum, assegurando visibilidade transparente,
-histórico para auditoria e rapidez na mitigação de impedimentos.
+Justificativa Técnica e Metodológica:
+A equipe escolheu o formato de Daily Scrum assíncrona por meio de um canal de texto
+específico no Discord, alinhando-se às melhores práticas da Engenharia de Software
+moderna para equipes de tecnologia. O modelo assíncrono traz vantagens essenciais:
+1. Rastreabilidade Total: Cada membro posta formalmente suas respostas às 3 perguntas
+   canônicas do Scrum, gerando um histórico auditável de cada dia de trabalho;
+2. Agilidade Operacional: Elimina a necessidade de sincronização síncrona rígida de horários,
+   permitindo conciliar as demandas acadêmicas sem perder o compromisso diário;
+3. Resolução Rápida de Impedimentos: Bloqueios sinalizados no canal geram notificações
+   imediatas para que o outro integrante ofereça suporte antes do fim do dia.
+
+Estrutura Padrão das Respostas Diárias:
+1. O que fiz ontem (ou desde a última reunião)?
+2. O que farei hoje?
+3. Há algum impedimento bloqueando minhas atividades?
 
 --------------------------------------------------------------------------------
-2. REGISTRO DIÁRIO DE ATIVIDADES POR PAPEL
+2. REGISTRO COMPLETO DIA A DIA DO QUE FOI DITO E FEITO POR CADA INTEGRANTE
 --------------------------------------------------------------------------------
-
-==================================================
-DIA 1: Terça-feira, 06/10/2026 (Abertura da Sprint)
-==================================================
-• Papel: Product Owner (Eduardo Constantino):
-  - O que fiz ontem: Conduzi a sessão de Sprint Planning e priorizei os itens do Backlog.
-  - O que farei hoje: Criar o repositório no GitHub, configurar .gitignore e a árvore de pastas (TSK-101).
-  - Impedimentos: Nenhum.
-
-• Papel: Scrum Master (Simulado):
-  - O que fiz ontem: Facilitei o dimensionamento das horas e distribuição das tarefas.
-  - O que farei hoje: Redigir o README.md detalhando o propósito pedagógico e visão da obra (TSK-102).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Diagramação & QA (Simulado):
-  - O que fiz ontem: Analisei o roteiro de diretrizes da disciplina de Engenharia de Software.
-  - O que farei hoje: Configurar o quadro Kanban com as colunas do ciclo ágil e limites de WIP (TSK-103).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Arte & Prompts (Simulado):
-  - O que fiz ontem: Pesquisei referências de quadrinhos de ficção científica e estética cyberpunk.
-  - O que farei hoje: Elaborar os perfis dos personagens principais Maya Chen e Leo Santos (TSK-104).
-  - Impedimentos: Nenhum.
-
-==================================================
-DIA 2: Quarta-feira, 07/10/2026
-==================================================
-• Papel: Product Owner (Eduardo Constantino):
-  - O que fiz ontem: Repositório público criado com pastas docs/, prompts/ e hq/ devidamente organizadas.
-  - O que farei hoje: Iniciar a redação do roteiro quadro a quadro com foco nos quadros 1 a 3 (TSK-105).
-  - Impedimentos: Nenhum.
-
-• Papel: Scrum Master (Simulado):
-  - O que fiz ontem: Concluí a primeira versão do README com os papéis e links de gestão.
-  - O que farei hoje: Pesquisar modelos de prompts textuais no ChatGPT/Gemini para os diálogos (TSK-106).
-  - Impedimentos: Alinhar paleta de cores para os prompts visuais.
-
-• Papel: Dev Diagramação & QA (Simulado):
-  - O que fiz ontem: Configurei as colunas do Kanban no GitHub Projects e no kanban.md.
-  - O que farei hoje: Cadastrar as 8 tarefas da Sprint 1 com responsáveis e critérios de aceite (TSK-103).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Arte & Prompts (Simulado):
-  - O que fiz ontem: Descrevi a caracterização de Maya (Dev Sênior) e Leo (DevOps).
-  - O que farei hoje: Conceber a entidade senciente Echo e seu comportamento visual (TSK-104).
-  - Impedimentos: Nenhum.
-
-==================================================
-DIA 3: Quinta-feira, 08/10/2026
-==================================================
-• Papel: Product Owner (Eduardo Constantino):
-  - O que fiz ontem: Roteirizei os quadros 1 a 3 (panorama da cidade, sala de servidores em crise e código legado).
-  - O que farei hoje: Escrever os quadros 4 e 5 (encontro de Echo e debates sobre refatoração) (TSK-105).
-  - Impedimentos: Nenhum.
-
-• Papel: Scrum Master (Simulado):
-  - O que fiz ontem: Desenvolvi o prompt base de role-playing para geração textual de roteiro.
-  - O que farei hoje: Formular o Style Anchor imutável para prompts de imagens (TSK-106).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Diagramação & QA (Simulado):
-  - O que fiz ontem: Cadastrei todos os cards no board e verifiquei o fluxo de To Do e In Progress.
-  - O que farei hoje: Realizar a revisão ortográfica e formatação dos documentos ágeis (TSK-102).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Arte & Prompts (Simulado):
-  - O que fiz ontem: Finalizei as fichas de Maya, Leo e Echo no roteiro-hq.md.
-  - O que farei hoje: Iniciar testes práticos de geração de imagem com o Style Anchor (TSK-107).
-  - Impedimentos: Variação nos traços faciais entre diferentes geradores gratuitos.
-
-==================================================
-DIA 4: Sexta-feira, 09/10/2026
-==================================================
-• Papel: Product Owner (Eduardo Constantino):
-  - O que fiz ontem: Finalizei os 6 quadros do Capítulo 1 da HQ, integrando conceitos de testes e refatoração.
-  - O que farei hoje: Revisar a coerência narrativa e verificar a rastreabilidade com o Product Backlog (TSK-105).
-  - Impedimentos: Nenhum.
-
-• Papel: Scrum Master (Simulado):
-  - O que fiz ontem: Concluí a biblioteca de prompts parametrizados em prompts-ia.md.
-  - O que farei hoje: Ajustar tags de iluminação e iluminação neon para testes finais (TSK-106).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Diagramação & QA (Simulado):
-  - O que fiz ontem: Validei os artefatos de documentação e aprovei a integração com a branch principal.
-  - O que farei hoje: Organizar a pauta para a cerimônia de Sprint Review e Retrospectiva (TSK-108).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Arte & Prompts (Simulado):
-  - O que fiz ontem: Realizei múltiplas gerações de imagem para concept art e personagens.
-  - O que farei hoje: Selecionar a melhor arte e salvar a capa conceitual em hq/capa_concept_art.jpg (TSK-107).
-  - Impedimentos: Nenhum.
-
-==================================================
-DIA 5: Segunda-feira, 12/10/2026 (Encerramento da Sprint)
-==================================================
-• Papel: Product Owner (Eduardo Constantino):
-  - O que fiz ontem: Validei os commits e a conformidade dos artefatos da Sprint 1 no Git.
-  - O que farei hoje: Conduzir a Sprint Review, apresentar o incremento e compilar links do Git (TSK-108).
-  - Impedimentos: Nenhum.
-
-• Papel: Scrum Master (Simulado):
-  - O que fiz ontem: Chequei o cumprimento da Meta da Sprint e o DoD de cada tarefa.
-  - O que farei hoje: Facilitar a Sprint Retrospective, documentando pontos fortes e melhorias (TSK-108).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Diagramação & QA (Simulado):
-  - O que fiz ontem: Atualizei o status de todos os cards da Sprint 1 para a coluna Done no Kanban.
-  - O que farei hoje: Consolidar a ata da Retrospectiva com as ações planejadas para a Sprint 2 (TSK-108).
-  - Impedimentos: Nenhum.
-
-• Papel: Dev Arte & Prompts (Simulado):
-  - O que fiz ontem: Integrei a imagem da capa conceitual ao README principal da HQ.
-  - O que farei hoje: Participar da Sprint Review e avaliar lições aprendidas na consistência de IA (TSK-108).
-  - Impedimentos: Nenhum.
 
 ================================================================================
-FIM DO REGISTRO DAS REUNIÕES DIÁRIAS (SPRINT 1)
+SESSÃO 1: Terça-feira, 06/10/2026 (Abertura da Sprint 1)
+================================================================================
+
+• Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor):
+  - O que fiz ontem:
+    Participei da sessão de Sprint Planning com o João Paulo; definimos a Meta da
+    Sprint 1 e priorizamos os itens iniciais do Backlog (PB-01 a PB-06).
+  - O que farei hoje:
+    Criar o repositório público 'Eng_Software-GrupoK' no GitHub, configurar o arquivo
+    .gitignore para Python/Node/Markdown e montar a árvore de diretórios base
+    ('docs/', 'prompts/', 'hq/') (TSK-101).
+  - Impedimentos:
+    Nenhum impedimento no momento.
+
+• João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor):
+  - O que fiz ontem:
+    Auxiliei na distribuição equitativa das tarefas no Sprint Planning (14h para cada um)
+    e na definição dos critérios de aceitação e Definition of Done (DoD).
+  - O que farei hoje:
+    Redigir a primeira versão completa do README.md do projeto, detalhando a visão da HQ,
+    apresentando os integrantes e seus papéis, e incluindo a sinopse em dois parágrafos
+    (TSK-102). Em seguida, iniciar a configuração do quadro Kanban (TSK-103).
+  - Impedimentos:
+    Nenhum impedimento.
+
+================================================================================
+SESSÃO 2: Quarta-feira, 07/10/2026
+================================================================================
+
+• Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor):
+  - O que fiz ontem:
+    Concluí a TSK-101: o repositório público está configurado no GitHub com branch
+    'main', licença MIT, .gitignore e pastas 'docs/planejamento/', 'docs/roteiro/',
+    'prompts/' e 'hq/'.
+  - O que farei hoje:
+    Iniciar o detalhamento das fichas dos personagens principais (Maya Chen, Leo Santos
+    e a IA Echo) com traços fisionômicos, perfis psicológicos e motivações (TSK-104),
+    além de começar a estruturação dos primeiros quadros do roteiro (TSK-105).
+  - Impedimentos:
+    Nenhum impedimento.
+
+• João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor):
+  - O que fiz ontem:
+    Finalizei a versão inicial do README.md (TSK-102) e criei as colunas no GitHub
+    Projects: Product Backlog, To Do, In Progress, Review/QA e Done (TSK-103).
+  - O que farei hoje:
+    Cadastrar todos os cards das tarefas da Sprint 1 no board do GitHub Projects,
+    com estimativas e responsáveis, e documentar as políticas de WIP no 'docs/planejamento/kanban.md'.
+    Iniciar o levantamento de estilos de arte para a biblioteca de prompts (TSK-106).
+  - Impedimentos:
+    Precisamos bater o martelo sobre a paleta exata de cores para orientar os prompts de IA.
+    (Alinhado no chat: utilizaremos paleta Cyberpunk em ciano #00f0ff, roxo #7928ca e âmbar #ff9900).
+
+================================================================================
+SESSÃO 3: Quinta-feira, 08/10/2026 (Meio da Sprint)
+================================================================================
+
+• Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor):
+  - O que fiz ontem:
+    Concluí as fichas de personagens no arquivo 'docs/roteiro/roteiro-hq.md' (TSK-104)
+    e escrevi os quadros 1 a 3 do Capítulo 1 da HQ (panorama de Neo-Vitória e sala de controle).
+  - O que farei hoje:
+    Escrever os quadros 4 e 5 do roteiro (TSK-105), trazendo o primeiro contato com a sub-rotina
+    Echo e inserindo os debates técnicos sobre refatoração arquitetural e débito técnico.
+  - Impedimentos:
+    Nenhum impedimento.
+
+• João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor):
+  - O que fiz ontem:
+    Finalizei o cadastro das tarefas no Kanban e o arquivo kanban.md (TSK-103). Estruturei
+    o prompt base de role-playing para IA no arquivo 'prompts/prompts-ia.md' (TSK-106).
+  - O que farei hoje:
+    Consolidar o 'Style Anchor' imutável para a geração de imagens da HQ, definir os prompts
+    parametrizados para os personagens (TSK-106) e iniciar testes práticos de geração de concept art
+    para selecionar a arte oficial da capa (TSK-107).
+  - Impedimentos:
+    Geradores gratuitos apresentaram alguma variação nos traços faciais entre diferentes tentativas.
+    Solução: fixar sementes (seeds) e descritores imutáveis no prompt.
+
+================================================================================
+SESSÃO 4: Sexta-feira, 09/10/2026
+================================================================================
+
+• Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor):
+  - O que fiz ontem:
+    Avancei na redação do roteiro e escrevi o clímax da cena nos quadros 5 e 6 (TSK-105).
+  - O que farei hoje:
+    Finalizar a revisão técnica do roteiro completo (quadros 1 a 6), garantindo que os conceitos
+    de Engenharia de Software (deadlock, refatoração, CI/CD, microsserviços) estejam perfeitamente
+    integrados aos diálogos, e validar o cumprimento dos critérios de aceitação.
+  - Impedimentos:
+    Nenhum impedimento.
+
+• João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor):
+  - O que fiz ontem:
+    Estruturei 5 prompts de alta qualidade em 'prompts/prompts-ia.md' com o Style Anchor
+    de graphic novel moderna (TSK-106) e gerei várias opções visuais de concept art.
+  - O que farei hoje:
+    Selecionar a melhor arte conceitual da capa gerada por IA, salvar o arquivo oficial
+    em 'hq/capa_concept_art.jpg' (TSK-107) e preparar a pauta da reunião de Sprint Review
+    e Retrospectiva da próxima segunda-feira (TSK-108).
+  - Impedimentos:
+    Nenhum impedimento. A capa foi gerada com excelente impacto visual e coerência cyberpunk!
+
+================================================================================
+SESSÃO 5: Segunda-feira, 12/10/2026 (Encerramento da Sprint 1)
+================================================================================
+
+• Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor):
+  - O que fiz ontem:
+    Revisei todos os commits da branch 'main' e confirmei que todos os artefatos
+    planejados estão íntegros e renderizando corretamente no repositório GitHub.
+  - O que farei hoje:
+    Conduzir a reunião de Sprint Review com o João Paulo, homologar formalmente o incremento
+    da Sprint 1 e compilar todos os links diretos para o GitHub (TSK-108).
+  - Impedimentos:
+    Nenhum impedimento. Meta da Sprint 1 atingida em 100%!
+
+• João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor):
+  - O que fiz ontem:
+    Verifiquei o cumprimento dos critérios de aceitação e Definition of Done (DoD) de todas as 8
+    tarefas da Sprint 1, movendo os cards para a coluna 'Done' no Kanban.
+  - O que farei hoje:
+    Facilitar a cerimônia de Sprint Retrospective com o Eduardo (TSK-108), documentar os pontos
+    fortes e desafios no uso de IA, e traçar o plano de ação concreto para a Sprint 2.
+  - Impedimentos:
+    Nenhum impedimento. Cerimônias prontas para realização e registro.
+
+================================================================================
+FIM DO REGISTRO DAS REUNIÕES DIÁRIAS (SPRINT 1) — GRUPO K
 ================================================================================

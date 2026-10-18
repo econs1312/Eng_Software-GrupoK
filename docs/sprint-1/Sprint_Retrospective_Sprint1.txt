@@ -3,61 +3,80 @@ SPRINT RETROSPECTIVE — SPRINT 1 — GRUPO K
 ================================================================================
 Instituição: IFES - Campus Serra | V Período | Engenharia de Software
 Projeto: História em Quadrinhos com IA Generativa (Debugando o Futuro)
-Período da Sprint 1: 06/10/2026 a 12/10/2026
-Data da Reunião de Retrospectiva: 12/10/2026 (Segunda-feira) - 19:30 às 20:00
-Estrutura da Equipe: Simulação de Papéis Ágeis no Framework Scrum:
-- Product Owner (PO): Eduardo Constantino de Oliveira
-- Scrum Master (SM): Papel Scrum Master (Simulado)
-- Desenvolvedor / Ilustrador IA: Papel Dev Arte & Prompts (Simulado)
-- Desenvolvedor / Diagramador & QA: Papel Dev Diagramação & Documentação (Simulado)
+Período da Sprint 1: 06/10/2026 a 12/10/2026 (1 Semana)
+Data da Reunião de Retrospectiva: 12/10/2026 (Segunda-feira) - 19:30 às 20:15
+
+Integrantes Presentes na Cerimônia (Scrum Team):
+- Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor)
+- João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor)
 
 --------------------------------------------------------------------------------
 1. OBJETIVO DA CERIMÔNIA
 --------------------------------------------------------------------------------
-Inspecionar a dinâmica de trabalho da Sprint 1 sob a ótica dos diferentes papéis
-do Scrum, avaliando o que funcionou bem, as dificuldades técnicas no uso de IA
-e ferramentas ágeis, e estabelecendo um plano de ação concreto para a Sprint 2.
+Inspecionar a dinâmica colaborativa da equipe ao longo da Sprint 1, avaliando as
+ferramentas técnicas adotadas (GitHub, Discord, IA Generativa), a fluidez dos
+processos ágeis, e estabelecendo um plano de ação concreto e executável para
+aumentar a produtividade e a qualidade na Sprint 2.
 
 --------------------------------------------------------------------------------
 2. DINÂMICA DA RETROSPECTIVA: ANÁLISE DOS TRÊS PILARES
 --------------------------------------------------------------------------------
 
 A. O QUE FUNCIONOU BEM (PONTOS FORTES / SUCESSOS):
-1. Clareza e Separação de Papéis: O modelo de simulação por papéis (PO, SM, Devs)
-   permitiu delimitar com exatidão as responsabilidades de escopo, facilitação e entrega técnica.
-2. Uso Produtivo da IA Generativa: O uso do ChatGPT/Gemini acelerou o rascunho
-   do roteiro, possibilitando integrar termos de Engenharia de Software com muita fluidez.
-3. Transparência do Kanban: O quadro no GitHub Projects e no kanban.md permitiu
-   acompanhar o fluxo contínuo de To Do, In Progress e Done.
-4. Versionamento Limpo no Git: Commits bem estruturados com mensagens descritivas
-   e sem conflitos de merge na branch principal.
+1. Trabalho Colaborativo e Divisão Clara de Papéis:
+   A divisão formal entre Product Owner (Eduardo) e Scrum Master (João Paulo), com ambos
+   atuando como desenvolvedores no Scrum Team, proporcionou excelente sinergia, foco e
+   equilíbrio de carga horária (14 horas de dedicação para cada integrante).
+2. Potencialização Criativa com IA Generativa:
+   O uso integrado de LLMs (Gemini/ChatGPT) auxiliou na estruturação rápida do roteiro
+   técnico, permitindo entrelaçar conceitos complexos de Engenharia de Software com narrativa fluida.
+3. Consistência Visual Inicial com Style Anchor:
+   A definição do Style Anchor permitiu obter uma arte conceitual da capa (capa_concept_art.jpg)
+   de alto impacto visual e forte coerência cyberpunk.
+4. Transparência e Rastreabilidade no GitHub:
+   Quadro Kanban atualizado em tempo real e commits atômicos e descritivos na branch main,
+   sem ocorrência de conflitos de merge.
+5. Comunicação Diária Eficiente via Discord:
+   O formato de Daily assíncrona funcionou com pontualidade diária, dando visibilidade total
+   ao progresso mútuo.
 
 B. O QUE PODE SER MELHORADO (DIFICULDADES / OPORTUNIDADES):
-1. Consistência Visual dos Personagens com IA: Ferramentas gratuitas de geração
-   de imagem tendem a alterar traços faciais entre diferentes prompts, exigindo
-   múltiplas tentativas até aprovação.
-2. Estimativa de Tempo de Prompts: A tarefa de engenharia de prompts demandou
-   mais tempo de teste do que as 5 horas inicialmente estimadas.
-3. Automação de Montagem: A diagramação manual exigirá padronização prévia de grids
-   para não atrasar o letreiramento nas próximas iterações.
+1. Variação Fisionômica nos Geradores Gratuitos de IA:
+   Mesmo com prompts detalhados, ferramentas gratuitas apresentaram variações pontuais nos
+   rostos dos personagens Maya e Leo entre diferentes gerações de teste.
+2. Esforço de Refinamento de Prompts:
+   A calibração do Style Anchor exigiu mais iterações do que o inicialmente previsto,
+   demonstrando que a engenharia de prompts requer testes empíricos contínuos.
+3. Necessidade de Pré-diagramação das Próximas Páginas:
+   A geração dos quadros individuais e montagem final da HQ na Sprint 2 exigirá o uso de
+   templates pré-formatados de grids e balões para não sobrecarregar a etapa de letreiramento.
 
 C. PLANO DE AÇÃO PARA A SPRINT 2 (COMPROMISSOS DE MELHORIA CONTÍNUA):
-1. Ação 1 (Arte/IA): Adotar uma biblioteca fixa de sementes (seeds) e descritores
-   imutáveis de trajes e cabelos para travar a identidade de Maya e Leo nos quadros da Sprint 2.
-   -> Papel Responsável: Dev Arte & Prompts.
-2. Ação 2 (Processos): Fixar o envio das Dailies impreterivelmente às 11:00h da manhã
-   para manter o rigor metodológico.
-   -> Papel Responsável: Scrum Master.
-3. Ação 3 (Diagramação): Utilizar templates pré-formatados de páginas e balões
-   no Figma/Canva para agilizar a montagem final dos quadrinhos.
-   -> Papel Responsável: Dev Diagramação & QA.
+1. Ação 1 (Arte & IA) — Trava de Sementes e Parâmetros:
+   Fixar seeds (quando suportado) e utilizar uma lista padronizada de tokens visuais imutáveis
+   (jaqueta com mechas azul-petróleo para Maya; luvas táticas e neon âmbar para Leo) para
+   assegurar consistência perfeita entre os painéis da HQ.
+   -> Responsável Principal: João Paulo Gusmão Teixeira.
+2. Ação 2 (Processos) — Criação de Templates de Grid no Canva/Figma:
+   Montar previamente os layouts das páginas e balões de diálogo vetoriais para acelerar
+   a montagem gráfica dos quadrinhos da Sprint 2.
+   -> Responsável Principal: João Paulo Gusmão Teixeira & Eduardo Constantino de Oliveira.
+3. Ação 3 (Narrativa) — Validação Antecipada dos Diálogos:
+   Revisar antecipadamente a distribuição de texto de cada balão para evitar poluição visual
+   sobre os pontos focais das ilustrações da HQ.
+   -> Responsável Principal: Eduardo Constantino de Oliveira.
 
 --------------------------------------------------------------------------------
 3. REGISTRO VISUAL DA REUNIÃO (PRINT DO GRUPO)
 --------------------------------------------------------------------------------
-A sessão de fechamento e retrospectiva foi realizada com compartilhamento de tela
-do quadro Kanban e artefatos Git, registrando a presença e consolidação das análises.
-(O print comprobatório da sessão está anexado na submissão correspondente do AVA).
+A cerimônia de Sprint Retrospective foi realizada via videoconferência no Google Meet,
+reunindo os integrantes Eduardo Constantino de Oliveira e João Paulo Gusmão Teixeira.
+Durante a sessão, foi realizado o compartilhamento de tela do quadro Kanban do GitHub
+Projects (comprovando 100% dos itens da Sprint 1 em Done) e o alinhamento das ações de
+melhoria para a Sprint 2.
+
+O print comprobatório da sessão com a equipe e a tela compartilhada está armazenado em:
+docs/sprint-1/print_reuniao_retrospectiva.png (e anexado à submissão do AVA).
 
 ================================================================================
 FIM DA RETROSPECTIVA — GRUPO K

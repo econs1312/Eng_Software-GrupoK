@@ -2,7 +2,7 @@
 
 **Título:** *Debugando o Futuro: Crônicas do Código Senciente*  
 **Gênero:** Ficção Científica / Cyberpunk / Engenharia de Software  
-**Autores:** Grupo K (IFES Serra - V Período)  
+**Autores:** Grupo K — Eduardo Constantino de Oliveira & João Paulo Gusmão Teixeira (IFES Serra - V Período)  
 
 ---
 

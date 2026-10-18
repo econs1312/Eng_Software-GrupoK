@@ -13,7 +13,7 @@
         flex-direction: column;
         height: 100vh;
         overflow: hidden;
-    }
+    }}
     /* Main call container */
     .meet-main {
         flex: 1;
@@ -23,7 +23,7 @@
     }
     /* Screen share area (large) */
     .screen-share-area {
-        flex: 3;
+        flex: 3.2;
         background-color: #000000;
         border-radius: 12px;
         position: relative;
@@ -100,12 +100,13 @@
 
     /* Participants column */
     .participants-column {
-        flex: 1;
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
+        flex: 1.1;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
     }
     .participant-card {
+        flex: 1;
         background-color: #3c4043;
         border-radius: 12px;
         position: relative;
@@ -119,25 +120,25 @@
         border: 2px solid #8ab4f8;
     }
     .avatar-circle {
-        width: 52px;
-        height: 52px;
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 20px;
+        font-size: 26px;
         font-weight: 700;
         color: white;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
     .user-tag-bar {
         position: absolute;
-        bottom: 8px;
-        left: 10px;
-        background-color: rgba(0, 0, 0, 0.65);
-        padding: 3px 8px;
+        bottom: 10px;
+        left: 12px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 4px 10px;
         border-radius: 4px;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 500;
         color: #e8eaed;
         display: flex;
@@ -148,6 +149,46 @@
         width: 14px;
         height: 14px;
         fill: #8ab4f8;
+    }
+
+    /* In-call chat box (lower half of right column or side panel) */
+    .chat-card {
+        flex: 1.1;
+        background-color: #282a2d;
+        border-radius: 12px;
+        border: 1px solid #3c4043;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .chat-header-meet {
+        background-color: #1f2022;
+        padding: 8px 12px;
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #9aa0a6;
+        border-bottom: 1px solid #3c4043;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chat-messages-meet {
+        flex: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 11px;
+        overflow-y: auto;
+    }
+    .chat-bubble {
+        background-color: #383a3e;
+        padding: 6px 10px;
+        border-radius: 6px;
+        line-height: 1.35;
+    }
+    .chat-bubble strong {
+        color: #8ab4f8;
     }
 
     /* Bottom Control Bar */
@@ -211,7 +252,7 @@
     <!-- Screen share showing Git / Kanban -->
     <div class="screen-share-area">
         <div class="share-header">
-            <span>📺 <strong>Eduardo Constantino (PO)</strong> está compartilhando a tela: <em>Quadro Kanban & Repositório Eng_Software-GrupoK</em></span>
+            <span>📺 <strong>Eduardo Constantino (PO)</strong> está compartilhando a tela: <em>Quadro Kanban do GitHub Projects — Grupo K</em></span>
         </div>
         <div class="share-content">
             <div style="font-weight:700; font-size:15px; margin-bottom:12px; color:#58a6ff; display:flex; justify-content:space-between; align-items:center;">
@@ -233,14 +274,14 @@
                 </div>
                 <div class="col-mock" style="background:#16241a; border-color:#238636;">
                     <div class="col-title" style="color:#3fb950;"><span>✅ DONE (SPRINT 1)</span> <span>8</span></div>
-                    <div class="item-mock item-done"><strong>TSK-101:</strong> Repositório & pastas <span class="tag-done">PO</span></div>
-                    <div class="item-mock item-done"><strong>TSK-102:</strong> README.md & sinopse <span class="tag-done">SM</span></div>
-                    <div class="item-mock item-done"><strong>TSK-103:</strong> Board Kanban & fluxos <span class="tag-done">QA</span></div>
-                    <div class="item-mock item-done"><strong>TSK-104:</strong> Fichas de Maya, Leo e Echo <span class="tag-done">ARTE</span></div>
-                    <div class="item-mock item-done"><strong>TSK-105:</strong> Roteiro completo Cap. 1 <span class="tag-done">PO</span></div>
-                    <div class="item-mock item-done"><strong>TSK-106:</strong> Engenharia de Prompts <span class="tag-done">SM</span></div>
-                    <div class="item-mock item-done"><strong>TSK-107:</strong> Capa da HQ gerada por IA <span class="tag-done">ARTE</span></div>
-                    <div class="item-mock item-done"><strong>TSK-108:</strong> Review & Retrospective <span class="tag-done">TODOS</span></div>
+                    <div class="item-mock item-done"><strong>TSK-101:</strong> Repositório & pastas <span class="tag-done">Eduardo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-102:</strong> README.md & sinopse <span class="tag-done">João Paulo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-103:</strong> Board Kanban & fluxos <span class="tag-done">João Paulo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-104:</strong> Fichas de Maya, Leo e Echo <span class="tag-done">Eduardo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-105:</strong> Roteiro completo Cap. 1 <span class="tag-done">Eduardo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-106:</strong> Engenharia de Prompts <span class="tag-done">João Paulo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-107:</strong> Capa da HQ gerada por IA <span class="tag-done">João Paulo</span></div>
+                    <div class="item-mock item-done"><strong>TSK-108:</strong> Review & Retrospective <span class="tag-done">Equipe</span></div>
                 </div>
             </div>
         </div>
@@ -252,31 +293,30 @@
             <div class="avatar-circle" style="background-color: #1a73e8;">EC</div>
             <div class="user-tag-bar">
                 <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
-                Eduardo Constantino (PO)
+                Eduardo Constantino (PO & Dev)
             </div>
         </div>
 
         <div class="participant-card">
-            <div class="avatar-circle" style="background-color: #e91e63;">SM</div>
+            <div class="avatar-circle" style="background-color: #e91e63;">JP</div>
             <div class="user-tag-bar">
                 <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
-                Scrum Master (Simulado)
+                João Paulo Gusmão (SM & Dev)
             </div>
         </div>
 
-        <div class="participant-card">
-            <div class="avatar-circle" style="background-color: #f9ab00; color:#202124;">IA</div>
-            <div class="user-tag-bar">
-                <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
-                Dev Arte & Prompts (Simulado)
+        <div class="chat-card">
+            <div class="chat-header-meet">
+                <span>💬 CHAT DA REUNIÃO</span>
+                <span style="color:#8ab4f8;">Grupo K</span>
             </div>
-        </div>
-
-        <div class="participant-card">
-            <div class="avatar-circle" style="background-color: #34a853;">QA</div>
-            <div class="user-tag-bar">
-                <svg class="mic-icon" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
-                Dev Diagramação & QA (Simulado)
+            <div class="chat-messages-meet">
+                <div class="chat-bubble">
+                    <strong>João Paulo:</strong> "A divisão de 14h para cada um funcionou perfeitamente. O Style Anchor travou bem a capa!"
+                </div>
+                <div class="chat-bubble">
+                    <strong>Eduardo:</strong> "Concordo! Para a Sprint 2 vamos preparar os templates de balões no Figma antes de gerar os painéis finais."
+                </div>
             </div>
         </div>
     </div>
@@ -298,7 +338,7 @@
     </div>
 
     <div class="controls-right">
-        <span>👥 4 pessoas</span>
+        <span>👥 2 pessoas</span>
         <span>💬 Chat</span>
         <span>ℹ️ Detalhes</span>
     </div>
