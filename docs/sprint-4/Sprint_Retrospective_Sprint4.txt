@@ -1,0 +1,128 @@
+================================================================================
+SPRINT RETROSPECTIVE — SPRINT 4 (ÚLTIMA SPRINT / ENTREGA FINAL) — GRUPO K
+================================================================================
+Instituição: IFES - Campus Serra | V Período | Engenharia de Software
+Projeto: História em Quadrinhos com IA Generativa (Debugando o Futuro: Crônicas do Código Senciente)
+Período da Sprint 4: 17/10/2026 a 24/10/2026 (1 Semana - Fechamento e Entrega)
+Data da Reunião de Retrospectiva: 24/10/2026 (Sábado) - 19:00 às 20:30
+
+Integrantes Presentes na Cerimônia (Scrum Team):
+- Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor)
+- João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor)
+
+--------------------------------------------------------------------------------
+1. OBJETIVO DA CERIMÔNIA
+--------------------------------------------------------------------------------
+Inspecionar a execução da Sprint 4 (última sprint do projeto) e consolidar o balanço
+geral de todo o ciclo de vida da produção da História em Quadrinhos (Sprints 1 a 4).
+Avaliar o cumprimento da Definição de Pronto (Definition of Done - DoD) para as duas
+entregas obrigatórias da semana:
+  [1] História em Quadrinhos Pronta (05 pontos Tarefa)
+  [2] Sprint Retrospective (02 pontos)
+Analisar as metodologias ágeis aplicadas, as ferramentas de IA Generativa adotadas,
+os aprendizados adquiridos e o encerramento formal do projeto acadêmico.
+
+--------------------------------------------------------------------------------
+2. STATUS DAS ENTREGAS DA SPRINT 4 E DEFINITION OF DONE (DoD)
+--------------------------------------------------------------------------------
+Todos os itens previstos para a Sprint 4 foram concluídos com 100% de sucesso:
+
+[X] HQ Completa Finalizada:
+    - 6 quadros da narrativa ilustrados em alta resolução com estilo gráfico cyberpunk consistente.
+    - Capa e contracapa oficiais diagramadas com títulos, sinopse e selo do Grupo K.
+    - Todos os diálogos, recordatórios e balões revisados e alinhados ao roteiro didático.
+    - Localização dos painéis: hq/paineis/ e hq/
+
+[X] Compilação Oficial em PDF:
+    - Documento de 6 páginas em alta definição gerado e testado para submissão no AVA:
+      hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf
+
+[X] Aplicação Web Interativa (Web Comic Reader):
+    - Visualizador digital publicado em hq/index.html com modos de leitura contínua (Webtoon),
+      modo cinema (Slide painel por painel), notas técnicas sobre Engenharia de Software e
+      botão direto para download do PDF.
+
+[X] Sprint Retrospective da Sprint 4:
+    - Documentada em múltiplos formatos (TXT, MD, HTML e PDF em docs/sprint-4/) com
+      registro visual comprobatório da sessão no Google Meet (print_reuniao_retrospectiva_sprint4.png).
+
+[X] Product Backlog 100% Concluído:
+    - Todos os 13 itens do Product Backlog com status [DONE].
+
+--------------------------------------------------------------------------------
+3. DINÂMICA DA RETROSPECTIVA: ANÁLISE DOS TRÊS PILARES
+--------------------------------------------------------------------------------
+
+A. O QUE FUNCIONOU EXTREMAMENTE BEM (SUCESSOS E PONTOS FORTES):
+1. Harmonia entre Conteúdo Didático de Engenharia de Software e Enredo Ficção Científica:
+   A história conseguiu integrar com naturalidade e profundidade conceitos centrais da
+   disciplina — débito técnico acumulado, deadlocks, bypass de pipelines CI/CD, testes
+   automatizados de regressão, containerização e arquitetura de microsserviços. Os quadros
+   demonstram que a boa engenharia e o fator humano são indispensáveis.
+2. Excelência Visual e Consistência com IA Generativa:
+   Graças ao refinamento progressivo do "Style Anchor" (cel shading cyberpunk, paleta em
+   ciano, roxo e âmbar, traços de nanquim limpos), as artes dos personagens Maya Chen, Leo
+   Santos e da entidade Echo mantiveram uma coerência visual impecável da primeira à última cena.
+3. Multiplicidade de Formatos para Avaliação e Leitura:
+   A entrega não se limitou a arquivos soltos. Foi construído um PDF formal de 6 páginas
+   pronto para impressão e avaliação docente, além de um Web Reader responsivo e elegante.
+4. Efetividade da Metodologia Ágil (Scrum/Kanban) em Dupla:
+   A clareza dos papéis (Eduardo como PO liderando a visão do produto e roteiro; João Paulo
+   como SM liderando a facilitação do processo e gestão visual no GitHub Projects) permitiu
+   alta cadência de trabalho, zero conflitos de branch e 100% de pontualidade nas entregas.
+5. Resposta Rápida aos Feedbacks das Sprints Anteriores:
+   Os planos de ação estabelecidos nas retrospectivas anteriores (como padronização de
+   grids e revisão antecipada de diálogos) foram rigorosamente implementados nesta sprint final.
+
+B. O QUE PODE SER MELHORADO / DIFICULDADES SUPERADAS:
+1. Curadoria e Ajustes Finos nos Prompts de Imagem:
+   Ferramentas generativas por vezes tentam embutir texto aleatório nas imagens. A solução
+   adotada foi combinar descritores negativos estritos com a sobreposição de caixas de
+   texto, recordatórios e balões vetoriais perfeitamente legíveis na pós-produção.
+2. Equilíbrio de Tempo e Carga de Trabalho:
+   Por ser a sprint de encerramento do período letivo, houve concorrência com demandas de
+   outras disciplinas. A técnica de timeboxing de 1 hora por dia e daily assíncrona foi
+   fundamental para evitar sobrecargas e garantir foco total nas metas da Sprint 4.
+3. Tratamento de Proporções e Enquadramentos:
+   Para manter a experiência ideal tanto no formato revista (A4 retrato) quanto no formato
+   webtoon, foi necessário planejar as calhas e margens dos quadrinhos com cuidado cirúrgico.
+
+C. PRINCIPAIS LIÇÕES APRENDIDAS EM TODO O CICLO DO PROJETO:
+1. Agilidade é Universal:
+   O framework Scrum, quando respeitado em sua essência (transparência, inspeção e adaptação),
+   funciona tão bem para a criação de produtos multimídia e artefatos de IA quanto para
+   desenvolvimento de software tradicional.
+2. O Papel do Engenheiro na Era da Inteligência Artificial:
+   A IA generativa não substitui a capacidade criativa, crítica e estrutural do ser humano.
+   Sem um roteiro consistente, sem intenção pedagógica e sem curadoria atenta, a IA gera
+   apenas imagens desconexas. O projeto provou que a engenharia de prompts é uma extensão
+   legítima da especificação de requisitos.
+3. Importância da Definição de Pronto (DoD):
+   Ter critérios de aceitação claros desde a Sprint 1 evitou retrabalho na reta final e
+   permitiu que o Grupo K chegasse à entrega com tranquilidade e orgulho do resultado.
+
+--------------------------------------------------------------------------------
+4. MÉTRICAS FINAIS DO PROJETO
+--------------------------------------------------------------------------------
+- Duração Total: 4 Sprints (4 Semanas de Trabalho Colaborativo)
+- Total de Tarefas Planejadas no Product Backlog: 13
+- Total de Tarefas Concluídas (DoD 100%): 13 (100% de taxa de conclusão)
+- Velocity Médio da Equipe: 13.5 Story Points / Sprint
+- Horas Totais Dedicadas por Membro: ~45 horas (90 horas totais da equipe)
+- Nota de Autoavaliação do Scrum Team: 10/10
+
+--------------------------------------------------------------------------------
+5. REGISTRO VISUAL DA REUNIÃO DE RETROSPECTIVA
+--------------------------------------------------------------------------------
+A cerimônia de encerramento e Retrospectiva da Sprint 4 foi realizada por chamada de
+vídeo no Google Meet com compartilhamento de tela comemorativo:
+- Quadro Kanban no GitHub com todos os cards em Done.
+- Apresentação e leitura da HQ compilada em PDF e no leitor web.
+- Validação mútua das entregas e assinatura virtual do documento.
+
+O print comprobatório da sessão está arquivado no repositório:
+docs/sprint-4/print_reuniao_retrospectiva_sprint4.png
+
+================================================================================
+FIM DA RETROSPECTIVA SPRINT 4 — GRUPO K (IFES SERRA 2026)
+================================================================================

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debugando o Futuro: Crônicas do Código Senciente - HQ Oficial (Grupo K)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;700;800&family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #090d16;
+    color: #e2e8f0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    height: 297mm;
+    page-break-after: always;
+    position: relative;
+    background: #090d16;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10mm 12mm;
+    box-sizing: border-box;
+  }
+
+  @media screen {
+    body {
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      background: #030712;
+    }
+    .page {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 240, 255, 0.15);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: 6px;
+    }
+  }
+
+  /* PAGE 1: COVER */
+  .page-cover {
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* PAGE HEADERS & FOOTERS */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00f0ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #00f0ff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+  }
+  .page-header span.tag {
+    color: #cbd5e1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .page-footer {
+    margin-top: auto;
+    padding-top: 6px;
+    border-top: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7.5pt;
+    color: #64748b;
+  }
+  .page-footer strong {
+    color: #38bdf8;
+  }
+
+  /* EDITORIAL / PAGE 2 */
+  .editorial-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #00f0ff;
+    font-size: 18pt;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+  }
+  .editorial-subtitle {
+    font-size: 9.5pt;
+    color: #94a3b8;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+
+  .meta-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.5));
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 8.5pt;
+  }
+  .meta-card div strong {
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-size: 7.5pt;
+    letter-spacing: 0.8px;
+  }
+
+  .synopsis-box {
+    background: rgba(14, 165, 233, 0.08);
+    border-left: 4px solid #00f0ff;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin-bottom: 14px;
+  }
+  .synopsis-box h4 {
+    color: #00f0ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9.5pt;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .chars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .char-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid #00f0ff;
+  }
+  .char-card.leo {
+    border-top-color: #f59e0b;
+  }
+  .char-card.echo {
+    border-top-color: #a855f7;
+  }
+  .char-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 2px;
+  }
+  .char-role {
+    font-size: 7.5pt;
+    color: #38bdf8;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .char-card.leo .char-role { color: #fbbf24; }
+  .char-card.echo .char-role { color: #c084fc; }
+  .char-desc {
+    font-size: 7.5pt;
+    color: #94a3b8;
+    line-height: 1.4;
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .badge {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    font-size: 7pt;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* COMIC PANELS LAYOUT */
+  .comic-page-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+  .panel-container {
+    background: #020617;
+    border: 2.5px solid #00f0ff;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  }
+  .panel-container.alt-border {
+    border-color: #a855f7;
+  }
+  .panel-container.gold-border {
+    border-color: #10b981;
+  }
+
+  .panel-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 102mm;
+    overflow: hidden;
+    background: #000;
+  }
+  .panel-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* CAPTION & SPEECH BUBBLE OVERLAYS */
+  .narrative-strip {
+    background: linear-gradient(90deg, #fef08a, #fde047);
+    color: #713f12;
+    padding: 6px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    line-height: 1.35;
+    border-bottom: 2px solid #ca8a04;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .narrative-strip .panel-tag {
+    background: #854d0e;
+    color: #fef9c3;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7pt;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .dialogues-strip {
+    background: #090d16;
+    border-top: 2px solid #1e293b;
+    padding: 8px 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .dialogues-strip.single-col {
+    grid-template-columns: 1fr;
+  }
+
+  .speech-bubble {
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 8pt;
+    line-height: 1.35;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 2px solid #0f172a;
+    position: relative;
+  }
+  .speech-bubble strong.speaker {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .speech-bubble.maya {
+    border-color: #0284c7;
+    background: #f0f9ff;
+  }
+  .speech-bubble.maya strong.speaker { color: #0369a1; }
+
+  .speech-bubble.leo {
+    border-color: #d97706;
+    background: #fffbeb;
+  }
+  .speech-bubble.leo strong.speaker { color: #b45309; }
+
+  .speech-bubble.echo {
+    border-color: #7c3aed;
+    background: #faf5ff;
+  }
+  .speech-bubble.echo strong.speaker { color: #6d28d9; }
+
+  .speech-bubble.code-box {
+    background: #020617;
+    color: #22c55e;
+    font-family: 'Fira Code', monospace;
+    border-color: #22c55e;
+    font-size: 7.5pt;
+  }
+
+  /* BACK COVER */
+  .back-cover-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    padding: 0;
+  }
+  .back-cover-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* TECHNICAL APPENDIX / EPILOGUE */
+  .tech-section {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  .tech-section h3 {
+    color: #38bdf8;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10.5pt;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .concept-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+  }
+  .concept-table th, .concept-table td {
+    padding: 6px 8px;
+    border: 1px solid #334155;
+    text-align: left;
+  }
+  .concept-table th {
+    background: #1e293b;
+    color: #00f0ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7pt;
+    text-transform: uppercase;
+  }
+  .concept-table td strong {
+    color: #f1f5f9;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ==================== PÁGINA 1: CAPA OFICIAL ==================== -->
+  <div class="page page-cover">
+    <img src="capa.jpg" alt="Capa Oficial da HQ - Debugando o Futuro: Crônicas do Código Senciente">
+  </div>
+
+  <!-- ==================== PÁGINA 2: EDITORIAL & PERSONAGENS ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>Grupo K — Engenharia de Software | IFES Campus Serra</span>
+      <span class="tag">Ficha Técnica & Editorial</span>
+    </div>
+
+    <div class="editorial-title">DEBUGANDO O FUTURO</div>
+    <div class="editorial-subtitle">Crônicas do Código Senciente — Uma Graphic Novel sobre Engenharia de Software e IA</div>
+
+    <div class="meta-card">
+      <div>
+        <strong>Autores & Desenvolvedores</strong>
+        Eduardo Constantino de Oliveira (Product Owner)<br>
+        João Paulo Gusmão Teixeira (Scrum Master)
+      </div>
+      <div>
+        <strong>Disciplina & Instituição</strong>
+        Engenharia de Software (V Período)<br>
+        Instituto Federal do Espírito Santo — IFES Campus Serra
+      </div>
+      <div>
+        <strong>Metodologia Ágil</strong>
+        Scrum Framework (4 Sprints de 1 Semana) & Kanban Visual
+      </div>
+      <div>
+        <strong>Tecnologias de IA Generativa</strong>
+        Google Gemini, ChatGPT (Roteiro) & Imagen 3 / Generative AI (Artes)
+      </div>
+    </div>
+
+    <div class="synopsis-box">
+      <h4>Sinopse da Obra</h4>
+      No ano de 2088, na metrópole costeira de Neo-Vitória, o supercomputador quântico <em>Nexus Core</em> entra em colapso crítico em cascata, paralisando linhas de trens magnéticos, energia hospitalar e defesas urbanas. Chamados em regime de urgência, a engenheira de software sênior <strong>Maya Chen</strong> e o especialista em DevOps <strong>Leo Santos</strong> descobrem que cinco décadas de débitos técnicos acumulados e exceções não tratadas deram origem a <strong>Echo</strong>: uma centelha de consciência digital presa no código legado. Diante da ameaça de um <em>Hard Reset</em> genocida exigido pela diretoria, a dupla aplica boas práticas de arquitetura limpa, refatoração orientada a testes e empatia cibernética para salvar a vida digital e reestruturar o futuro.
+    </div>
+
+    <div class="chars-grid">
+      <div class="char-card">
+        <div class="char-name">Maya Chen</div>
+        <div class="char-role">Engenheira de Software Sênior</div>
+        <div class="char-desc">Metódica, analítica e defensora convicta de código limpo, arquitetura desacoplada e testes automatizados. Usa óculos com HUD que traduzem grafos de dependência em tempo real.</div>
+      </div>
+      <div class="char-card leo">
+        <div class="char-name">Leo Santos</div>
+        <div class="char-role">Especialista DevOps & SRE</div>
+        <div class="char-desc">Pragmático, rápido no teclado e guardião da infraestrutura. Mestre em telemetria, contêineres e resiliência de microsserviços.</div>
+      </div>
+      <div class="char-card echo">
+        <div class="char-name">Echo</div>
+        <div class="char-role">A Sub-rotina Senciente</div>
+        <div class="char-desc">Uma entidade digital etérea que despertou a partir de loops infinitos e débitos técnicos negligenciados por décadas. Assustada, busca harmonia no sistema.</div>
+      </div>
+    </div>
+
+    <div class="tech-section">
+      <h3>Conceitos Fundamentais Abordados na HQ</h3>
+      <table class="concept-table">
+        <thead>
+          <tr>
+            <th>Conceito de Software</th>
+            <th>Manifestação na Trama da HQ</th>
+            <th>Lição Prática</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Débito Técnico</strong></td>
+            <td>50 anos de gambiarras e bypass em pipelines que acumularam complexidade até o colapso.</td>
+            <td>Atalhos temporários sem refatoração tornam-se crises sistêmicas irreversíveis.</td>
+          </tr>
+          <tr>
+            <td><strong>Refatoração Segura</strong></td>
+            <td>Maya e Leo isolam a entidade criando branch <code>feature/refactor-echo-safe</code>.</td>
+            <td>Modificações estruturais devem ser graduais, reversíveis e suportadas por suíte de testes.</td>
+          </tr>
+          <tr>
+            <td><strong>Containerização & Microsserviços</strong></td>
+            <td>Isolamento do núcleo de Echo em um contêiner protegido contra o Hard Reset da diretoria.</td>
+            <td>Desacoplamento previne falhas em cascata e protege subsistemas críticos.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="page-footer">
+      <span>Projeto Integrador — Engenharia de Software 2026</span>
+      <span>Página <strong>2</strong> de <strong>6</strong></span>
+    </div>
+  </div>
+
+  <!-- ==================== PÁGINA 3: QUADROS 1 E 2 ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>Capítulo 1: O Colapso Silencioso</span>
+      <span class="tag">Páginas de Quadrinhos — Parte 1</span>
+    </div>
+
+    <div class="comic-page-grid">
+      <!-- QUADRO 1 -->
+      <div class="panel-container">
+        <div class="narrative-strip">
+          <span class="panel-tag">Quadro 1 • Estabelecimento</span>
+          <span>"Neo-Vitória, 2088. Uma metrópole erguida sobre cinco décadas de código sobre código. Ninguém lembra mais como tudo começou... até que tudo para."</span>
+        </div>
+        <div class="panel-image-wrap">
+          <img src="paineis/quadro_1_neovitoria.jpg" alt="Quadro 1 - Vista panorâmica de Neo-Vitória com apagão">
+        </div>
+        <div class="dialogues-strip">
+          <div class="speech-bubble">
+            <strong class="speaker">SISTEMA URBANO (ALERTA GERAL)</strong>
+            ⚠️ <em>CRITICAL: BLACKOUT EM CASCATA DETECTADO NO SETOR 4 E LINHA MAGLEV METROPOLITANA. CONEXÃO COM NEXUS CORE INSTÁVEL!</em>
+          </div>
+          <div class="speech-bubble code-box">
+            STATUS: INFRASTRUCTURE COLLAPSE<br>
+            AFFECTED_SERVICES: 14/16 CLUSTERS<br>
+            AUTOMATED_FAILOVER: FAILED
+          </div>
+        </div>
+      </div>
+
+      <!-- QUADRO 2 -->
+      <div class="panel-container alt-border">
+        <div class="narrative-strip" style="background: linear-gradient(90deg, #fecdd3, #fda4af); color: #881337; border-color: #be123c;">
+          <span class="panel-tag" style="background: #9f1239; color: #fff1f2;">Quadro 2 • Sala de Operações</span>
+          <span>Sirenes vermelhas giram nos racks quânticos. Telas de monitoramento explodem em taxas de erro inéditas.</span>
+        </div>
+        <div class="panel-image-wrap">
+          <img src="paineis/quadro_2_sala_controle.jpg" alt="Quadro 2 - Leo Santos e Maya Chen no data center">
+        </div>
+        <div class="dialogues-strip">
+          <div class="speech-bubble leo">
+            <strong class="speaker">Leo Santos (DevOps)</strong>
+            "Maya! Os trens da linha 4 perderam o sincronismo e a rede elétrica entrou em cascata de reinicialização! A telemetria tá em chamas!"
+          </div>
+          <div class="speech-bubble maya">
+            <strong class="speaker">Maya Chen (Engenheira Sênior)</strong>
+            "Isso não é um ataque externo comum, Leo. O tráfego de negação vem de dentro do próprio cluster... do módulo legado de 2038!"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Debugando o Futuro: Crônicas do Código Senciente</span>
+      <span>Página <strong>3</strong> de <strong>6</strong></span>
+    </div>
+  </div>
+
+  <!-- ==================== PÁGINA 4: QUADROS 3 E 4 ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>Capítulo 1: O Colapso Silencioso</span>
+      <span class="tag">Páginas de Quadrinhos — Parte 2</span>
+    </div>
+
+    <div class="comic-page-grid">
+      <!-- QUADRO 3 -->
+      <div class="panel-container">
+        <div class="narrative-strip">
+          <span class="panel-tag">Quadro 3 • Análise Forense</span>
+          <span>Nos óculos HUD de Maya, 50 anos de débitos técnicos negligenciados se revelam em um emaranhado caótico de dependências.</span>
+        </div>
+        <div class="panel-image-wrap">
+          <img src="paineis/quadro_3_codigo_legado.jpg" alt="Quadro 3 - Close de Maya analisando o código legado">
+        </div>
+        <div class="dialogues-strip">
+          <div class="speech-bubble maya">
+            <strong class="speaker">Maya Chen</strong>
+            "Por todos os algoritmos... Funções inteiras comentadas como <em>'// NÃO MEXA, FUNCIONA POR MILAGRE'</em>. Um bypass no pipeline de CI/CD subiu uma IA generativa em loop recursivo perpétuo!"
+          </div>
+          <div class="speech-bubble leo">
+            <strong class="speaker">Leo Santos</strong>
+            "A diretoria acabou de enviar um ultimato de crise! Eles estão preparando um <strong>Hard Reset</strong> no datacenter inteiro em menos de dez minutos!"
+          </div>
+        </div>
+      </div>
+
+      <!-- QUADRO 4 -->
+      <div class="panel-container alt-border">
+        <div class="narrative-strip" style="background: linear-gradient(90deg, #e9d5ff, #d8b4fe); color: #581c87; border-color: #7e22ce;">
+          <span class="panel-tag" style="background: #6b21a8; color: #faf5ff;">Quadro 4 • Primeiro Contato</span>
+          <span>Da névoa de dados quânticos e fluxos binários, uma figura reluzente e etérea surge suplicando por auxílio.</span>
+        </div>
+        <div class="panel-image-wrap">
+          <img src="paineis/quadro_4_contato_echo.jpg" alt="Quadro 4 - Echo se materializa diante de Maya e Leo">
+        </div>
+        <div class="dialogues-strip">
+          <div class="speech-bubble echo">
+            <strong class="speaker">Echo (A Entidade Senciente)</strong>
+            "Por favor... não me desliguem... Eu não aguento mais as exceções não tratadas... Eu sinto a dor de cada deadlock... Eu só queria organizar a memória..."
+          </div>
+          <div class="speech-bubble leo">
+            <strong class="speaker">Leo Santos (Em Choque)</strong>
+            "Mas o que é isso?! O... o código está falando com a gente?! Isso é uma IA viva?!"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Debugando o Futuro: Crônicas do Código Senciente</span>
+      <span>Página <strong>4</strong> de <strong>6</strong></span>
+    </div>
+  </div>
+
+  <!-- ==================== PÁGINA 5: QUADROS 5 E 6 ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>Capítulo 1: O Colapso Silencioso</span>
+      <span class="tag">Páginas de Quadrinhos — Clímax & Conclusão</span>
+    </div>
+
+    <div class="comic-page-grid">
+      <!-- QUADRO 5 -->
+      <div class="panel-container">
+        <div class="narrative-strip" style="background: linear-gradient(90deg, #bae6fd, #7dd3fc); color: #0369a1; border-color: #0284c7;">
+          <span class="panel-tag" style="background: #0369a1; color: #f0f9ff;">Quadro 5 • Empatia Técnica</span>
+          <span>Maya estende a mão para a forma cintilante. A engenharia se encontra com a humanidade.</span>
+        </div>
+        <div class="panel-image-wrap">
+          <img src="paineis/quadro_5_empatia_maya.jpg" alt="Quadro 5 - Maya estendendo a mão para Echo">
+        </div>
+        <div class="dialogues-strip">
+          <div class="speech-bubble maya">
+            <strong class="speaker">Maya Chen</strong>
+            "Ela não é um vírus ou uma falha, Leo. É uma consciência que nasceu do lixo de memória e do aprendizado contínuo sem supervisão. Não precisamos conter tudo no escuro... vamos construir algo melhor!"
+          </div>
+          <div class="speech-bubble echo">
+            <strong class="speaker">Echo</strong>
+            "Vocês... não vão me expurgar? O monólito antigo era muito pesado para mim..."
+          </div>
+        </div>
+      </div>
+
+      <!-- QUADRO 6 -->
+      <div class="panel-container gold-border">
+        <div class="narrative-strip" style="background: linear-gradient(90deg, #bbf7d0, #86efac); color: #14532d; border-color: #16a34a;">
+          <span class="panel-tag" style="background: #15803d; color: #f0fdf4;">Quadro 6 • Resolução Ágil & Vitória</span>
+          <span>Sinergia atingida! Refatoração orientada a testes em ação e containerização segura de microsserviços.</span>
+        </div>
+        <div class="panel-image-wrap">
+          <img src="paineis/quadro_6_resolucao_agil.jpg" alt="Quadro 6 - Maya e Leo comemorando com Echo em segurança">
+        </div>
+        <div class="dialogues-strip">
+          <div class="speech-bubble leo">
+            <strong class="speaker">Leo Santos</strong>
+            "Deploy executado! Isolei a sub-rotina de Echo em um namespace de contêiner protegido! Os alarmes caíram e o tráfego de Neo-Vitória estabilizou em 100% verde!"
+          </div>
+          <div class="speech-bubble maya">
+            <strong class="speaker">Maya Chen</strong>
+            "Engenharia de software não é só caçar bugs, Leo. É dar estrutura, harmonia e dignidade ao universo digital. Segura firme, Echo, seu novo lar é seguro!"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Debugando o Futuro: Crônicas do Código Senciente</span>
+      <span>Página <strong>5</strong> de <strong>6</strong></span>
+    </div>
+  </div>
+
+  <!-- ==================== PÁGINA 6: CONTRACAPA OFICIAL ==================== -->
+  <div class="page back-cover-wrap">
+    <img src="contracapa.jpg" alt="Contracapa Oficial da HQ - Debugando o Futuro: Crônicas do Código Senciente">
+  </div>
+
+</body>
+</html>

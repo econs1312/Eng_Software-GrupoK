@@ -4,44 +4,50 @@
 **Disciplina:** Engenharia de Software — IFES Serra  
 **Ferramenta Oficial:** GitHub Projects & Markdown Board  
 **Link do Projeto no GitHub Projects:** [GitHub Projects — Grupo K](https://github.com/users/econs1312/projects)  
+**Status Atual:** 🏁 **Sprint 4 Finalizada — 100% dos Itens em DONE**  
 
 ---
 
 ## 🧭 Fluxo de Trabalho e Políticas de Cada Coluna
 
-O fluxo visual de desenvolvimento do Grupo K adota 5 etapas bem definidas:
+O fluxo visual de desenvolvimento do Grupo K adotou 5 etapas bem definidas:
 
 ```
-[ 1. Product Backlog ] ──► [ 2. To Do (Sprint 1) ] ──► [ 3. In Progress ] ──► [ 4. Review / QA ] ──► [ 5. Done ]
+[ 1. Product Backlog ] ──► [ 2. To Do ] ──► [ 3. In Progress ] ──► [ 4. Review / QA ] ──► [ 5. Done ]
 ```
 
 1. **Product Backlog:** Repositório de todas as necessidades e histórias de usuário identificadas para o projeto da HQ.
-2. **To Do (A Fazer - Sprint 1):** Tarefas priorizadas e refinadas que foram comprometidas para a iteração atual.
-3. **In Progress (Em Andamento):** Tarefas sendo executadas ativamente pelos integrantes. *Limite de WIP (Work in Progress): Máximo de 2 tarefas ativas por integrante*.
-4. **Review / QA (Revisão & Validação):** Artefato produzido sob validação técnica, ortográfica ou visual por outro membro da equipe.
+2. **To Do (A Fazer):** Tarefas priorizadas e refinadas comprometidas para a iteração atual.
+3. **In Progress (Em Andamento):** Tarefas sendo executadas ativamente pelos integrantes. *Limite de WIP: Máximo de 2 tarefas ativas por integrante*.
+4. **Review / QA (Revisão & Validação):** Artefato produzido sob validação técnica, conceitual ou visual cruzada.
 5. **Done (Concluído):** Tarefas finalizadas que atendem integralmente à *Definition of Done (DoD)* e foram mergeadas na branch `main`.
 
 ---
 
-## 📌 Estado Atual do Quadro Kanban (Sprint 1)
+## 📌 Estado Final do Quadro Kanban (Fechamento da Sprint 4)
 
-Abaixo está a representação tabular do estado do quadro com as atividades da primeira sprint já geradas e distribuídas:
+Com a conclusão da Sprint 4 (última sprint de entrega do projeto), todos os cards de trabalho foram devidamente homologados e movidos para **Done**:
 
-| 📋 Product Backlog (Futuras Sprints) | ⏳ To Do (Sprint 1) | ⚙️ In Progress | 🔍 Review / QA | ✅ Done |
-| :--- | :--- | :--- | :--- | :--- |
-| **PB-08:** Design do Layout e Grades de Quadrinhos *(5 pts)* | | | | **TSK-101:** Criação do repositório GitHub e estrutura de pastas *(Eduardo Constantino - PO/Dev)* |
-| **PB-09:** Inserção de Balões e Onomatopeias *(8 pts)* | | | | **TSK-102:** Redação do README e sinopse da obra *(João Paulo Gusmão - SM/Dev)* |
-| **PB-10:** Criação da Capa e Contracapa *(5 pts)* | | | | **TSK-103:** Configuração do board Kanban e fluxos *(João Paulo Gusmão - SM/Dev)* |
-| **PB-11:** Revisão Técnica Final *(3 pts)* | | | | **TSK-104:** Fichas dos personagens Maya, Leo e Echo *(Eduardo Constantino - PO/Dev)* |
-| **PB-12:** Exportação do PDF da HQ *(3 pts)* | | | | **TSK-105:** Escrita do roteiro quadro a quadro *(Eduardo Constantino - PO/Dev)* |
-| **PB-13:** Relatório Metodológico *(5 pts)* | | | | **TSK-106:** Biblioteca de prompts com Style Anchor *(João Paulo Gusmão - SM/Dev)* |
-| | | | | **TSK-107:** Geração da arte da capa `capa_concept_art.jpg` *(João Paulo Gusmão - SM/Dev)* |
-| | | | | **TSK-108:** Reunião de Sprint Review e Retrospectiva *(Eduardo & João Paulo - Equipe)* |
+| 📋 Product Backlog (0) | ⏳ To Do (0) | ⚙️ In Progress (0) | 🔍 Review / QA (0) | ✅ Done (100% Concluído) |
+| :---: | :---: | :---: | :---: | :--- |
+| — | — | — | — | **PB-01:** Setup do Repositório GitHub e regras Git *(2 pts)* |
+| — | — | — | — | **PB-02:** README oficial e sinopse da obra *(3 pts)* |
+| — | — | — | — | **PB-03:** Fichas dos personagens Maya, Leo e Echo *(5 pts)* |
+| — | — | — | — | **PB-04:** Roteiro técnico quadro a quadro *(8 pts)* |
+| — | — | — | — | **PB-05:** Estruturação do Quadro Kanban & Sprints *(3 pts)* |
+| — | — | — | — | **PB-06:** Engenharia de Prompts com Style Anchor *(5 pts)* |
+| — | — | — | — | **PB-07:** Geração visual dos 6 quadros da HQ *(8 pts)* |
+| — | — | — | — | **PB-08:** Diagramação em grid A4 e formato webtoon *(5 pts)* |
+| — | — | — | — | **PB-09:** Balões de diálogo e recordatórios narrativos *(8 pts)* |
+| — | — | — | — | **PB-10:** Criação da Capa e Contracapa oficiais *(5 pts)* |
+| — | — | — | — | **PB-11:** Revisão técnica e validação pedagógica de Software *(3 pts)* |
+| — | — | — | — | **PB-12:** Compilação final da HQ em PDF e Web Reader *(3 pts)* |
+| — | — | — | — | **PB-13:** Cerimônias e Sprint Retrospective Sprint 4 *(5 pts)* |
 
 ---
 
 ## 🔗 Informações para Submissão no AVA / Moodle
 
-Conforme solicitado nas orientações da disciplina:
-- **Local onde o Kanban é gerenciado:** [Repositório GitHub / GitHub Projects do Grupo K](https://github.com/users/econs1312/projects)
-- **Visualização direta do Kanban e tarefas da 1ª Sprint:** Este arquivo [`docs/planejamento/kanban.md`](kanban.md) mantém o espelho versionado de todas as colunas e movimentações da equipe.
+- **Quadro de Gestão no GitHub Projects:** [Repositório GitHub / GitHub Projects do Grupo K](https://github.com/users/econs1312/projects)
+- **História em Quadrinhos Pronta:** [`hq/index.html`](../../hq/index.html) e [`hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf`](../../hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf)
+- **Documentação da Sprint 4 Retrospective:** [`docs/sprint-4/Sprint_Retrospective_Sprint4.pdf`](../sprint-4/Sprint_Retrospective_Sprint4.pdf)

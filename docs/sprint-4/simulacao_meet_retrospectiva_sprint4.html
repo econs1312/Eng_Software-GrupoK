@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Google Meet - Reunião de Sprint Retrospective Sprint 4 (Grupo K)</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Google Sans', Roboto, 'Segoe UI', Arial, sans-serif;
+        background-color: #202124;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+    /* Main call container */
+    .meet-main {
+        flex: 1;
+        display: flex;
+        padding: 16px;
+        gap: 16px;
+    }
+    /* Screen share area (large) */
+    .screen-share-area {
+        flex: 3.2;
+        background-color: #000000;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #3c4043;
+    }
+    .share-header {
+        background-color: #1a1a1a;
+        padding: 10px 16px;
+        font-size: 13px;
+        color: #9aa0a6;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #333;
+    }
+    .share-header strong {
+        color: #8ab4f8;
+    }
+    .share-content {
+        flex: 1;
+        background-color: #0d1117;
+        color: #c9d1d9;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        padding: 18px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .kanban-header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #30363d;
+        padding-bottom: 10px;
+    }
+    .project-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #f0f6fc;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .badge-done-all {
+        background: #238636;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 12px;
+    }
+    .kanban-mock {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        flex: 1;
+    }
+    .kanban-col {
+        background-color: #161b22;
+        border-radius: 6px;
+        border: 1px solid #30363d;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .col-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: #8b949e;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .col-count {
+        background-color: #30363d;
+        color: #c9d1d9;
+        border-radius: 10px;
+        padding: 0 6px;
+        font-size: 11px;
+    }
+    .col-count.success {
+        background-color: #238636;
+        color: #ffffff;
+    }
+    .kanban-card {
+        background-color: #21262d;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 8px 10px;
+        margin-bottom: 6px;
+        font-size: 11px;
+        line-height: 1.35;
+    }
+    .card-tag {
+        display: inline-block;
+        font-size: 9px;
+        font-weight: 600;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-bottom: 4px;
+    }
+    .tag-must { background-color: #b62324; color: #fff; }
+    .tag-should { background-color: #d29922; color: #fff; }
+    .tag-done { background-color: #238636; color: #fff; }
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6px;
+        font-size: 9px;
+        color: #8b949e;
+    }
+
+    /* Right column: participants & chat */
+    .meet-sidebar {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .video-tile {
+        background-color: #3c4043;
+        border-radius: 10px;
+        height: 140px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+    }
+    .video-tile.speaking {
+        border-color: #8ab4f8;
+    }
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1a73e8, #12b5cb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .user-avatar.jp {
+        background: linear-gradient(135deg, #9334e8, #e81a73);
+    }
+    .user-label {
+        position: absolute;
+        bottom: 8px;
+        left: 10px;
+        background-color: rgba(0,0,0,0.65);
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .mic-icon {
+        width: 12px;
+        height: 12px;
+        background-color: #8ab4f8;
+        border-radius: 50%;
+    }
+
+    /* Meet chat simulation */
+    .meet-chat {
+        flex: 1;
+        background-color: #282a2d;
+        border-radius: 10px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        font-size: 11.5px;
+        border: 1px solid #3c4043;
+    }
+    .chat-header {
+        font-weight: 700;
+        font-size: 12px;
+        color: #e8eaed;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #3c4043;
+    }
+    .chat-messages {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        overflow: hidden;
+    }
+    .chat-msg {
+        line-height: 1.3;
+    }
+    .chat-msg strong {
+        color: #8ab4f8;
+    }
+    .chat-msg.jp strong {
+        color: #c58af8;
+    }
+    .chat-msg p {
+        color: #bdc1c6;
+        margin-top: 2px;
+    }
+
+    /* Bottom control bar */
+    .meet-controls {
+        height: 60px;
+        background-color: #202124;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        border-top: 1px solid #3c4043;
+    }
+    .call-info {
+        font-size: 13px;
+        color: #e8eaed;
+    }
+    .btn-group {
+        display: flex;
+        gap: 12px;
+    }
+    .ctrl-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #3c4043;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 15px;
+    }
+    .ctrl-btn.active { background-color: #8ab4f8; color: #202124; }
+    .ctrl-btn.end { background-color: #ea4335; }
+</style>
+</head>
+<body>
+
+<div class="meet-main">
+    <!-- SCREEN SHARE (KANBAN 100% DONE & HQ) -->
+    <div class="screen-share-area">
+        <div class="share-header">
+            <span>📺</span>
+            <span>Você está apresentando para todos: <strong>GitHub Projects — Grupo K / Sprint 4 (DoD 100% Concluído)</strong></span>
+        </div>
+        <div class="share-content">
+            <div class="kanban-header-bar">
+                <div class="project-title">
+                    <span>🚀 IFES Serra — Engenharia de Software | Grupo K Board</span>
+                    <span class="badge-done-all">Sprint 4: 100% ENTREGUE</span>
+                </div>
+                <div style="font-size: 11px; color:#8b949e;">
+                    HQ Final: <strong>Debugando o Futuro (PDF & Web)</strong> | 13/13 Cards Concluídos
+                </div>
+            </div>
+
+            <div class="kanban-mock">
+                <!-- COL 1: TO DO -->
+                <div class="kanban-col">
+                    <div class="col-title">
+                        <span>TO DO (A FAZER)</span>
+                        <span class="col-count">0</span>
+                    </div>
+                    <div style="text-align: center; color: #6e7681; font-size: 11px; margin-top: 40px;">
+                        <em>Todas as tarefas foram puxadas e concluídas!</em>
+                    </div>
+                </div>
+
+                <!-- COL 2: IN PROGRESS -->
+                <div class="kanban-col">
+                    <div class="col-title">
+                        <span>IN PROGRESS</span>
+                        <span class="col-count">0</span>
+                    </div>
+                    <div style="text-align: center; color: #6e7681; font-size: 11px; margin-top: 40px;">
+                        <em>Nenhuma tarefa pendente de execução.</em>
+                    </div>
+                </div>
+
+                <!-- COL 3: REVIEW / QA -->
+                <div class="kanban-col">
+                    <div class="col-title">
+                        <span>REVIEW / QA</span>
+                        <span class="col-count">0</span>
+                    </div>
+                    <div style="text-align: center; color: #6e7681; font-size: 11px; margin-top: 40px;">
+                        <em>Homologação final 100% aprovada.</em>
+                    </div>
+                </div>
+
+                <!-- COL 4: DONE -->
+                <div class="kanban-col" style="border-color: #238636; background: rgba(35, 134, 54, 0.05);">
+                    <div class="col-title">
+                        <span style="color:#3fb950;">DONE (CONCLUÍDO)</span>
+                        <span class="col-count success">13</span>
+                    </div>
+
+                    <div class="kanban-card">
+                        <span class="card-tag tag-done">PB-07 [DoD]</span>
+                        <strong>Geração Visual dos 6 Quadros com IA</strong>
+                        <div class="card-footer"><span>hq/paineis/</span><span>8 pts</span></div>
+                    </div>
+
+                    <div class="kanban-card">
+                        <span class="card-tag tag-done">PB-09 [DoD]</span>
+                        <strong>Letreiramento, Balões e Diálogos da HQ</strong>
+                        <div class="card-footer"><span>hq/index.html</span><span>8 pts</span></div>
+                    </div>
+
+                    <div class="kanban-card">
+                        <span class="card-tag tag-done">PB-10 [DoD]</span>
+                        <strong>Criação da Capa e Contracapa Oficiais</strong>
+                        <div class="card-footer"><span>hq/capa.jpg</span><span>5 pts</span></div>
+                    </div>
+
+                    <div class="kanban-card">
+                        <span class="card-tag tag-done">PB-12 [DoD]</span>
+                        <strong>Compilação Final em PDF de Alta Definição</strong>
+                        <div class="card-footer"><span>hq/pdf/</span><span>5 pts</span></div>
+                    </div>
+
+                    <div class="kanban-card">
+                        <span class="card-tag tag-done">PB-13 [DoD]</span>
+                        <strong>Sprint Retrospective Sprint 4 & Lições</strong>
+                        <div class="card-footer"><span>docs/sprint-4/</span><span>5 pts</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR: MEMBERS & CHAT -->
+    <div class="meet-sidebar">
+        <!-- TILE EDUARDO (PO) -->
+        <div class="video-tile speaking">
+            <div class="user-avatar">EO</div>
+            <div class="user-label">
+                <span class="mic-icon"></span>
+                <span>Eduardo Constantino (PO & Dev)</span>
+            </div>
+        </div>
+
+        <!-- TILE JOÃO PAULO (SM) -->
+        <div class="video-tile">
+            <div class="user-avatar jp">JT</div>
+            <div class="user-label">
+                <span class="mic-icon"></span>
+                <span>João Paulo Gusmão (SM & Dev)</span>
+            </div>
+        </div>
+
+        <!-- CHAT SIMULATION -->
+        <div class="meet-chat">
+            <div class="chat-header">💬 Chat da Reunião (Retrospectiva Sprint 4)</div>
+            <div class="chat-messages">
+                <div class="chat-msg">
+                    <strong>Eduardo Constantino:</strong>
+                    <p>Fala João! Acabei de rodar a compilação do PDF final da HQ com os 6 quadros e a contracapa. O arquivo ficou perfeito!</p>
+                </div>
+                <div class="chat-msg jp">
+                    <strong>João Paulo Gusmão:</strong>
+                    <p>Show de bola, Eduardo! O leitor web no index.html também tá rodando suave com modo Webtoon e Slide. Todos os 13 cards do Kanban estão em Done!</p>
+                </div>
+                <div class="chat-msg">
+                    <strong>Eduardo Constantino:</strong>
+                    <p>Incrível fechar a Sprint 4 com 100% do DoD batido. A integração com os conceitos de Engenharia de Software ficou muito didática.</p>
+                </div>
+                <div class="chat-msg jp">
+                    <strong>João Paulo Gusmão:</strong>
+                    <p>Com certeza! Vamos registrar esse print da retrospectiva e anexar os PDFs na entrega do AVA. Parabéns pelo projeto em dupla!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="meet-controls">
+    <div class="call-info">
+        <strong>meet.google.com/k-ifes-sprint4-retro</strong> &nbsp;|&nbsp; 19:42 &nbsp;|&nbsp; 👥 2 participantes
+    </div>
+    <div class="btn-group">
+        <button class="ctrl-btn active">🎤</button>
+        <button class="ctrl-btn active">📹</button>
+        <button class="ctrl-btn active">🖥️</button>
+        <button class="ctrl-btn">✋</button>
+        <button class="ctrl-btn end">📞</button>
+    </div>
+    <div style="font-size: 12px; color: #9aa0a6;">
+        Grupo K — IFES Campus Serra (2026)
+    </div>
+</div>
+
+</body>
+</html>

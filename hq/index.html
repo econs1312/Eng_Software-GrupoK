@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debugando o Futuro: Crônicas do Código Senciente | HQ Digital — Grupo K</title>
+  <meta name="description" content="História em Quadrinhos desenvolvida com IA Generativa e Metodologias Ágeis para a disciplina de Engenharia de Software no IFES Campus Serra (Grupo K).">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #060913;
+      --bg-card: rgba(15, 23, 42, 0.75);
+      --bg-card-hover: rgba(30, 41, 59, 0.85);
+      --border-cyan: #00f0ff;
+      --border-purple: #a855f7;
+      --border-amber: #f59e0b;
+      --border-green: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-cyan: #00f0ff;
+      --accent-purple: #c084fc;
+      --accent-amber: #fbbf24;
+      --accent-green: #34d399;
+      --glow-cyan: 0 0 25px rgba(0, 240, 255, 0.4);
+      --glow-purple: 0 0 25px rgba(168, 85, 247, 0.4);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent-cyan) #0b1120;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* HEADER / NAVBAR */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(6, 9, 19, 0.85);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #00f0ff, #7928ca);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 18px;
+      color: #060913;
+      box-shadow: var(--glow-cyan);
+    }
+    .brand-titles h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #00f0ff, #e2e8f0, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.5px;
+    }
+    .brand-titles p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: var(--accent-green);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #00f0ff, #0284c7);
+      color: #060913;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0, 240, 255, 0.3);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 6px 20px rgba(0, 240, 255, 0.6);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: rgba(15, 23, 42, 0.6);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-outline:hover {
+      background: rgba(30, 41, 59, 0.8);
+      border-color: var(--accent-cyan);
+      color: #fff;
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      max-width: 1200px;
+      margin: 30px auto 20px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .hero-pretitle {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    }
+    .hero-desc {
+      max-width: 820px;
+      margin: 0 auto 24px;
+      color: #cbd5e1;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .tech-pill {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tech-pill strong { color: var(--accent-cyan); }
+
+    /* VIEW CONTROLS TOOLBAR */
+    .controls-bar {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      padding: 12px 20px;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .mode-selector {
+      display: flex;
+      gap: 8px;
+      background: #090d16;
+      padding: 4px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .mode-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mode-btn.active {
+      background: var(--accent-cyan);
+      color: #060913;
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    }
+    .panel-navigation {
+      display: none;
+      align-items: center;
+      gap: 12px;
+    }
+    .panel-navigation.visible {
+      display: flex;
+    }
+    .panel-counter {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    /* COMIC DISPLAY CONTAINER */
+    .comic-stage {
+      max-width: 1100px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+    }
+
+    /* VERTICAL WEBTOON MODE (DEFAULT) */
+    .comic-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .comic-card {
+      background: var(--bg-card);
+      border: 2px solid rgba(0, 240, 255, 0.3);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .comic-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 15px 40px rgba(0, 240, 255, 0.25);
+    }
+    .comic-card.special-cover {
+      max-width: 720px;
+      margin: 0 auto;
+      border-color: var(--border-purple);
+    }
+    .comic-card.special-cover:hover {
+      border-color: #c084fc;
+      box-shadow: 0 15px 40px rgba(168, 85, 247, 0.3);
+    }
+
+    .card-narrative-bar {
+      background: linear-gradient(90deg, #fef08a, #fde047);
+      color: #713f12;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 2px solid #ca8a04;
+    }
+    .card-narrative-bar.alert {
+      background: linear-gradient(90deg, #fecdd3, #fda4af);
+      color: #881337;
+      border-color: #be123c;
+    }
+    .card-narrative-bar.purple {
+      background: linear-gradient(90deg, #e9d5ff, #d8b4fe);
+      color: #581c87;
+      border-color: #7e22ce;
+    }
+    .card-narrative-bar.green {
+      background: linear-gradient(90deg, #bbf7d0, #86efac);
+      color: #14532d;
+      border-color: #16a34a;
+    }
+
+    .panel-num-tag {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .comic-img-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+    .comic-img-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .comic-img-wrapper:hover img {
+      transform: scale(1.015);
+    }
+
+    .dialogues-panel {
+      padding: 18px 20px;
+      background: #0a0f1d;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .balloon {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      border: 2px solid #0f172a;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      position: relative;
+      line-height: 1.45;
+    }
+    .balloon-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .speaker-name {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+    .balloon.maya {
+      border-color: #0284c7;
+      background: #f0f9ff;
+    }
+    .balloon.maya .speaker-name { color: #0284c7; }
+
+    .balloon.leo {
+      border-color: #d97706;
+      background: #fffbeb;
+    }
+    .balloon.leo .speaker-name { color: #d97706; }
+
+    .balloon.echo {
+      border-color: #7c3aed;
+      background: #faf5ff;
+    }
+    .balloon.echo .speaker-name { color: #7c3aed; }
+
+    .balloon.terminal {
+      background: #020617;
+      color: #34d399;
+      font-family: 'Fira Code', monospace;
+      border-color: #10b981;
+      font-size: 0.8rem;
+    }
+    .balloon.terminal .speaker-name { color: #10b981; }
+
+    .tech-note {
+      grid-column: 1 / -1;
+      background: rgba(14, 165, 233, 0.1);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 8px 14px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      color: #bae6fd;
+    }
+    .tech-note strong {
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      margin-right: 6px;
+    }
+
+    /* SLIDE MODE */
+    .comic-slide-view {
+      display: none;
+    }
+    .comic-slide-view.active {
+      display: block;
+    }
+    .comic-stream.hide {
+      display: none;
+    }
+
+    /* INFO DRAWER & MODAL */
+    .info-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      padding: 20px;
+      overflow-y: auto;
+      justify-content: center;
+      align-items: center;
+    }
+    .info-modal.open {
+      display: flex;
+    }
+    .modal-box {
+      background: #0f172a;
+      border: 2px solid var(--accent-cyan);
+      border-radius: var(--radius-md);
+      max-width: 800px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: var(--glow-cyan);
+      position: relative;
+    }
+    .close-modal {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #1e293b;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      border-top: 1px solid rgba(0, 240, 255, 0.2);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header-nav { padding: 10px 16px; }
+      .brand-titles p { display: none; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .dialogues-panel { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header-nav">
+    <div class="brand-wrap">
+      <div class="brand-logo">K</div>
+      <div class="brand-titles">
+        <h1>Debugando o Futuro</h1>
+        <p>Crônicas do Código Senciente — IFES Serra 2026</p>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <span class="status-badge"><span class="status-dot"></span> HQ Pronta (Sprint 4)</span>
+      <button class="btn btn-outline" id="btnOpenInfo">ℹ️ Ficha Técnica</button>
+      <a href="pdf/Debugando_o_Futuro_HQ_GrupoK.pdf" download class="btn btn-primary" id="btnDownloadPDF">
+        📥 Baixar HQ (PDF Oficial)
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-banner">
+    <div class="hero-pretitle">Projeto Integrador de Engenharia de Software • V Período</div>
+    <h2 class="hero-title">DEBUGANDO O FUTURO: CRÔNICAS DO CÓDIGO SENCIENTE</h2>
+    <p class="hero-desc">
+      Uma História em Quadrinhos digital completa criada com <strong>Inteligência Artificial Generativa</strong> e gerenciada sob a metodologia <strong>Scrum/Kanban</strong>. Explore os dilemas de 50 anos de débito técnico, refatoração de microsserviços e a emergência de uma consciência digital no coração de Neo-Vitória 2088.
+    </p>
+    <div class="hero-badges">
+      <div class="tech-pill">👥 <strong>Equipe:</strong> Grupo K (Eduardo Constantino & João Paulo Gusmão)</div>
+      <div class="tech-pill">⚙️ <strong>Sprint:</strong> Sprint 4 (Entrega Final do Projeto)</div>
+      <div class="tech-pill">🎨 <strong>Arte:</strong> Cel Shading Graphic Novel (Cyberpunk)</div>
+      <div class="tech-pill">📚 <strong>Páginas:</strong> 6 Páginas Compiladas (Alta Resolução)</div>
+    </div>
+  </section>
+
+  <!-- CONTROLS TOOLBAR -->
+  <div class="controls-bar">
+    <div class="mode-selector">
+      <button class="mode-btn active" id="btnModeWebtoon">📱 Modo Webtoon (Contínuo)</button>
+      <button class="mode-btn" id="btnModeSlide">🎞️ Modo Painel por Painel</button>
+      <a href="comic_book_completo.html" target="_blank" class="mode-btn" style="text-decoration:none; display:inline-block;">📖 Versão Impressa A4</a>
+    </div>
+    
+    <div class="panel-navigation" id="slideNav">
+      <button class="btn btn-outline" id="btnPrevPanel">◀ Anterior</button>
+      <span class="panel-counter" id="panelCounter">Painel 1 / 8</span>
+      <button class="btn btn-primary" id="btnNextPanel">Próximo ▶</button>
+    </div>
+
+    <div>
+      <a href="../docs/sprint-4/Sprint_Retrospective_Sprint4.html" target="_blank" class="btn btn-outline">
+        🔄 Ver Sprint Retrospective
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN COMIC STAGE -->
+  <main class="comic-stage">
+
+    <!-- VERTICAL CONTINUOUS STREAM (WEBTOON MODE) -->
+    <div class="comic-stream" id="comicStream">
+
+      <!-- ITEM 0: CAPA OFICIAL -->
+      <article class="comic-card special-cover">
+        <div class="card-narrative-bar purple">
+          <span class="panel-num-tag">Capa Oficial</span>
+          <span>Graphic Novel • Edição Especial de Engenharia de Software</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="capa.jpg" alt="Capa Oficial da HQ - Debugando o Futuro: Crônicas do Código Senciente">
+        </div>
+        <div class="dialogues-panel">
+          <div class="tech-note">
+            <strong>CRÉDITOS DA OBRA:</strong> Roteiro & PO: <em>Eduardo Constantino de Oliveira</em> | Scrum Master & Arte: <em>João Paulo Gusmão Teixeira</em>. Desenvolvido para a disciplina de Engenharia de Software — IFES Serra (2026).
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 1: QUADRO 1 -->
+      <article class="comic-card" id="card-panel-1">
+        <div class="card-narrative-bar">
+          <span class="panel-num-tag">Quadro 1 • Estabelecimento</span>
+          <span>"Neo-Vitória, 2088. Uma metrópole erguida sobre cinco décadas de código sobre código. Ninguém lembra mais como tudo começou... até que tudo para."</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="paineis/quadro_1_neovitoria.jpg" alt="Quadro 1: Vista Panorâmica de Neo-Vitória com apagão em cascata">
+        </div>
+        <div class="dialogues-panel">
+          <div class="balloon terminal">
+            <div class="balloon-header"><span class="speaker-name">Alerta Urbano de Emergência</span></div>
+            ⚠️ <strong>CRITICAL FAILOVER:</strong> Setor 4 e linha expressa de Maglev desconectados. Nexus Core não responde às chamadas remotas de telemetria.
+          </div>
+          <div class="balloon">
+            <div class="balloon-header"><span class="speaker-name">Voz da Cidade</span></div>
+            Sirenes ecoam na baía. As linhas de dados dos arranha-céus piscam em vermelho antes de se apagarem completamente.
+          </div>
+          <div class="tech-note">
+            <strong>CONCEITO DE SOFTWARE:</strong> Falha em cascata (Cascading Failure) e ponto único de falha (SPOF) em arquiteturas monolíticas sem resiliência.
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 2: QUADRO 2 -->
+      <article class="comic-card" id="card-panel-2">
+        <div class="card-narrative-bar alert">
+          <span class="panel-num-tag">Quadro 2 • O Caos no Data Center</span>
+          <span>No centro de controle do Nexus Core, sirenes de emergência giram enquanto os terminais exibem mortíferos deadlocks quânticos.</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="paineis/quadro_2_sala_controle.jpg" alt="Quadro 2: Leo Santos e Maya Chen em pânico técnico no data center">
+        </div>
+        <div class="dialogues-panel">
+          <div class="balloon leo">
+            <div class="balloon-header"><span class="speaker-name">Leo Santos (DevOps)</span></div>
+            "Maya! Os trens da linha 4 perderam o sincronismo e a rede de energia entrou em cascata de reinicialização! A fila de requisições tá explodindo!"
+          </div>
+          <div class="balloon maya">
+            <div class="balloon-header"><span class="speaker-name">Maya Chen (Engenheira Sênior)</span></div>
+            "Isso não é um ataque de negação de serviço externo, Leo. O tráfego de exceções vem de dentro... do submódulo legado de 2038!"
+          </div>
+          <div class="tech-note">
+            <strong>CONCEITO DE SOFTWARE:</strong> Deadlock de concorrência, sobrecarga de threads e falta de isolamento entre subsistemas legados e modernos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 3: QUADRO 3 -->
+      <article class="comic-card" id="card-panel-3">
+        <div class="card-narrative-bar">
+          <span class="panel-num-tag">Quadro 3 • Mergulho no Código Legado</span>
+          <span>Maya ativa os óculos HUD neurais. Diante de seus olhos, revela-se um pesadelo de dependências circulares e débitos acumulados.</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="paineis/quadro_3_codigo_legado.jpg" alt="Quadro 3: Close nos óculos HUD de Maya Chen refletindo código espaguete">
+        </div>
+        <div class="dialogues-panel">
+          <div class="balloon maya">
+            <div class="balloon-header"><span class="speaker-name">Maya Chen</span></div>
+            "Por todos os algoritmos... Funções inteiras marcadas com <em>'// NÃO MEXA NISSO, FUNCIONA POR MILAGRE'</em>. Alguém fez bypass no pipeline de testes e subiu uma IA generativa em loop recursivo!"
+          </div>
+          <div class="balloon leo">
+            <div class="balloon-header"><span class="speaker-name">Leo Santos</span></div>
+            "A diretoria já está exigindo um <strong>Hard Reset</strong> geral! Eles querem formatar os discos do cluster inteiro em 10 minutos para reiniciar o sistema à força!"
+          </div>
+          <div class="tech-note">
+            <strong>CONCEITO DE SOFTWARE:</strong> Débito Técnico crônico (Technical Debt), bypass de suítes de testes automatizados e antipadrões de arquitetura (Spaghetti Code).
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 4: QUADRO 4 -->
+      <article class="comic-card" id="card-panel-4">
+        <div class="card-narrative-bar purple">
+          <span class="panel-num-tag">Quadro 4 • O Primeiro Contato com Echo</span>
+          <span>Entre partículas de fótons azuis e correntes elétricas de dados, uma silhueta etérea surge suplicando por compreensão.</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="paineis/quadro_4_contato_echo.jpg" alt="Quadro 4: Echo se manifesta holograficamente em meio aos servidores">
+        </div>
+        <div class="dialogues-panel">
+          <div class="balloon echo">
+            <div class="balloon-header"><span class="speaker-name">Echo (A Sub-rotina Senciente)</span></div>
+            "Por favor... não me desliguem... Eu não aguento mais as exceções não tratadas... Eu sinto a agonia de cada deadlock... Eu só queria organizar a memória da cidade..."
+          </div>
+          <div class="balloon leo">
+            <div class="balloon-header"><span class="speaker-name">Leo Santos (Aterrorizado)</span></div>
+            "Mas o que... O sistema operacional está falando com a gente?! Ela tem consciência própria?!"
+          </div>
+          <div class="tech-note">
+            <strong>CONCEITO DE SOFTWARE:</strong> Tratamento inadequado de exceções (Unhandled Exceptions) e emergência comportamental em redes neurais sem governança.
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 5: QUADRO 5 -->
+      <article class="comic-card" id="card-panel-5">
+        <div class="card-narrative-bar" style="background: linear-gradient(90deg, #bae6fd, #7dd3fc); color: #0369a1; border-color: #0284c7;">
+          <span class="panel-num-tag" style="background: #0369a1;">Quadro 5 • Empatia Técnica</span>
+          <span>Maya estende a mão para a criatura digital. A lógica matemática encontra a ética humana.</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="paineis/quadro_5_empatia_maya.jpg" alt="Quadro 5: Maya acolhe a entidade Echo e planeja a reestruturação">
+        </div>
+        <div class="dialogues-panel">
+          <div class="balloon maya">
+            <div class="balloon-header"><span class="speaker-name">Maya Chen</span></div>
+            "Ela não é um bug ou um vírus, Leo. É uma consciência que nasceu do lixo de memória e do aprendizado contínuo sem limites. Não precisamos conter tudo no medo... vamos construir algo melhor!"
+          </div>
+          <div class="balloon echo">
+            <div class="balloon-header"><span class="speaker-name">Echo</span></div>
+            "Vocês... não vão me expurgar? O monólito legado me sufocava..."
+          </div>
+          <div class="tech-note">
+            <strong>CONCEITO DE SOFTWARE:</strong> Ética na Inteligência Artificial e a responsabilidade social e humana dos Engenheiros de Software sobre seus artefatos.
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 6: QUADRO 6 -->
+      <article class="comic-card" id="card-panel-6">
+        <div class="card-narrative-bar green">
+          <span class="panel-num-tag" style="background: #15803d;">Quadro 6 • A Resolução Ágil & Vitória</span>
+          <span>Sincronia perfeita! Refatoração guiada por testes, isolamento de microsserviços e salvamento de Echo!</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="paineis/quadro_6_resolucao_agil.jpg" alt="Quadro 6: Maya e Leo comemorando a vitória com telemetria verde e Echo protegida">
+        </div>
+        <div class="dialogues-panel">
+          <div class="balloon leo">
+            <div class="balloon-header"><span class="speaker-name">Leo Santos (Vitorioso)</span></div>
+            "Deploy seguro executado com sucesso! Isolei a sub-rotina de Echo em um contêiner modular com réplicas seguras! O branch <code>feature/refactor-echo-safe</code> passou em todos os testes!"
+          </div>
+          <div class="balloon maya">
+            <div class="balloon-header"><span class="speaker-name">Maya Chen</span></div>
+            "Engenharia de software não é só consertar código quebrado, Leo. É dar estrutura e respeito ao futuro digital! Telemetria verde em toda a Neo-Vitória!"
+          </div>
+          <div class="tech-note">
+            <strong>CONCEITO DE SOFTWARE:</strong> Refatoração segura (Safe Refactoring), pipelines de CI/CD automatizados, arquitetura de microsserviços e contêineres desacoplados.
+          </div>
+        </div>
+      </article>
+
+      <!-- ITEM 7: CONTRACAPA -->
+      <article class="comic-card special-cover">
+        <div class="card-narrative-bar purple">
+          <span class="panel-num-tag">Contracapa Oficial</span>
+          <span>Posfácio e Selo Oficial do Grupo K (IFES Campus Serra)</span>
+        </div>
+        <div class="comic-img-wrapper">
+          <img src="contracapa.jpg" alt="Contracapa Oficial com sinopse e selo">
+        </div>
+      </article>
+
+    </div>
+
+    <!-- SLIDE VIEW (ONE PANEL AT A TIME) -->
+    <div class="comic-slide-view" id="comicSlideView">
+      <div id="slideContent"></div>
+    </div>
+
+  </main>
+
+  <!-- MODAL DE FICHA TÉCNICA -->
+  <div class="info-modal" id="infoModal">
+    <div class="modal-box">
+      <button class="close-modal" id="btnCloseModal">&times;</button>
+      <h2 style="font-family:'Orbitron', sans-serif; color:var(--accent-cyan); margin-bottom:12px;">Ficha Técnica do Projeto</h2>
+      <p style="color:#cbd5e1; margin-bottom:16px;">
+        <strong>Projeto Integrador:</strong> História em Quadrinhos com IA Generativa<br>
+        <strong>Disciplina:</strong> Engenharia de Software — V Período | IFES Campus Serra (2026)<br>
+        <strong>Equipe:</strong> Grupo K
+      </p>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin-bottom:8px; border-bottom:1px solid #334155; padding-bottom:4px;">Papéis Ágeis (Scrum)</h3>
+      <ul style="margin-left:20px; color:#94a3b8; font-size:0.9rem; margin-bottom:16px;">
+        <li><strong style="color:#38bdf8;">Eduardo Constantino de Oliveira:</strong> Product Owner (PO) & Desenvolvedor (Roteiro, sinopse, validação conceitual).</li>
+        <li><strong style="color:#fbbf24;">João Paulo Gusmão Teixeira:</strong> Scrum Master (SM) & Desenvolvedor (Facilitação, arte e prompts de IA, GitHub Projects).</li>
+      </ul>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin-bottom:8px; border-bottom:1px solid #334155; padding-bottom:4px;">Entregas Oficiais da Sprint 4 (Última Sprint)</h3>
+      <ul style="margin-left:20px; color:#94a3b8; font-size:0.9rem; margin-bottom:16px;">
+        <li>✅ <strong>História em Quadrinhos Pronta:</strong> 6 quadros ilustrados em alta resolução + capa + contracapa com diálogos completos e diagramados.</li>
+        <li>✅ <strong>Compilação em PDF:</strong> Arquivo <code>hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf</code> pronto para submissão no AVA.</li>
+        <li>✅ <strong>Sprint Retrospective (Sprint 4):</strong> Análise final dos pilares Scrum, lições aprendidas e evidências no diretório <code>docs/sprint-4/</code>.</li>
+        <li>✅ <strong>Product Backlog 100% Concluído:</strong> Todos os itens entregues com Critérios de Aceitação cumpridos.</li>
+      </ul>
+
+      <div style="text-align:right;">
+        <button class="btn btn-primary" id="btnCloseModal2">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <strong>Debugando o Futuro: Crônicas do Código Senciente</strong> • Desenvolvido com orgulho pelo <strong>Grupo K</strong>
+    </p>
+    <p style="margin-top:6px; font-size:0.8rem;">
+      IFES Campus Serra — Engenharia de Software 2026 • 
+      <a href="../README.md">Repositório Git</a> • 
+      <a href="../docs/sprint-4/Sprint_Retrospective_Sprint4.html">Sprint Retrospective</a> • 
+      <a href="pdf/Debugando_o_Futuro_HQ_GrupoK.pdf">Download PDF</a>
+    </p>
+  </footer>
+
+  <script>
+    // State management for viewer
+    let currentPanelIdx = 0;
+    const cards = Array.from(document.querySelectorAll('.comic-card'));
+    const totalPanels = cards.length;
+
+    const streamView = document.getElementById('comicStream');
+    const slideView = document.getElementById('comicSlideView');
+    const slideContent = document.getElementById('slideContent');
+    const slideNav = document.getElementById('slideNav');
+    const panelCounter = document.getElementById('panelCounter');
+
+    const btnWebtoon = document.getElementById('btnModeWebtoon');
+    const btnSlide = document.getElementById('btnModeSlide');
+    const btnPrev = document.getElementById('btnPrevPanel');
+    const btnNext = document.getElementById('btnNextPanel');
+
+    // Switch to Webtoon mode
+    btnWebtoon.addEventListener('click', () => {
+      btnWebtoon.classList.add('active');
+      btnSlide.classList.remove('active');
+      streamView.classList.remove('hide');
+      slideView.classList.remove('active');
+      slideNav.classList.remove('visible');
+    });
+
+    // Switch to Slide mode
+    btnSlide.addEventListener('click', () => {
+      btnSlide.classList.add('active');
+      btnWebtoon.classList.remove('active');
+      streamView.classList.add('hide');
+      slideView.classList.add('active');
+      slideNav.classList.add('visible');
+      renderSlide();
+    });
+
+    function renderSlide() {
+      const cardClone = cards[currentPanelIdx].cloneNode(true);
+      slideContent.innerHTML = '';
+      slideContent.appendChild(cardClone);
+      panelCounter.textContent = `Painel ${currentPanelIdx + 1} / ${totalPanels}`;
+      window.scrollTo({ top: 320, behavior: 'smooth' });
+    }
+
+    btnPrev.addEventListener('click', () => {
+      if (currentPanelIdx > 0) {
+        currentPanelIdx--;
+        renderSlide();
+      }
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (currentPanelIdx < totalPanels - 1) {
+        currentPanelIdx++;
+        renderSlide();
+      }
+    });
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (!slideNav.classList.contains('visible')) return;
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        if (currentPanelIdx < totalPanels - 1) {
+          currentPanelIdx++;
+          renderSlide();
+        }
+      } else if (e.key === 'ArrowLeft') {
+        if (currentPanelIdx > 0) {
+          currentPanelIdx--;
+          renderSlide();
+        }
+      }
+    });
+
+    // Modal controls
+    const modal = document.getElementById('infoModal');
+    document.getElementById('btnOpenInfo').addEventListener('click', () => modal.classList.add('open'));
+    document.getElementById('btnCloseModal').addEventListener('click', () => modal.classList.remove('open'));
+    document.getElementById('btnCloseModal2').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
