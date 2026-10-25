@@ -3,7 +3,7 @@
 Este diretório armazena os ativos visuais, painéis individuais, aplicação web interativa e a versão final compilada em PDF da História em Quadrinhos:
 
 **Obra Oficial:** *Debugando o Futuro: Crônicas do Código Senciente*  
-**Autores:** Eduardo Constantino de Oliveira (Product Owner) & João Paulo Gusmão Teixeira (Scrum Master)  
+**Autores:** Eduardo Constantino de Oliveira (Product Owner), João Paulo Gusmão Teixeira (Scrum Master) & Jacyellen Pereira da Silva (Desenvolvedora / QA)  
 **Instituição:** IFES Campus Serra — Engenharia de Software (V Período / 2026)  
 **Status:** ✅ **Concluído e Publicado (Sprint 4 - Entrega Final do Projeto)**  
 

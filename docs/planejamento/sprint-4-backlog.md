@@ -4,7 +4,7 @@
 **Disciplina:** Engenharia de Software — IFES Serra (V Período)  
 **Período da Sprint 4:** 17/10/2026 a 24/10/2026 (1 Semana)  
 **Meta da Sprint (Sprint Goal):** Concluir a produção dos 6 quadros da História em Quadrinhos com imagens de alta qualidade, compilar a edição final em PDF e leitor Web, e realizar a Sprint Retrospective formal com o balanço de encerramento do projeto.  
-**Equipe:** Grupo K (Eduardo Constantino de Oliveira [PO & Dev] & João Paulo Gusmão Teixeira [SM & Dev])  
+**Equipe:** Grupo K (Eduardo Constantino de Oliveira [PO & Dev], João Paulo Gusmão Teixeira [SM & Dev] & Jacyellen Pereira da Silva [Dev / QA])  
 
 ---
 
@@ -26,19 +26,20 @@
 | ID Tarefa | Item do PB | Descrição da Tarefa | Responsável | Estimativa (Horas) | Status |
 | :--- | :---: | :--- | :---: | :---: | :---: |
 | **TS4-01** | PB-07 | Geração das ilustrações em alta resolução para os 6 quadros da HQ via IA generativa | João Paulo & Eduardo | 8h | ✅ Concluído |
-| **TS4-02** | PB-10 | Criação e curadoria da capa e contracapa oficiais da edição graphic novel | João Paulo Gusmão | 4h | ✅ Concluído |
-| **TS4-03** | PB-09 | Diagramação, balões de diálogo em português e recordatórios narrativos | Eduardo Constantino | 6h | ✅ Concluído |
+| **TS4-02** | PB-10 | Criação e curadoria da capa e contracapa oficiais da edição graphic novel | João Paulo & Jacyellen | 4h | ✅ Concluído |
+| **TS4-03** | PB-09 | Diagramação, balões de diálogo em português e recordatórios narrativos | Eduardo & Jacyellen | 6h | ✅ Concluído |
 | **TS4-04** | PB-12 | Desenvolvimento do leitor interativo web (Webtoon e Slide) em `hq/index.html` | Eduardo Constantino | 5h | ✅ Concluído |
 | **TS4-05** | PB-12 | Compilação da HQ em arquivo único PDF de 6 páginas (`hq/pdf/`) | João Paulo & Eduardo | 3h | ✅ Concluído |
-| **TS4-06** | PB-13 | Realização da cerimônia de Sprint Retrospective via Google Meet e registro de print | Grupo K | 2h | ✅ Concluído |
-| **TS4-07** | PB-13 | Redação da documentação formal da Retrospectiva (TXT, MD, HTML e PDF) | João Paulo & Eduardo | 4h | ✅ Concluído |
-| **TS4-08** | PB-05 | Atualização do Quadro Kanban, Product Backlog e README geral do repositório | Eduardo & João Paulo | 2h | ✅ Concluído |
+| **TS4-06** | PB-13 | Realização da cerimônia de Sprint Retrospective via Google Meet e registro de print | Grupo K (Trio) | 2h | ✅ Concluído |
+| **TS4-07** | PB-13 | Redação da documentação formal da Retrospectiva (TXT, MD, HTML e PDF) | Jacyellen & João Paulo | 4h | ✅ Concluído |
+| **TS4-08** | PB-05 | Atualização do Quadro Kanban, Product Backlog e README geral do repositório | Eduardo, João Paulo & Jacyellen | 2h | ✅ Concluído |
 
 ---
 
 ## 📊 Capacidade e Alocação da Equipe na Sprint 4
 
-- **Eduardo Constantino de Oliveira:** 17 horas trabalhadas
-- **João Paulo Gusmão Teixeira:** 17 horas trabalhadas
-- **Carga Horária Total da Sprint 4:** 34 horas
+- **Eduardo Constantino de Oliveira:** 14 horas trabalhadas
+- **João Paulo Gusmão Teixeira:** 14 horas trabalhadas
+- **Jacyellen Pereira da Silva:** 14 horas trabalhadas
+- **Carga Horária Total da Sprint 4:** 42 horas
 - **Taxa de Conclusão das Tarefas Planejadas:** 100% (8 de 8 tarefas concluídas)

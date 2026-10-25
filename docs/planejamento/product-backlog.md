@@ -4,7 +4,7 @@
 **Disciplina:** Engenharia de Software — IFES Serra  
 **Responsável (Product Owner):** Eduardo Constantino de Oliveira  
 **Scrum Master:** João Paulo Gusmão Teixeira  
-**Equipe / Scrum Team:** Grupo K (Eduardo Constantino de Oliveira & João Paulo Gusmão Teixeira)  
+**Equipe / Scrum Team:** Grupo K (Eduardo Constantino de Oliveira, João Paulo Gusmão Teixeira & Jacyellen Pereira da Silva)  
 **Status Geral:** ✅ **100% Concluído (Sprint 4 — Entrega Final do Projeto)**  
 
 ---

@@ -6,6 +6,7 @@
 **Equipe:** Grupo K  
 - **Eduardo Constantino de Oliveira:** Product Owner (PO) & Desenvolvedor  
 - **João Paulo Gusmão Teixeira:** Scrum Master (SM) & Desenvolvedor  
+- **Jacyellen Pereira da Silva:** Desenvolvedora & UI/UX / QA  
 
 **Período da Sprint 4:** 17/10/2026 a 24/10/2026 (1 Semana)  
 **Data da Reunião de Retrospectiva:** 24/10/2026 (Sábado) — 19:00 às 20:30  
@@ -27,9 +28,9 @@ A cerimônia de **Sprint Retrospective da Sprint 4** cumpre um duplo papel decis
 
 | Tarefa / Artefato Obrigatório | Responsáveis | Status | Evidência / Link no Repositório |
 | :--- | :---: | :---: | :--- |
-| **História em Quadrinhos Pronta (05 pts)**<br>• 6 quadros ilustrados em alta resolução<br>• Roteiro e diálogos didáticos de Software<br>• Capa oficial e contracapa temática | Eduardo & João Paulo | **CONCLUÍDO (100%)** | • [`hq/index.html`](../../hq/index.html)<br>• [`hq/comic_book_completo.html`](../../hq/comic_book_completo.html)<br>• Painéis em [`hq/paineis/`](../../hq/paineis/) |
-| **Compilação da HQ em PDF**<br>• Documento gráfico de 6 páginas em alta definição para leitura e avaliação acadêmica | Grupo K | **CONCLUÍDO (100%)** | • [`hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf`](../../hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf) |
-| **Sprint Retrospective Sprint 4 (02 pts)**<br>• Inspeção dos pilares Scrum e lições aprendidas<br>• Print comprobatório da reunião de equipe | Eduardo & João Paulo | **CONCLUÍDO (100%)** | • [`docs/sprint-4/Sprint_Retrospective_Sprint4.pdf`](Sprint_Retrospective_Sprint4.pdf)<br>• [`docs/sprint-4/Sprint_Retrospective_Sprint4.html`](Sprint_Retrospective_Sprint4.html)<br>• [`print_reuniao_retrospectiva_sprint4.png`](print_reuniao_retrospectiva_sprint4.png) |
+| **História em Quadrinhos Pronta (05 pts)**<br>• 6 quadros ilustrados em alta resolução<br>• Roteiro e diálogos didáticos de Software<br>• Capa oficial e contracapa temática | Eduardo, João Paulo & Jacyellen | **CONCLUÍDO (100%)** | • [`hq/index.html`](../../hq/index.html)<br>• [`hq/comic_book_completo.html`](../../hq/comic_book_completo.html)<br>• Painéis em [`hq/paineis/`](../../hq/paineis/) |
+| **Compilação da HQ em PDF**<br>• Documento gráfico de 6 páginas em alta definição para leitura e avaliação acadêmica | Grupo K (Trio) | **CONCLUÍDO (100%)** | • [`hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf`](../../hq/pdf/Debugando_o_Futuro_HQ_GrupoK.pdf) |
+| **Sprint Retrospective Sprint 4 (02 pts)**<br>• Inspeção dos pilares Scrum e lições aprendidas<br>• Print comprobatório da reunião de equipe | Eduardo, João Paulo & Jacyellen | **CONCLUÍDO (100%)** | • [`docs/sprint-4/Sprint_Retrospective_Sprint4.pdf`](Sprint_Retrospective_Sprint4.pdf)<br>• [`docs/sprint-4/Sprint_Retrospective_Sprint4.html`](Sprint_Retrospective_Sprint4.html)<br>• [`print_reuniao_retrospectiva_sprint4.png`](print_reuniao_retrospectiva_sprint4.png) |
 | **Product Backlog Completo**<br>• 13 de 13 itens entregues e movidos para Done | Eduardo Constantino | **CONCLUÍDO (100%)** | • [`docs/planejamento/product-backlog.md`](../planejamento/product-backlog.md) |
 
 ---
@@ -43,8 +44,8 @@ A cerimônia de **Sprint Retrospective da Sprint 4** cumpre um duplo papel decis
    A manutenção de um *Style Anchor* detalhado permitiu manter os personagens Maya Chen e Leo Santos fisionomicamente reconhecíveis e visualmente impactantes, culminando em 6 quadros exuberantes, além de capa e contracapa dignas de publicações editoriais de ponta.
 3. **Múltiplos Formatos de Consumo:**
    A equipe disponibilizou um leitor web completo em HTML5/CSS3 (com modos Webtoon e Slide cinema) e um arquivo compilado em PDF de 6 páginas em 300 DPI, assegurando facilidade máxima de avaliação pelo docente e visualização pelo público.
-4. **Alinhamento e Disciplina Ágil em Dupla:**
-   A distribuição equilibrada de responsabilidades entre PO (Eduardo) e SM (João Paulo) foi exemplar. Todas as cerimônias foram documentadas, o quadro Kanban permaneceu atualizado e a taxa de retrabalho foi mínima.
+4. **Alinhamento e Disciplina Ágil em Equipe:**
+   A distribuição equilibrada de responsabilidades entre PO (Eduardo), SM (João Paulo) e Dev/QA (Jacyellen) foi exemplar. Todas as cerimônias foram documentadas, o quadro Kanban permaneceu atualizado e a taxa de retrabalho foi mínima.
 
 ### 🟡 B. O que Pode Ser Melhorado / Desafios Superados
 1. **Filtragem de Artefatos em Modelos Generativos de Imagem:**
@@ -83,9 +84,10 @@ A cerimônia de **Sprint Retrospective da Sprint 4** cumpre um duplo papel decis
 
 ## 📸 5. Registro Visual da Cerimônia (Print do Grupo K)
 
-A reunião de encerramento da Sprint 4 foi realizada no Google Meet com a participação síncrona dos dois integrantes da equipe:
+A reunião de encerramento da Sprint 4 foi realizada no Google Meet com a participação síncrona dos três integrantes da equipe:
 - **Eduardo Constantino de Oliveira** (Product Owner)
 - **João Paulo Gusmão Teixeira** (Scrum Master)
+- **Jacyellen Pereira da Silva** (Desenvolvedora / QA)
 
 Durante a sessão, foram apresentados:
 1. O quadro Kanban com todos os cards em **Done**;

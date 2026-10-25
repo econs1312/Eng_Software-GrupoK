@@ -9,6 +9,7 @@ Data da Reunião de Retrospectiva: 24/10/2026 (Sábado) - 19:00 às 20:30
 Integrantes Presentes na Cerimônia (Scrum Team):
 - Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor)
 - João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor)
+- Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA)
 
 --------------------------------------------------------------------------------
 1. OBJETIVO DA CERIMÔNIA
@@ -66,10 +67,11 @@ A. O QUE FUNCIONOU EXTREMAMENTE BEM (SUCESSOS E PONTOS FORTES):
 3. Multiplicidade de Formatos para Avaliação e Leitura:
    A entrega não se limitou a arquivos soltos. Foi construído um PDF formal de 6 páginas
    pronto para impressão e avaliação docente, além de um Web Reader responsivo e elegante.
-4. Efetividade da Metodologia Ágil (Scrum/Kanban) em Dupla:
+4. Efetividade da Metodologia Ágil (Scrum/Kanban) em Equipe:
    A clareza dos papéis (Eduardo como PO liderando a visão do produto e roteiro; João Paulo
-   como SM liderando a facilitação do processo e gestão visual no GitHub Projects) permitiu
-   alta cadência de trabalho, zero conflitos de branch e 100% de pontualidade nas entregas.
+   como SM liderando a facilitação e Kanban; Jacyellen como Dev/QA garantindo qualidade
+   visual e refinamento da HQ) permitiu alta cadência de trabalho, zero conflitos de branch
+   e 100% de pontualidade nas entregas.
 5. Resposta Rápida aos Feedbacks das Sprints Anteriores:
    Os planos de ação estabelecidos nas retrospectivas anteriores (como padronização de
    grids e revisão antecipada de diálogos) foram rigorosamente implementados nesta sprint final.
@@ -108,7 +110,7 @@ C. PRINCIPAIS LIÇÕES APRENDIDAS EM TODO O CICLO DO PROJETO:
 - Total de Tarefas Planejadas no Product Backlog: 13
 - Total de Tarefas Concluídas (DoD 100%): 13 (100% de taxa de conclusão)
 - Velocity Médio da Equipe: 13.5 Story Points / Sprint
-- Horas Totais Dedicadas por Membro: ~45 horas (90 horas totais da equipe)
+- Horas Totais Dedicadas por Membro: ~45 horas (135 horas totais da equipe)
 - Nota de Autoavaliação do Scrum Team: 10/10
 
 --------------------------------------------------------------------------------
