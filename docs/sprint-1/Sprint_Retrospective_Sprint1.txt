@@ -9,6 +9,7 @@ Data da Reunião de Retrospectiva: 12/10/2026 (Segunda-feira) - 19:30 às 20:15
 Integrantes Presentes na Cerimônia (Scrum Team):
 - Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor)
 - João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor)
+- Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA)
 
 --------------------------------------------------------------------------------
 1. OBJETIVO DA CERIMÔNIA
@@ -24,9 +25,9 @@ aumentar a produtividade e a qualidade na Sprint 2.
 
 A. O QUE FUNCIONOU BEM (PONTOS FORTES / SUCESSOS):
 1. Trabalho Colaborativo e Divisão Clara de Papéis:
-   A divisão formal entre Product Owner (Eduardo) e Scrum Master (João Paulo), com ambos
-   atuando como desenvolvedores no Scrum Team, proporcionou excelente sinergia, foco e
-   equilíbrio de carga horária (14 horas de dedicação para cada integrante).
+   A divisão formal entre Product Owner (Eduardo), Scrum Master (João Paulo) e
+   Desenvolvedora/QA (Jacyellen), todos atuando integrados no Scrum Team,
+   proporcionou excelente sinergia, foco e equilíbrio colaborativo de dedicação.
 2. Potencialização Criativa com IA Generativa:
    O uso integrado de LLMs (Gemini/ChatGPT) auxiliou na estruturação rápida do roteiro
    técnico, permitindo entrelaçar conceitos complexos de Engenharia de Software com narrativa fluida.
@@ -56,21 +57,22 @@ C. PLANO DE AÇÃO PARA A SPRINT 2 (COMPROMISSOS DE MELHORIA CONTÍNUA):
    Fixar seeds (quando suportado) e utilizar uma lista padronizada de tokens visuais imutáveis
    (jaqueta com mechas azul-petróleo para Maya; luvas táticas e neon âmbar para Leo) para
    assegurar consistência perfeita entre os painéis da HQ.
-   -> Responsável Principal: João Paulo Gusmão Teixeira.
+   -> Responsável Principal: João Paulo Gusmão Teixeira & Jacyellen Pereira da Silva.
 2. Ação 2 (Processos) — Criação de Templates de Grid no Canva/Figma:
    Montar previamente os layouts das páginas e balões de diálogo vetoriais para acelerar
    a montagem gráfica dos quadrinhos da Sprint 2.
-   -> Responsável Principal: João Paulo Gusmão Teixeira & Eduardo Constantino de Oliveira.
+   -> Responsável Principal: Jacyellen Pereira da Silva & João Paulo Gusmão Teixeira.
 3. Ação 3 (Narrativa) — Validação Antecipada dos Diálogos:
    Revisar antecipadamente a distribuição de texto de cada balão para evitar poluição visual
    sobre os pontos focais das ilustrações da HQ.
-   -> Responsável Principal: Eduardo Constantino de Oliveira.
+   -> Responsável Principal: Eduardo Constantino de Oliveira & Jacyellen Pereira da Silva.
 
 --------------------------------------------------------------------------------
 3. REGISTRO VISUAL DA REUNIÃO (PRINT DO GRUPO)
 --------------------------------------------------------------------------------
 A cerimônia de Sprint Retrospective foi realizada via videoconferência no Google Meet,
-reunindo os integrantes Eduardo Constantino de Oliveira e João Paulo Gusmão Teixeira.
+reunindo os integrantes Eduardo Constantino de Oliveira, João Paulo Gusmão Teixeira
+e Jacyellen Pereira da Silva.
 Durante a sessão, foi realizado o compartilhamento de tela do quadro Kanban do GitHub
 Projects (comprovando 100% dos itens da Sprint 1 em Done) e o alinhamento das ações de
 melhoria para a Sprint 2.

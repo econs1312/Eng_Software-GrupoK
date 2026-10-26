@@ -11,6 +11,8 @@
   - *Atribuições:* Concepção da HQ, roteiro estruturado quadro a quadro, alinhamento dos conceitos de Engenharia de Software e homologação das entregas.
 - **João Paulo Gusmão Teixeira:** **Scrum Master (SM) & Desenvolvedor**
   - *Atribuições:* Facilitação das cerimônias ágeis, engenharia de prompts de IA para consistência visual, geração da arte da capa conceitual, gestão do quadro Kanban no GitHub Projects e garantia de qualidade (QA).
+- **Jacyellen Pereira da Silva:** **Desenvolvedora & UI/UX / QA (Scrum Team)**
+  - *Atribuições:* Co-criação e revisão de roteiro e diálogos, curadoria e refinamento de prompts de IA, diagramação e revisão de qualidade visual da HQ (QA), homologação de critérios de aceitação e documentação ágil.
 
 ---
 
@@ -36,13 +38,13 @@
 | **TSK-101** | PB-01 | Criar repositório público `Eng_Software-GrupoK`, configurar `.gitignore` e organizar estrutura de pastas (`docs/`, `prompts/`, `hq/`). | Eduardo Constantino *(PO / Dev)* | 2h | **Concluído** |
 | **TSK-102** | PB-02 | Redigir o `README.md` completo contendo integrantes, papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão. | João Paulo Gusmão *(SM / Dev)* | 3h | **Concluído** |
 | **TSK-103** | PB-05 | Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo ágil e cadastrar as tarefas da Sprint 1. | João Paulo Gusmão *(SM / Dev)* | 2h | **Concluído** |
-| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | Eduardo Constantino *(PO / Dev)* | 4h | **Concluído** |
-| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ. | Eduardo Constantino *(PO / Dev)* | 6h | **Concluído** |
-| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | João Paulo Gusmão *(SM / Dev)* | 5h | **Concluído** |
+| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | Eduardo & Jacyellen *(PO / Dev / QA)* | 4h | **Concluído** |
+| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ. | Eduardo & Jacyellen *(PO / Dev)* | 6h | **Concluído** |
+| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | João Paulo & Jacyellen *(SM / Dev / QA)* | 5h | **Concluído** |
 | **TSK-107** | PB-06 | Gerar e selecionar a arte conceitual da capa oficial da HQ com IA generativa e armazenar no repositório (`hq/capa_concept_art.jpg`). | João Paulo Gusmão *(SM / Dev)* | 4h | **Concluído** |
-| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando os pontos fortes e melhorias para a Sprint 2. | Eduardo & João Paulo *(Scrum Team)* | 2h | **Concluído** |
+| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando os pontos fortes e melhorias para a Sprint 2. | Eduardo, João Paulo & Jacyellen *(Scrum Team)* | 2h | **Concluído** |
 
-**Carga Horária Total Planejada:** 28 horas úteis (divididas equitativamente: Eduardo Constantino com 14h e João Paulo Gusmão com 14h).
+**Carga Horária Total Planejada:** 28 horas úteis (distribuídas colaborativamente entre os três integrantes da equipe: Eduardo Constantino, João Paulo Gusmão e Jacyellen Pereira da Silva).
 
 ---
 

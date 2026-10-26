@@ -47,7 +47,7 @@ A equipe do **Grupo K** é composta por três integrantes que atuam de forma col
 | :--- | :--- | :--- | :--- |
 | **Eduardo Constantino de Oliveira** | **Product Owner (PO) & Desenvolvedor** | Visão do produto, concepção do universo narrativo, roteiro detalhado da HQ, integração conceitual com Engenharia de Software e homologação das entregas. | [@econs1312](https://github.com/econs1312) |
 | **João Paulo Gusmão Teixeira** | **Scrum Master (SM) & Desenvolvedor** | Facilitação do framework Scrum, engenharia e testes de prompts de IA, geração e curadoria da arte conceitual da capa, gestão do quadro Kanban no GitHub Projects e garantia da qualidade (QA). | [@joaopaulogusmao](#) |
-| **Jacyellen Pereira da Silva** | **Desenvolvedora & UI/UX / QA (Scrum Team)** | Co-criação e revisão de roteiro e diálogos, curadoria e refinamento de prompts de IA, diagramação e revisão de qualidade visual da HQ (QA), homologação de critérios de aceitação e documentação ágil. | [@jacyellenpereira](#) |
+| **Jacyellen Pereira da Silva** | **Desenvolvedora & UI/UX / QA (Scrum Team)** | Co-criação e revisão de roteiro e diálogos, curadoria e refinamento de prompts de IA, diagramação e revisão de qualidade visual da HQ (QA), homologação de critérios de aceitação e documentação ágil. | [@Jacyellen-S](https://github.com/Jacyellen-S) |
 
 ---
 

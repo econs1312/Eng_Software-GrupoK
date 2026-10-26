@@ -8,6 +8,7 @@ Período da Sprint 1: 06/10/2026 a 12/10/2026 (1 Semana)
 Integrantes e Estrutura da Equipe no Scrum:
 - Eduardo Constantino de Oliveira: Product Owner (PO) & Desenvolvedor
 - João Paulo Gusmão Teixeira: Scrum Master (SM) & Desenvolvedor
+- Jacyellen Pereira da Silva: Desenvolvedora & UI/UX / QA
 
 --------------------------------------------------------------------------------
 1. FORMATO ESCOLHIDO PARA AS REUNIÕES DIÁRIAS E JUSTIFICATIVA
@@ -25,7 +26,7 @@ moderna para equipes de tecnologia. O modelo assíncrono traz vantagens essencia
 2. Agilidade Operacional: Elimina a necessidade de sincronização síncrona rígida de horários,
    permitindo conciliar as demandas acadêmicas sem perder o compromisso diário;
 3. Resolução Rápida de Impedimentos: Bloqueios sinalizados no canal geram notificações
-   imediatas para que o outro integrante ofereça suporte antes do fim do dia.
+   imediatas para que os outros integrantes ofereçam suporte antes do fim do dia.
 
 Estrutura Padrão das Respostas Diárias:
 1. O que fiz ontem (ou desde a última reunião)?
@@ -42,7 +43,7 @@ SESSÃO 1: Terça-feira, 06/10/2026 (Abertura da Sprint 1)
 
 • Eduardo Constantino de Oliveira (Product Owner & Desenvolvedor):
   - O que fiz ontem:
-    Participei da sessão de Sprint Planning com o João Paulo; definimos a Meta da
+    Participei da sessão de Sprint Planning com o time; definimos a Meta da
     Sprint 1 e priorizamos os itens iniciais do Backlog (PB-01 a PB-06).
   - O que farei hoje:
     Criar o repositório público 'Eng_Software-GrupoK' no GitHub, configurar o arquivo
@@ -53,7 +54,7 @@ SESSÃO 1: Terça-feira, 06/10/2026 (Abertura da Sprint 1)
 
 • João Paulo Gusmão Teixeira (Scrum Master & Desenvolvedor):
   - O que fiz ontem:
-    Auxiliei na distribuição equitativa das tarefas no Sprint Planning (14h para cada um)
+    Auxiliei na distribuição equitativa das tarefas no Sprint Planning
     e na definição dos critérios de aceitação e Definition of Done (DoD).
   - O que farei hoje:
     Redigir a primeira versão completa do README.md do projeto, detalhando a visão da HQ,
@@ -61,6 +62,16 @@ SESSÃO 1: Terça-feira, 06/10/2026 (Abertura da Sprint 1)
     (TSK-102). Em seguida, iniciar a configuração do quadro Kanban (TSK-103).
   - Impedimentos:
     Nenhum impedimento.
+
+• Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA):
+  - O que fiz ontem:
+    Participei do Sprint Planning com Eduardo e João Paulo, alinhando a visão estética da HQ,
+    padrões de acessibilidade visual e critérios de aceitação para as entregas da Sprint 1.
+  - O que farei hoje:
+    Revisar o planejamento de layout das pastas e apoiar na estrutura de documentação do
+    repositório e do README (TSK-101 e TSK-102).
+  - Impedimentos:
+    Nenhum impedimento no momento.
 
 ================================================================================
 SESSÃO 2: Quarta-feira, 07/10/2026
@@ -90,6 +101,16 @@ SESSÃO 2: Quarta-feira, 07/10/2026
     Precisamos bater o martelo sobre a paleta exata de cores para orientar os prompts de IA.
     (Alinhado no chat: utilizaremos paleta Cyberpunk em ciano #00f0ff, roxo #7928ca e âmbar #ff9900).
 
+• Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA):
+  - O que fiz ontem:
+    Validei a estrutura do README e a árvore de diretórios do repositório; ajudei na definição
+    da paleta de cores cyberpunk e sugestões visuais.
+  - O que farei hoje:
+    Colaborar na caracterização visual e estética dos personagens principais nas fichas
+    narrativas (TSK-104) e acompanhar a definição e estimativas das tarefas no Kanban.
+  - Impedimentos:
+    Nenhum impedimento.
+
 ================================================================================
 SESSÃO 3: Quinta-feira, 08/10/2026 (Meio da Sprint)
 ================================================================================
@@ -116,6 +137,16 @@ SESSÃO 3: Quinta-feira, 08/10/2026 (Meio da Sprint)
     Geradores gratuitos apresentaram alguma variação nos traços faciais entre diferentes tentativas.
     Solução: fixar sementes (seeds) e descritores imutáveis no prompt.
 
+• Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA):
+  - O que fiz ontem:
+    Revisei as fichas de personagens (Maya Chen e Leo Santos) e os primeiros rascunhos de diálogos
+    dos quadros 1 a 3 (TSK-104), avaliando ritmo de leitura e clareza.
+  - O que farei hoje:
+    Testar a fluidez dos diálogos sob a ótica de diagramação em quadrinhos e apoiar nos testes dos
+    primeiros prompts com Style Anchor para geração visual de personagens (TSK-106).
+  - Impedimentos:
+    Nenhum impedimento.
+
 ================================================================================
 SESSÃO 4: Sexta-feira, 09/10/2026
 ================================================================================
@@ -141,6 +172,16 @@ SESSÃO 4: Sexta-feira, 09/10/2026
   - Impedimentos:
     Nenhum impedimento. A capa foi gerada com excelente impacto visual e coerência cyberpunk!
 
+• Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA):
+  - O que fiz ontem:
+    Realizei a revisão de QA dos quadros 4 e 5 do roteiro e acompanhei os testes visuais
+    de geração de arte conceitual.
+  - O que farei hoje:
+    Apoiar João Paulo na seleção estética e validação da capa oficial conceitual da HQ
+    (TSK-107) e estruturar os critérios de qualidade visual e QA para a Sprint 2.
+  - Impedimentos:
+    Nenhum impedimento.
+
 ================================================================================
 SESSÃO 5: Segunda-feira, 12/10/2026 (Encerramento da Sprint 1)
 ================================================================================
@@ -150,7 +191,7 @@ SESSÃO 5: Segunda-feira, 12/10/2026 (Encerramento da Sprint 1)
     Revisei todos os commits da branch 'main' e confirmei que todos os artefatos
     planejados estão íntegros e renderizando corretamente no repositório GitHub.
   - O que farei hoje:
-    Conduzir a reunião de Sprint Review com o João Paulo, homologar formalmente o incremento
+    Conduzir a reunião de Sprint Review com a equipe, homologar formalmente o incremento
     da Sprint 1 e compilar todos os links diretos para o GitHub (TSK-108).
   - Impedimentos:
     Nenhum impedimento. Meta da Sprint 1 atingida em 100%!
@@ -160,10 +201,20 @@ SESSÃO 5: Segunda-feira, 12/10/2026 (Encerramento da Sprint 1)
     Verifiquei o cumprimento dos critérios de aceitação e Definition of Done (DoD) de todas as 8
     tarefas da Sprint 1, movendo os cards para a coluna 'Done' no Kanban.
   - O que farei hoje:
-    Facilitar a cerimônia de Sprint Retrospective com o Eduardo (TSK-108), documentar os pontos
+    Facilitar a cerimônia de Sprint Retrospective com o time (TSK-108), documentar os pontos
     fortes e desafios no uso de IA, e traçar o plano de ação concreto para a Sprint 2.
   - Impedimentos:
     Nenhum impedimento. Cerimônias prontas para realização e registro.
+
+• Jacyellen Pereira da Silva (Desenvolvedora & UI/UX / QA):
+  - O que fiz ontem:
+    Efetuei o QA final do roteiro e dos prompts de IA gerados, garantindo que atendessem a
+    todos os critérios de aceitação e de usabilidade visual.
+  - O que farei hoje:
+    Participar ativamente das cerimônias de Sprint Review e Retrospectiva da Sprint 1 (TSK-108),
+    colaborando na identificação de lições aprendidas e nas melhorias de layout para a Sprint 2.
+  - Impedimentos:
+    Nenhum impedimento.
 
 ================================================================================
 FIM DO REGISTRO DAS REUNIÕES DIÁRIAS (SPRINT 1) — GRUPO K

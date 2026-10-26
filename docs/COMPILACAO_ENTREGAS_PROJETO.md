@@ -3,9 +3,9 @@
 > **Disciplina:** Engenharia de Software (V Período) — IFES Campus Serra (2026)  
 > **Projeto:** História em Quadrinhos com IA Generativa (*Debugando o Futuro: Crônicas do Código Senciente*)  
 > **Equipe (Scrum Team):**  
-> - 🧑‍💼 **Eduardo Constantino de Oliveira:** Product Owner (PO) & Desenvolvedor  
-> - ⚙️ **João Paulo Gusmão Teixeira:** Scrum Master (SM) & Desenvolvedor  
-> - 🎨 **Jacyellen Pereira da Silva:** Desenvolvedora & UI/UX / QA  
+> - 🧑‍💼 **Eduardo Constantino de Oliveira:** Product Owner (PO) & Desenvolvedor ([@econs1312](https://github.com/econs1312))  
+> - ⚙️ **João Paulo Gusmão Teixeira:** Scrum Master (SM) & Desenvolvedor ([@joaopaulogusmao](https://github.com/joaopaulogusmao))  
+> - 🎨 **Jacyellen Pereira da Silva:** Desenvolvedora & UI/UX / QA ([@Jacyellen-S](https://github.com/Jacyellen-S))  
 > **Repositório GitHub:** `Eng_Software-GrupoK` (Branch `main`)  
 > **Status:** ✅ **100% Concluído (Todas as Sprints e Itens do Backlog Finalizados)**  
 
@@ -60,8 +60,8 @@ A tabela abaixo resume exatamente o que foi produzido e os arquivos prontos para
     - Relatório formal completo em PDF, HTML, Markdown e TXT, cobrindo os 3 pilares Scrum e as lições aprendidas em todo o ciclo de vida.
     - Registro de métricas finais: 4 sprints, 13 de 13 itens concluídos (100% Done), 52 Story Points entregues e zero conflitos de merge.
     - Print comprobatório da videoconferência de fechamento no Google Meet com os três integrantes (Eduardo, João Paulo e Jacyellen) apresentando o Kanban 100% finalizado.
-  - **Integração Formal de Jacyellen Pereira da Silva:**
-    - Atribuição do papel de Desenvolvedora & UI/UX / QA em todos os documentos, fichas técnicas, créditos da HQ e evidências de reuniões.
+  - **Equipe Completa Integrada em Todo o Ciclo:**
+    - Presença formal de Eduardo Constantino (PO/Dev), João Paulo Gusmão (SM/Dev) e Jacyellen Pereira da Silva (Dev/QA - [@Jacyellen-S](https://github.com/Jacyellen-S)) em todos os documentos, fichas técnicas, créditos da HQ, cerimônias ágeis e evidências de reuniões desde a Sprint 1 até o encerramento.
 
 ---
 

@@ -4,9 +4,9 @@
 **Disciplina:** Engenharia de Software (V Período)  
 **Projeto:** História em Quadrinhos com IA Generativa (*Debugando o Futuro: Crônicas do Código Senciente*)  
 **Equipe:** Grupo K  
-- **Eduardo Constantino de Oliveira:** Product Owner (PO) & Desenvolvedor  
-- **João Paulo Gusmão Teixeira:** Scrum Master (SM) & Desenvolvedor  
-- **Jacyellen Pereira da Silva:** Desenvolvedora & UI/UX / QA  
+- **Eduardo Constantino de Oliveira:** Product Owner (PO) & Desenvolvedor ([@econs1312](https://github.com/econs1312))  
+- **João Paulo Gusmão Teixeira:** Scrum Master (SM) & Desenvolvedor ([@joaopaulogusmao](https://github.com/joaopaulogusmao))  
+- **Jacyellen Pereira da Silva:** Desenvolvedora & UI/UX / QA ([@Jacyellen-S](https://github.com/Jacyellen-S))  
 
 **Período da Sprint 4:** 17/10/2026 a 24/10/2026 (1 Semana)  
 **Data da Reunião de Retrospectiva:** 24/10/2026 (Sábado) — 19:00 às 20:30  

@@ -1,9 +1,9 @@
 # 🏃 Sprint Backlog — Sprint 1 (Grupo K)
 
-**Projeto:** História em Quadrinhos com IA Generativa (*Debugando o Futuro: Crônicas do Código Senciente*)  
+**Equipe:** Grupo K (Eduardo Constantino de Oliveira [PO & Dev], João Paulo Gusmão Teixeira [SM & Dev] & Jacyellen Pereira da Silva [Dev / UI/UX / QA])  
 **Disciplina:** Engenharia de Software — IFES Serra  
 **Período da Sprint:** 1 Semana  
-**Status da Sprint:** Em Andamento  
+**Status da Sprint:** Concluído  
 
 ---
 
@@ -32,13 +32,13 @@ Os seguintes itens prioritários foram puxados do [Product Backlog](product-back
 | **TSK-101** | PB-01 | Criar repositório público `Eng_Software-GrupoK`, configurar `.gitignore` e organizar estrutura de pastas (`docs/`, `prompts/`, `hq/`). | Eduardo Constantino *(PO / Dev)* | 2h | **Concluído** |
 | **TSK-102** | PB-02 | Redigir o `README.md` completo contendo integrantes, papéis da equipe, escopo do projeto, sinopse em 2 parágrafos e links de gestão. | João Paulo Gusmão *(SM / Dev)* | 3h | **Concluído** |
 | **TSK-103** | PB-05 | Criar e configurar o quadro Kanban (GitHub Projects) com as colunas do ciclo de vida ágil e cadastrar as tarefas da Sprint 1. | João Paulo Gusmão *(SM / Dev)* | 2h | **Concluído** |
-| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | Eduardo Constantino *(PO / Dev)* | 4h | **Concluído** |
-| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ. | Eduardo Constantino *(PO / Dev)* | 6h | **Concluído** |
-| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | João Paulo Gusmão *(SM / Dev)* | 5h | **Concluído** |
+| **TSK-104** | PB-03 | Desenvolver as fichas dos personagens principais (Maya, Leo, Echo) detalhando personalidade, motivações e referências estéticas. | Eduardo & Jacyellen *(PO / Dev / QA)* | 4h | **Concluído** |
+| **TSK-105** | PB-04 | Escrever o roteiro estruturado quadro a quadro (descrições visuais, diálogos e recordatórios) para o Capítulo 1 da HQ. | Eduardo & Jacyellen *(PO / Dev)* | 6h | **Concluído** |
+| **TSK-106** | PB-06 | Formular e testar biblioteca de prompts em ferramentas de IA Generativa garantindo consistência visual dos personagens. | João Paulo & Jacyellen *(SM / Dev / QA)* | 5h | **Concluído** |
 | **TSK-107** | PB-06 | Gerar e selecionar a arte conceitual da capa oficial da HQ com IA e armazenar no repositório (`hq/capa_concept_art.jpg`). | João Paulo Gusmão *(SM / Dev)* | 4h | **Concluído** |
-| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando pontos fortes e plano de ação para a Sprint 2. | Eduardo & João Paulo *(Scrum Team)* | 2h | **Concluído** |
+| **TSK-108** | PB-05 | Realizar a reunião de Sprint Review e Retrospectiva da Sprint 1, documentando pontos fortes e plano de ação para a Sprint 2. | Eduardo, João Paulo & Jacyellen *(Scrum Team)* | 2h | **Concluído** |
 
-**Carga Horária Total:** 28 horas úteis (distribuídas igualmente entre Eduardo Constantino [14h] e João Paulo Gusmão [14h]).
+**Carga Horária Total:** 28 horas úteis (distribuídas colaborativamente entre os integrantes Eduardo Constantino, João Paulo Gusmão e Jacyellen Pereira da Silva).
 
 ---
 

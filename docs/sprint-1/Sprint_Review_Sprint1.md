@@ -10,6 +10,7 @@
 ### 👥 Integrantes da Equipe (Scrum Team):
 - **Eduardo Constantino de Oliveira:** Product Owner (PO) & Desenvolvedor
 - **João Paulo Gusmão Teixeira:** Scrum Master (SM) & Desenvolvedor
+- **Jacyellen Pereira da Silva:** Desenvolvedora & UI/UX / QA
 
 ---
 
@@ -21,7 +22,7 @@ Apresentar formalmente o incremento do produto desenvolvido de forma colaborativ
 ## 2. Status da Meta da Sprint (Sprint Goal)
 - **Meta Definida no Sprint Planning:**  
   > *"Estabelecer a infraestrutura do repositório no GitHub, estruturar o fluxo de trabalho ágil no Kanban, definir a concepção do universo narrativo com roteiro quadro a quadro completo e consolidar os primeiros prompts consistentes de IA para geração visual dos personagens e capa conceitual."*
-- **Resultado da Avaliação:** **100% ALCANÇADA**. Todas as 8 tarefas planejadas foram finalizadas pela dupla, revisadas segundo a Definition of Done (DoD) e commitadas na branch `main`.
+- **Resultado da Avaliação:** **100% ALCANÇADA**. Todas as 8 tarefas planejadas foram finalizadas pela equipe, revisadas segundo a Definition of Done (DoD) e commitadas na branch `main`.
 
 ---
 

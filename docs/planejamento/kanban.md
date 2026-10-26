@@ -1,6 +1,7 @@
 # 📊 Quadro Kanban — Grupo K
 
 **Projeto:** História em Quadrinhos com IA Generativa (*Debugando o Futuro: Crônicas do Código Senciente*)  
+**Equipe (Scrum Team):** Eduardo Constantino de Oliveira (PO/Dev), João Paulo Gusmão Teixeira (SM/Dev) e Jacyellen Pereira da Silva (Dev/QA)  
 **Disciplina:** Engenharia de Software — IFES Serra  
 **Ferramenta Oficial:** GitHub Projects & Markdown Board  
 **Link do Projeto no GitHub Projects:** [GitHub Projects — Grupo K](https://github.com/users/econs1312/projects)  
